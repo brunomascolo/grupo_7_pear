@@ -9,3 +9,11 @@ Bruno Mascolo: Soy un intento de ingeniero mecanico de 26 años que se canso de 
 Juan Carlos Ortiz: Soy un ingeniero electrónico de 38 años, facinado con la programación. practico el ciclismo.
 
 Kevin Palma: Hola, soy Kevin tengo 29 años, me gusta la computación y la tecnologia. Soy de profesión informático.
+
+Cayetano Fabrissin: Soy un contador de 32 años que trabaja de forma independiente y decidió dedicar su tiempo libre al estudio de la programación.
+
+Páginas web de referencia:
+https://mintable.app/
+https://opensea.io/
+https://www.binance.com/en/nft/home
+https://www.thetadrop.com/
