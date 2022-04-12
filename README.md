@@ -13,7 +13,9 @@ A continuacion presentaremos a los miembros que colaboran en este proyecto:
 <h3>Cayetano Fabrissin:</h3> Soy un contador de 32 años que trabaja de forma independiente y decidió dedicar su tiempo libre al estudio de la programación.
 
 <h4>Páginas web de referencia:</h4>
-https://mintable.app/
-https://opensea.io/
-https://www.binance.com/en/nft/home
-https://www.thetadrop.com/
+<ul>
+<li>https://mintable.app/</li>
+<li>https://opensea.io/</li>
+<li>https://www.binance.com/en/nft/home</li>
+<li>https://www.thetadrop.com/</li>
+</ul>
