@@ -20,3 +20,8 @@ A continuacion presentaremos a los miembros que colaboran en este proyecto:
 <li>https://www.binance.com/en/nft/home</li>
 <li>https://www.thetadrop.com/</li>
 </ul>
+<div>
+<ul>
+<li>Link al boceto https://app.uizard.io/p/d46a3b08</li>
+</ul>
+</div>
