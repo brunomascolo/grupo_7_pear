@@ -21,7 +21,8 @@ A continuacion presentaremos a los miembros que colaboran en este proyecto:
 <li>https://www.thetadrop.com/</li>
 </ul>
 <div>
+<h4>Link al boceto </h4>
 <ul>
-<li>Link al boceto https://app.uizard.io/p/d46a3b08</li>
+<li>https://app.uizard.io/p/d46a3b08</li>
 </ul>
 </div>
