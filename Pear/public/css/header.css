@@ -1,0 +1,49 @@
+:root{
+    --VerdeOscuro:#3AAFB9;
+    --Celeste: #97C8EB;
+    --VerdeClaro: #B9F18C;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    width: 70%;    
+}
+
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;  
+    
+}
+
+.cabecera div{
+    margin-right: 15px;    
+}
+
+.botonCabecera{
+    padding: 10px;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid gainsboro;
+    background-color: white;
+    
+}
+
+.fa-bars{
+    color: #B9F18C;
+    font-size: 20px;
+}
+
+.fa-cart-shopping{
+    color:#3AAFB9;
+    font-size: 20px;
+}

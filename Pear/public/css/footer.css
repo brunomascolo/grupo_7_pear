@@ -1,0 +1,70 @@
+:root{
+    --VerdeOscuro:#3AAFB9;
+    --Celeste: #97C8EB;
+    --VerdeClaro: #B9F18C;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+footer{
+    background-color: #3AAFB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secciones{
+    padding: 15px;  
+}
+
+.secciones i{   
+    margin: 10px;
+    font-size: 30px;
+    color: white;  
+}
+
+.titulo{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.secciones form{
+    text-align: center;
+}
+
+.secciones input{
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: auto;
+    font-size: 15px;
+    
+}
+
+.botonSuscribirme{
+    background-color: #B9F18C;
+    color:#3AAFB9;
+    font-size: 15px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+.logoFooter{
+    width: 35%;
+    height: 35%;
+}
+
+.derechos{
+    font-size: 12px;
+    color: gainsboro;
+    margin: 10px;
+
+}
+
+
