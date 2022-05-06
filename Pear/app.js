@@ -9,7 +9,7 @@ app.use(express.static(publicPath)); //esta linea le dice a express que queremos
 //de manera sencilla
 
 app.listen(3000, () => 
-console.log("Servidor corriendo en el puerto 3000"));
+console.log("Servidor corriendo en el puerto http://localhost:3000"));
 
 app.get('/', (req,res) => {
     let viewsPath = path.resolve(__dirname, "./views/home.html");

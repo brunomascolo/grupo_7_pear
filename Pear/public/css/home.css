@@ -1,0 +1,17 @@
+body {
+    width: 100%;
+    margin: 0;
+  }
+.home-general{
+  padding-left: 5%;
+}
+.home-general p{
+  font-weight: bold;
+  font-size: 20px;
+}
+.slider-principal {
+  width: 100%;
+  position: relative;
+  border: 5px;
+  border-color: black;
+}
