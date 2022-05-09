@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5e4bcf93eb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/register.css">
+        <title>Registrarme</title>
+        <link rel="shortcut icon" href="/img/p2.png">
+    </head>
+<body>
+    <header>
+        <div class="cabecera">
+            <img src="/img/pear1.png" alt="logo_pear" class="logo">
+            <div>
+                <i class="fa-solid fa-cart-shopping botonCabecera"></i>
+                <i class="fa-solid fa-bars botonCabecera"></i>
+            </div>           
+    </header>
+    <main>
+        <div class="iconoCerrar">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="iconoFotoPerfil">
+            <i class="fas fa-user-alt"></i>
+        </div>
+        <form action="/" method="POST">
+            <div class="formulario">
+                <input class="inputs" type="text" name="register" id="name" placeholder="   Nombre Completo" minlength="5">
+                <input class="inputs" type="email" name="register" id="email" placeholder="   Email" minlength="5">
+                <input class="inputs" type="password" name="register" id="password" placeholder="   Contraseña" minlength="5">
+                <input class="inputs" type="password" name="register" id="repeatPassword" placeholder="   Repetir Contraseña" minlength="5">
+            </div>
+            <div class="checksWrap">
+                <label for="register">
+                    <input type="checkbox" name="register" id="terminos" value="acepto" class="checks">
+                    He leido y acepto los <a href="">terminos y condiciones</a>
+                </label>
+                <label for="register">
+                    <input type="checkbox" name="register" id="mayor" value="mayor" class="checks">
+                    Soy mayor de 18 años
+                </label>                
+            </div>
+            <div class="checksWrap">
+                <button type="submit" class="botones" onclick="location.href='/'">Registrarme</button>
+            </div>
+        </form>
+
+        
+    </main>
+    <footer>
+        <div class="secciones">
+            <p class="titulo">Unite a la comunidad Pear</p>
+            <div>
+                <form action="/" method="POST">
+                    <input type="email" id="emailSuscripcion" placeholder="   Email">
+                    <button type="submit" class="botonSuscribirme" onclick="location.href='/'">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+        <div class="secciones">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-google"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <img src="/img/p2.png" alt="logo_pear2" class="logoFooter">
+        <div class="secciones">
+            <p class="derechos">© 2021 - 2022 Grupo 7, Digital House</p>
+            <a href="/" class="derechos">Terminos y Condiciones</a>
+            <a href="/" class="derechos">Acuerdo de Privacidad</a>
+        </div>
+    </footer>
+
+</div>
+    
+</body>
+</html>

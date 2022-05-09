@@ -1,0 +1,100 @@
+:root{
+    --VerdeOscuro:#3AAFB9;
+    --Celeste: #97C8EB;
+    --VerdeClaro: #B9F18C;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-times{
+    color: white;
+}
+
+.iconoCerrar{    
+    background-color: #3AAFB9;
+    margin: 20px;
+    border-radius: 8px;
+    border: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    left: 40%;
+}
+
+.iconoFotoPerfil{
+    font-size: 75px;
+    color: #3AAFB9;
+    margin-bottom: 20px;
+}
+
+.inputs {
+    width: 100%;
+    font-weight: 500;
+    border: none;
+    border-bottom: solid 1px gainsboro;
+}
+
+main form{
+    width: 60%;
+}
+
+main form input{
+    height: 30px;
+    font-size: 14px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);    
+}
+
+.checks{    
+    margin: 15px;
+    height: auto;
+}
+
+.checksWrap{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.botones{
+    width: 80%;
+    margin: 20px;
+    text-align: center;
+    background-color:#3AAFB9;
+    border-radius: 6px;
+    color: white;
+    border: blue;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 450ms;
+} 
+.botones:hover{
+    background-color: #0022AA;
+}
+
+main button{
+    height: 40px;
+}
+
