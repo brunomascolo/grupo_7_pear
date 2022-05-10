@@ -1,21 +1,33 @@
 body {
-    width: 100%;
-    margin: 0;
-  }
-.home-general{
-  padding-left: 5%;
+  width: 100%;
+  margin: 0;
 }
-.home-general p{
+
+.home-general {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mas-visitados {
   font-weight: bold;
   font-size: 20px;
 }
+
 .slider-principal {
-  justify-content: center   ;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  position: relative;
+
 }
-.slider-principal img{
-  max-width: 100%;
+.slider-principal img {
+  border: gray 1px solid;
   border-radius: 10px;
+  width: 100%;
+}
+.name-section{
+  position: absolute;
+  bottom: 15%;
+  right: 35%;
+  color: white;
 }
