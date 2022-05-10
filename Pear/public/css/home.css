@@ -27,7 +27,8 @@ body {
 }
 .name-section{
   position: absolute;
-  bottom: 15%;
-  right: 35%;
+  bottom: -3%;
+  right: 20%;
   color: white;
+  font-weight: bold;
 }
