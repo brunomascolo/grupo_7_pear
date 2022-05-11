@@ -12,6 +12,7 @@ body {
 .mas-visitados {
   font-weight: bold;
   font-size: 20px;
+  padding-left: 20px padding
 }
 
 .slider-principal {
@@ -20,15 +21,22 @@ body {
   position: relative;
 
 }
+
 .slider-principal img {
   border: gray 1px solid;
   border-radius: 10px;
   width: 100%;
 }
-.name-section{
+
+.name-section {
   position: absolute;
   bottom: -3%;
   right: 20%;
   color: white;
   font-weight: bold;
+}
+
+.slider-principal:hover .name-section {
+  color: black;
+  text-shadow: 5px 5px 10px #000000;
 }
