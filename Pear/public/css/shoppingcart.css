@@ -1,0 +1,56 @@
+@import url(/css/header.css);
+@import url(/css/footer.css);
+@import url(/css/home.css);
+
+
+.contenedorTituloCarrito{
+    border-bottom: 1px solid gainsboro;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.tituloCarrito{
+    padding: 6px;
+    margin: 4px;
+    font-weight: bolder;
+    color: #3AAFB9;
+    
+}
+
+.contenedorTituloSeguridadDatos{
+    border-bottom: 1px solid gainsboro;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+.tituloSeguridadDatos{
+    padding: 3px;
+    margin: 2px;
+}
+
+.logo{
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.seccionProductos{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 90%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgProductos{
+    width: 90%;
+    margin: auto;
+    
+}
