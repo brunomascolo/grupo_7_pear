@@ -1,18 +1,28 @@
+:root {
+  --VerdeOscuro: #3AAFB9;
+  --Celeste: #97C8EB;
+  --VerdeClaro: #B9F18C;
+}
+
 body {
   width: 100%;
   margin: 0;
 }
 
+
+
+/* CSS Mas visitados*/
 .home-general {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.mas-visitados {
+.titulos-principal {
   font-weight: bold;
   font-size: 20px;
-  padding-left: 20px padding
+  padding-left: 5%;
+  border-bottom: 1px solid rgb(212, 212, 212);
 }
 
 .slider-principal {
@@ -39,4 +49,137 @@ body {
 .slider-principal:hover .name-section {
   color: black;
   text-shadow: 5px 5px 10px #000000;
+}
+
+/* CSS Categorias */
+.categorias-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.icon-home {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: var(--VerdeOscuro);
+  width: 40%;
+  margin: auto;
+  border-radius: 30%;
+  padding: 5%;
+}
+
+.icon-home p {
+  font-size: 16px;
+  margin: auto;
+  font-weight: bold;
+}
+
+/* CSS Partners */
+.partners-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.partner-home img {
+  width: 90%;
+  padding: 5%;
+  border: gray 1px solid;
+  border-radius: 10px;
+}
+
+/* CSS Crear y vender NFT */
+.opciones-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.pasos-home {
+  text-align: center;
+  padding: 10px;
+}
+
+.subtitulo-pasos {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.texto-pasos {
+  font-weight: bold;
+  color: gray;
+}
+
+.iconos {
+  color: var(--VerdeOscuro);
+  font-size: 40px;
+}
+
+@media (min-width: 361px) and (max-width: 769px) {
+  .slider-principal {
+    width: 40%;
+  }
+
+  .home-general {
+    width: 70%;
+    margin: auto;
+  }
+
+  .categorias-home {
+    width: 50%;
+    margin: auto;
+  }
+
+  .partners-home {
+    width: 50%;
+    margin: auto;
+  }
+
+  .opciones-home {
+    width: 50%;
+  }
+
+  .pasos-home {
+    width: 40%;
+  }
+}
+
+@media (min-width: 770px) {
+  .slider-principal {
+    width: 30%;
+  }
+
+  .home-general {
+    width: 70%;
+    margin: auto;
+  }
+
+  .categorias-home {
+    width: 50%;
+    margin: auto;
+  }
+
+  .icon-home{
+    width: 10%;
+  }
+
+  .partners-home {
+    width: 50%;
+    margin: auto;
+  }
+
+  .opciones-home {
+    width: 50%;
+  }
+
+  .pasos-home {
+    width: 20%;
+  }
 }
