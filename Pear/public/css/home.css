@@ -133,7 +133,6 @@ body {
   }
 
   .categorias-home {
-    width: 50%;
     margin: auto;
   }
 
@@ -143,11 +142,11 @@ body {
   }
 
   .opciones-home {
-    width: 50%;
+    width: 75%;
   }
 
   .pasos-home {
-    width: 40%;
+    width: 80%;
   }
 }
 
