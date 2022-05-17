@@ -21,9 +21,7 @@
     
 }
 
-.cabecera div{
-    margin-right: 15px;    
-}
+
 
 .botonCabecera{
     padding: 10px;
@@ -46,4 +44,44 @@ header{
 .fa-cart-shopping{
     color:#3AAFB9;
     font-size: 20px;
+
+}
+
+@media (min-width: 430px) and (max-width: 800px){
+    .logo{
+        position: relative;
+        left: -40px;
+        max-height: 350%;
+        width: 90%;
+    }
+    .fa-cart-shopping{
+        font-size: 30px;
+    }
+    .fa-bars{
+        font-size: 30px;
+    }
+    .iconosCabecera{
+        position: absolute;
+        left: 75%;
+    }
+}
+
+@media (min-width: 801px){
+    .logo{
+        position: relative;
+        left: -40px;
+        max-height: 350%;
+        width: 90%;
+    }
+    .fa-cart-shopping{
+        font-size: 30px;
+    }
+    .fa-bars{
+        font-size: 30px;
+    }
+    .iconosCabecera{
+        position: absolute;
+        left: 80%;
+    }
+    
 }

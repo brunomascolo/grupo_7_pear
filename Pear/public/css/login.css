@@ -38,12 +38,9 @@ main{
     font-size: 75px;
     color: #3AAFB9;
     margin-bottom: 20px;
-}
-
-label{
-    width: 80%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 main form{
@@ -51,6 +48,7 @@ main form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 main form input{
@@ -58,7 +56,8 @@ main form input{
     font-size: 14px;
 }
 
-.inputs{
+
+.textos{
     width: 80%;
     margin: 20px;
     margin-left: 0px;
@@ -70,27 +69,24 @@ main form input{
     font-weight: 200;  
 }
 
+.botonIniciarSesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .formulario{
     display: flex;
     flex-direction: column;
     align-items: center;      
 }
 
-.checks{    
-    margin: 15px;
-    height: auto;
-}
 
-.checksWrap{
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;    
-}
-.checksWrap label{
-    align-items: center;
+
+label{
+    width: 80%;
+    display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .botones{
@@ -105,7 +101,9 @@ main form input{
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 15px;
+
 } 
+
 .botones:hover{
     background-color: #0022AA;
 }
@@ -114,52 +112,63 @@ main button{
     height: 40px;
 }
 
-.checksWrap button{
-    margin: auto;
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
+.links a{
+    margin: 10px;
+    color: var(--VerdeOscuro);
+    transition: all 600ms;
+}
+
+.links a:hover{
+    color: #0022AA;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.metamask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.metamask h4{
+    color: var(--VerdeClaro);
+    font-weight: bold;
+}
+
+.metamask img{
+    width: 80%;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 @media (min-width: 430px) and (max-width: 800px){
-    .logo{
-        position: relative;
-        left: -40px;
-        max-height: 350%;
-        width: 90%;
+    .metamask h4{
+        font-size: 22px;
     }
-    .fa-cart-shopping{
-        font-size: 30px;
+    .metamask img{
+        width: 50%;        
     }
-    .fa-bars{
-        font-size: 30px;
-    }
-    .iconoFotoPerfil{
-        font-size: 100px;
-    }
-    .iconosCabecera{
-        position: absolute;
-        left: 75%;
-    }
-    .iconoCerrar{
-        left: 30%;
-    }
-    .inputs{
+    .textos{
         font-size: 16px;
     }
 }
 
 @media (min-width: 801px){
-    .inputs{
-        font-size: 18px;
-    }
-    .iconoFotoPerfil{
-        font-size: 100px;
-    }
-    .checksWrap{
-        font-size: 18px;
-    }
-    .botones{
-        font-size: 18px;
-    }
-}
 
+    .metamask h4{
+        font-size: 24px;
+    }
+    .metamask img{
+        width: 50%;        
+    }
+    .textos{
+        font-size: 18px;
+    }
+   
+}
