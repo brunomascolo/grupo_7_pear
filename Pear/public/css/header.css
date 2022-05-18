@@ -17,23 +17,37 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center; 
 }
-
-
 
 .botonCabecera{
     padding: 10px;
 }
 
-header{
+.header{
     height: 100px;
     display: flex;
     justify-content: space-between; 
     border-bottom: 1px solid gainsboro;
     background-color: white;
+    width: 100%;
     
 }
+
+.menu-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  .menu-principal a {
+    text-decoration: none;
+    color: #222222;
+    display: inline-block;
+    padding: 5px 0px;
+    font-size: 17px;
+  }
 
 .fa-bars{
     color: #B9F18C;
@@ -82,5 +96,21 @@ header{
         position: absolute;
         left: 80%;
     }
+
+    .menu-principal {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        margin: auto;
+        margin-top: 3%;
+      }
+    
+      .menu-principal ul {
+        display: flex;
+      }
+    
+      .menu-principal li {
+        margin: 0 5px;
+      }
     
 }
