@@ -19,7 +19,7 @@ body {
 }
 
 .titulos-principal {
-  font-weight: bold;
+  font-weight: 300;
   font-size: 20px;
   padding-left: 5%;
   border-bottom: 1px solid rgb(212, 212, 212);
@@ -106,13 +106,13 @@ body {
 }
 
 .subtitulo-pasos {
-  font-weight: bold;
+  font-weight: 300;
   font-size: 20px;
   color: var(--VerdeOscuro);
 }
 
 .texto-pasos {
-  font-weight: bold;
+  font-weight: 300;
   color: gray;
 }
 
@@ -160,7 +160,7 @@ body {
   }
 
   .titulos-principal {
-    font-weight: bold;
+    font-weight: 300;
     font-size: 2.5em;
   }
 
@@ -188,7 +188,7 @@ body {
 
   .pasos-home {
     width: 23%;
-    font-size: 2em;
+    font-size: 1.2em;
   }
 
   .subtitulo-pasos {

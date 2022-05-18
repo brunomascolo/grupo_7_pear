@@ -1,37 +1,37 @@
-:root{
-    --VerdeOscuro:#3AAFB9;
+:root {
+    --VerdeOscuro: #3AAFB9;
     --Celeste: #97C8EB;
     --VerdeClaro: #B9F18C;
 }
 
-*{
+* {
     font-family: 'Roboto', sans-serif;
 }
 
-.logo{
-    width: 70%;    
+
+.logo {
+    width: 70%;
 }
 
-.cabecera{
+.cabecera {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
-.botonCabecera{
+.botonCabecera {
     padding: 10px;
 }
 
-.header{
+.header {
     height: 100px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     border-bottom: 1px solid gainsboro;
     background-color: white;
     width: 100%;
-    
 }
 
 .menu-principal ul {
@@ -39,62 +39,80 @@
     margin: 0;
     padding: 0;
     display: none;
-  }
-  
-  .menu-principal a {
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px 0px;
-    font-size: 17px;
-  }
+    z-index: 1;
+}
 
-.fa-bars{
+.menu-principal a {
+    text-decoration: none;
+    color: var(--VerdeClaro);
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 400ms;
+}
+
+.menu-principal a:hover {
+    color: #3AAFB9;
+    font-size: 19px;
+}
+
+.fa-bars {
     color: #B9F18C;
     font-size: 20px;
 }
 
-.fa-cart-shopping{
-    color:#3AAFB9;
+.fa-cart-shopping {
+    color: #3AAFB9;
     font-size: 20px;
 
 }
 
-@media (min-width: 430px) and (max-width: 800px){
-    .logo{
+@media (min-width: 430px) and (max-width: 800px) {
+    .logo {
         position: relative;
         left: -40px;
         max-height: 350%;
         width: 90%;
     }
-    .fa-cart-shopping{
+
+    .fa-cart-shopping {
         font-size: 30px;
     }
-    .fa-bars{
+
+    .fa-bars {
         font-size: 30px;
     }
-    .iconosCabecera{
+
+    .iconosCabecera {
         position: absolute;
         left: 75%;
     }
 }
 
-@media (min-width: 801px){
-    .logo{
+@media (min-width: 801px) {
+    .logo {
         position: relative;
         left: -40px;
         max-height: 350%;
         width: 90%;
     }
-    .fa-cart-shopping{
+
+    .fa-cart-shopping {
         font-size: 30px;
     }
-    .fa-bars{
+
+    .fa-bars {
         font-size: 30px;
     }
-    .iconosCabecera{
+
+    .iconosCabecera {
         position: absolute;
         left: 80%;
+    }
+
+    .header {
+        border: 0px;
     }
 
     .menu-principal {
@@ -103,14 +121,21 @@
         width: 85%;
         margin: auto;
         margin-top: 3%;
-      }
-    
-      .menu-principal ul {
+        border-bottom: solid 1px gainsboro;
+
+    }
+
+    .menu-principal ul {
         display: flex;
-      }
-    
-      .menu-principal li {
+    }
+
+    .menu-principal li {
         margin: 0 5px;
-      }
-    
+    }
+
+    #burger{
+        display: none;
+    }
+
+
 }

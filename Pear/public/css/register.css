@@ -22,7 +22,7 @@ main{
 }
 
 .iconoCerrar{    
-    background-color: #3AAFB9;
+    background-color: #da6e6ee5;
     margin: 20px;
     border-radius: 8px;
     border: none;
@@ -36,7 +36,7 @@ main{
 
 .iconoFotoPerfil{
     font-size: 75px;
-    color: #3AAFB9;
+    color: gainsboro;
     margin-bottom: 20px;
 }
 
@@ -91,6 +91,7 @@ main form input{
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-weight: 300;
 }
 
 .botones{

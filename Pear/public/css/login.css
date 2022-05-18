@@ -22,7 +22,7 @@ main{
 }
 
 .iconoCerrar{    
-    background-color: #3AAFB9;
+    background-color: #da6e6ee5;
     margin: 20px;
     border-radius: 8px;
     border: none;
@@ -36,7 +36,7 @@ main{
 
 .iconoFotoPerfil{
     font-size: 75px;
-    color: #3AAFB9;
+    color: gainsboro;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -139,7 +139,7 @@ main button{
 
 .metamask h4{
     color: var(--VerdeClaro);
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .metamask img{
@@ -157,6 +157,9 @@ main button{
     .textos{
         font-size: 16px;
     }
+    .iconoFotoPerfil{
+        font-size: 100px;
+    }
 }
 
 @media (min-width: 801px){
@@ -169,6 +172,9 @@ main button{
     }
     .textos{
         font-size: 18px;
+    }
+    .iconoFotoPerfil{
+        font-size: 100px;
     }
    
 }
