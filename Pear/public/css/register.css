@@ -32,6 +32,7 @@ main{
     padding-bottom: 6px;
     position: relative;
     left: 40%;
+    transition: all 300ms;
 }
 
 .iconoFotoPerfil{
@@ -97,18 +98,18 @@ main form input{
 .botones{
     width: 40%;    
     text-align: center;
-    background-color: var(--VerdeOscuro);
+    background-color: var(--Celeste);
     border-radius: 4px;
     color: white;
-    border: blue;
+    border: none;
     font-size: 14px;
     transition: all 450ms;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 15px;
 } 
-.botones:hover{
-    background-color: #0022AA;
+.checksWrap button:hover{
+    background-color: var(--VerdeOscuro);
 }
 
 main button{
@@ -161,6 +162,9 @@ main button{
     }
     .botones{
         font-size: 18px;
+    }
+    .iconoCerrar:hover{
+        font-size: 20px;
     }
 }
 
