@@ -166,6 +166,10 @@ main button{
     .iconoFotoPerfil{
         font-size: 100px;
     }
+    .iconoCerrar{
+        left: 25%;
+    }
+
 }
 
 @media (min-width: 801px){
@@ -184,6 +188,17 @@ main button{
     }
     .iconoCerrar:hover{
         font-size: 20px;
+        background-color: #b04848e5;
     }
+    label{
+        width: 40%;
+    }
+    .botones{
+        width: 33%;
+    }
+    .iconoCerrar{
+        left: 25%;
+    }
+
    
 }

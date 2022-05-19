@@ -128,12 +128,7 @@ main button{
 }
 
 @media (min-width: 430px) and (max-width: 800px){
-    .logo{
-        position: relative;
-        left: -40px;
-        max-height: 350%;
-        width: 90%;
-    }
+    
     .fa-cart-shopping{
         font-size: 30px;
     }
@@ -148,7 +143,7 @@ main button{
         left: 75%;
     }
     .iconoCerrar{
-        left: 30%;
+        left: 25%;
     }
     .inputs{
         font-size: 16px;
@@ -167,9 +162,18 @@ main button{
     }
     .botones{
         font-size: 18px;
+        width: 33%;
     }
     .iconoCerrar:hover{
         font-size: 20px;
+        background-color: #b04848e5;
     }
+    label{
+        width: 40%;
+    }
+    .iconoCerrar{
+        left: 25%;
+    }
+
 }
 
