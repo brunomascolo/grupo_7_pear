@@ -26,7 +26,13 @@ app.get('/login', (req,res) => {
     res.sendFile(viewsPath);
 })
 
+app.get("/detail", (req, res) => {
+  let viewsPath = path.resolve(__dirname, "./views/details.html");
+  res.sendFile(viewsPath);
+});
+
 app.get('/shopping-cart', (req,res) => {
     let viewsPath = path.resolve(__dirname, "./views/shoppingcart.html");
     res.sendFile(viewsPath);
+   
 })

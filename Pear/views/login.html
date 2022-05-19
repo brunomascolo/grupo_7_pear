@@ -11,8 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
-        <link rel="stylesheet" href="/css/register.css">
-        <title>Registrarme</title>
+        <link rel="stylesheet" href="/css/login.css">
+        <title>Iniciar Sesion</title>
         <link rel="shortcut icon" href="/img/p2.png">
     </head>
 <body>
@@ -48,33 +48,23 @@
         </div>
         <form action="/" method="POST">
             <div class="formulario">
-                <label for="register">
-                    <input class="inputs" type="text" name="register" id="name" placeholder="   Nombre Completo" minlength="5" required>
+                <label for="login">
+                    <input type="text" id="username" name="login" placeholder="  Nombre de usuario" class="textos" minlength="3">
                 </label>
-                <label for="register">
-                    <input class="inputs" type="email" name="register" id="email" placeholder="   Email" minlength="5" required>
-                </label>
-                <label for="register">
-                    <input class="inputs" type="password" name="register" id="password" placeholder="   Contraseña" minlength="5" required>
-                </label>   
-                <label for="register">
-                    <input class="inputs" type="password" name="register" id="repeatPassword" placeholder="   Repetir Contraseña" minlength="5" required>
-                </label>             
+                <label for="login">
+                    <input type="password" name="login" id="password" placeholder="  Contraseña" class="textos" minlength="8">
+                </label>                  
             </div>
-            <div class="checksWrap">
-                <label for="register">
-                    <input type="checkbox" name="register" id="terminos" value="acepto" class="checks">
-                    <a href="">He leido y acepto los terminos y condiciones</a>
-                </label>
+            <div class="botonIniciarSesion">
+                <button type="submit" class="botones" onsubmit="location.href='/'">Iniciar Sesión</button>  
             </div>
-            <div class="checksWrap">
-                <label for="register">
-                    <input type="checkbox" name="register" id="mayor" value="mayor" class="checks">
-                    Soy mayor de 18 años
-                </label>                
+            <div class="links">
+                <a href="">¿No tenés cuenta? Registrate</a>
+                <a href="">¿Olvidaste tu contraseña?</a>
             </div>
-            <div class="checksWrap">
-                <button type="submit" class="botones" onclick="location.href='/'">Registrarme</button>
+            <div class="metamask">
+                <h4>También podes ingresar con:</h4>
+                <img src="img/MetaMask.png" alt="logo_metamask">
             </div>
         </form>
 
