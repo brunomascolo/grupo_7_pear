@@ -1,0 +1,19 @@
+.fa-arrow-left{
+    color:#3AAFB9;
+    font-size: 20px;
+}
+
+.tituloyreturn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.detallecompra{
+    margin: auto;
+    width: 350px;
+}
+.imagendetalle{
+    width: 350px;
+    margin: auto;
+}
