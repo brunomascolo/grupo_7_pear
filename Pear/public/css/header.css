@@ -8,16 +8,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 .logo {
-    width: 70%;
+    width: 50%;
 }
 
 .cabecera {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -69,11 +68,14 @@
 }
 
 @media (min-width: 430px) and (max-width: 800px) {
+    .cabecera{
+        justify-content: space-between;
+    }
     .logo {
         position: relative;
-        left: -40px;
         max-height: 350%;
-        width: 90%;
+        width: 40%;
+        left: 10%;
     }
 
     .fa-cart-shopping {
@@ -91,11 +93,14 @@
 }
 
 @media (min-width: 801px) {
+    .header{
+        padding-top: 2%;
+    }
     .logo {
         position: relative;
-        left: -40px;
+        /* left: -40px; */
         max-height: 350%;
-        width: 90%;
+        width: 49%;
     }
 
     .fa-cart-shopping {
@@ -121,7 +126,9 @@
         width: 85%;
         margin: auto;
         margin-top: 3%;
-        border-bottom: solid 1px gainsboro;
+        border-bottom: solid 1px gainsboro;        
+        position: sticky;
+        top: 0;
 
     }
 
