@@ -34,5 +34,5 @@ app.get("/detail", (req, res) => {
 app.get('/shopping-cart', (req,res) => {
     let viewsPath = path.resolve(__dirname, "./views/shoppingcart.html");
     res.sendFile(viewsPath);
+   
 })
-

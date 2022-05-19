@@ -1,18 +1,26 @@
+:root {
+  --VerdeOscuro: #3AAFB9;
+  --Celeste: #97C8EB;
+  --VerdeClaro: #B9F18C;
+}
+
 body {
   width: 100%;
   margin: 0;
 }
 
+/* CSS Mas visitados*/
 .home-general {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.mas-visitados {
-  font-weight: bold;
+.titulos-principal {
+  font-weight: 300;
   font-size: 20px;
-  padding-left: 20px padding
+  padding-left: 5%;
+  border-bottom: 1px solid rgb(212, 212, 212);
 }
 
 .slider-principal {
@@ -36,7 +44,160 @@ body {
   font-weight: bold;
 }
 
-.slider-principal:hover .name-section {
-  color: black;
-  text-shadow: 5px 5px 10px #000000;
+/* CSS Categorias */
+.categorias-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.icon-home {
+  width: 40%;
+  text-align: center;
+  padding: 10px 5px 0px 5px;
+  /* border: 1px rgb(173, 173, 173) solid; */
+  margin-bottom: 5px;
+}
+
+.iconos-home {
+  color: var(--VerdeOscuro);
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.nombre-categoria {
+  padding-top: 10px;
+  font-size: 1em;
+  color: var(--VerdeOscuro);
+  margin: 0;
+}
+
+/* CSS Partners */
+.partners-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.partner-home img {
+  width: 90%;
+  padding: 5%;
+  border: gray 1px solid;
+  border-radius: 10px;
+}
+
+/* CSS Crear y vender NFT */
+.opciones-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.pasos-home {
+  text-align: center;
+  padding: 10px;
+}
+
+.subtitulo-pasos {
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--VerdeOscuro);
+}
+
+.texto-pasos {
+  font-weight: 300;
+  color: gray;
+}
+
+.iconos {
+  color: var(--VerdeOscuro);
+  font-size: 40px;
+}
+
+@media (min-width: 430px) and (max-width: 800px) {
+  .slider-principal {
+    width: 30%;
+  }
+
+  .home-general {
+    width: 70%;
+    margin: auto;
+  }
+
+  .categorias-home {
+    margin: auto;
+  }
+
+  .partners-home {
+    width: 50%;
+    margin: auto;
+  }
+
+  .opciones-home {
+    width: 75%;
+  }
+
+  .pasos-home {
+    width: 80%;
+  }
+  .icon-home{
+    width: 25%;
+  }
+}
+
+@media (min-width: 801px) {
+  .slider-principal {
+    width: 30%;
+  }
+
+  .main {
+    width: 80%;
+    margin: auto;
+  }
+
+  .titulos-principal {
+    font-weight: 300;
+    font-size: 2.5em;
+  }
+
+  .categorias-home {
+    margin: auto;
+    flex-wrap: nowrap;
+  }
+
+  .partners-home {
+    flex-wrap: nowrap;
+    width: 50%;
+    margin: auto;
+  }
+  .partners-home img {
+    border: none;
+  }
+
+  .opciones-home {
+    width: 50%;
+  }
+
+  .iconos {
+    font-size: 2em;
+  }
+
+  .opciones-home {
+    width: 100%;
+  }
+
+  .pasos-home {
+    width: 23%;
+    font-size: 1.2em;
+  }
+
+  .subtitulo-pasos {
+    font-size: 1em;
+  }
 }
