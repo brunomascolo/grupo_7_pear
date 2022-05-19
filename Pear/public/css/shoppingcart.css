@@ -31,15 +31,13 @@
     margin: 2px;
 }
 
-.logo{
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 50%;
+.tituloProducto{
+    color: #3AAFB9;
+    font-size: 1.5em;
 }
 
 .seccionProductos{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -92,17 +90,17 @@
 
 .procederPago{
     display: flex;
-    justify-content: flex-end;  
+    justify-content: center;  
     flex-direction: row;
     margin-right: 2%;
 }
 
-.contenedorBotonPago{
+/* .contenedorBotonPago{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right:2%;
-}
+} */
 
 .linkSeguirComprando{
     font-size: 0.85em;
@@ -114,10 +112,10 @@
     background-color: #B9F18C;
     color:#3AAFB9;
     font-size: 15px;
-    height: 25px;
     border-radius: 5px;
     border: none;
     font-weight: bold;
+    padding: 10px;
 }
 
 .precioProdTotal{
@@ -153,6 +151,18 @@
     
 }
 
+.botonesPago{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonesPago button{
+    margin-bottom: 20px;
+}
+
+
 @media (min-width: 430px){
     .imgProductos{ max-width: 500px ;
     }
@@ -163,5 +173,16 @@
 }
 
 @media (min-width: 801px){
+    .precios{
+        font-size: 18px;
+    }
+    .precioProdTotal{
+        font-size: 20px;
+    }
+    .botonPago{
+        font-size: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
 }

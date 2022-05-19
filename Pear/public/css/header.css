@@ -97,8 +97,7 @@
     }
     .logo {
         position: relative;
-        /* left: -40px; */
-        max-height: 350%;
+        left: -50px;        
         width: 49%;
     }
 
@@ -141,6 +140,10 @@
 
     #burger{
         display: none;
+    }
+
+    .menu-principal a{
+        font-size: 22px;
     }
 
 

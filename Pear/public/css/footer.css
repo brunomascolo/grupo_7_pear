@@ -67,4 +67,32 @@ footer{
 
 }
 
+@media (min-width: 430px) and (max-width: 800px) {
+    
+}
+
+@media(min-width: 801px){
+    .titulo{
+        font-size: 40px;
+    }
+
+    .secciones input{
+        width: 70%;
+        height: 50px;
+    }
+    .botonSuscribirme{
+        height: 50px;
+        font-weight: bold;
+    }
+    .botonSuscribirme:hover{
+        background-color: wheat;
+        
+    }
+
+    .secciones i{
+        font-size: 50px;
+        margin: 30px;
+    }
+}
+
 

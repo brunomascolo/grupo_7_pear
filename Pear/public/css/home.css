@@ -60,12 +60,14 @@ body {
   padding: 10px 5px 0px 5px;
   /* border: 1px rgb(173, 173, 173) solid; */
   margin-bottom: 5px;
+  transition: all 100ms;
 }
 
 .iconos-home {
   color: var(--VerdeOscuro);
   font-size: 2.5em;
   text-align: center;
+  transition: all 300ms;
 }
 
 .nombre-categoria {
@@ -155,6 +157,11 @@ body {
 @media (min-width: 801px) {
   .slider-principal {
     width: 30%;
+    transition: all 300ms;
+    
+  }
+  .slider-principal img:hover{
+    box-shadow: 0px 0px 10px gray;
   }
 
   .main {
@@ -195,9 +202,38 @@ body {
   .pasos-home {
     width: 23%;
     font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .pasos-home:hover{
+    box-shadow: 0px 0px 10px gray;
   }
 
   .subtitulo-pasos {
     font-size: 1em;
   }
+  
+  .icon-home{
+    font-size: 1.5em;
+  }
+
+  .icon-home:hover{
+    
+    font-size: 2em;
+  } 
+
+  .icon-home:hover i{    
+    color: #B9F18C;
+  } 
+  .icon-home:hover p{    
+    color: #B9F18C;
+  } 
+
+  .iconos{
+    font-size: 3em;
+  }
+
+  .subtitulo-pasos{
+    font-size: 1.5em;
+  }
+  
 }
