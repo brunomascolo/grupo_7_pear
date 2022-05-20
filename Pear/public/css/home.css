@@ -169,6 +169,10 @@ body {
     margin: auto;
   }
 
+  .name-section {
+    bottom: 5%;
+  }
+
   .titulos-principal {
     font-size: 2em;
   }
@@ -200,7 +204,7 @@ body {
   }
 
   .pasos-home {
-    width: 23%;
+    width: 20%;
     font-size: 1.2em;
     margin-bottom: 10px;
   }

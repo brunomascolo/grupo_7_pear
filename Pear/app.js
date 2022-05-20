@@ -12,8 +12,12 @@ app.listen(3000, () =>
 console.log("Servidor corriendo en el puerto http://localhost:3000"));
 
 app.get('/', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./views/home.html");
+    let viewsPath = path.resolve(__dirname, "./views/index.html");
     res.sendFile(viewsPath);
+})
+
+app.post("/", function(req, res){
+    res.sendFile(path.resolve(__dirname,"./views/index.html"))
 })
 
 app.get('/register', (req,res) => {
