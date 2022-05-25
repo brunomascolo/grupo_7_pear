@@ -20,21 +20,22 @@ No apurarse en la codificacion, ir linea a linea verificando el funcionamiento. 
 Continuar sin individualizar el trabajo, para poder abarcar todos los temas/problemas de forma conjunta. 
 
 
+
 <h2>Retrospectiva Sprint 3</h2>
-<h4>Que hicimos bien en el sprint anterior?</h4>
+<h4>Que hay que comenzar a hacer?</h4>
+Informar avances de cada integrante por los canales de comunicaciones que tenemos disponible, para que el resto este en conocimiento de lo que falta para finalizar el sprint.
 
+<h4>Que hay que hacer mas?</h4>
+Lograr reunir al equipo mas oportunidades para conocer el avance del resto, previo a la entrega del sprint. Organizar de mejor forma las tareas, ya que se comienzan a separar en distintas areas (Backend/Frontend) y la carga de trabajo es distinta.
 
+<h4>Que hay que continuar haciendo?</h4>
+Seguir trabajando en equipo para lograr los objetivos de cada sprint, y replicar lo del sprint 2, donde se logro todo.
 
-<h4>Que hicimos mal en el sprint anterior?</h4>
+<h4>Que hay que hacer menos?</h4>
+Subestimar los sprints y relajarse. 
 
-
-
-<h4>Que deberiamos empezar a hacer?</h4>
-
-
-
-<h4>Que deberiamos dejar de hacer?</h4>
-
+<h4>Que hay que dejar de hacer?</h4>
+No apurarse en la codificacion, ir linea a linea verificando el funcionamiento. (Para evitar conflictos con git)
 
 
 
