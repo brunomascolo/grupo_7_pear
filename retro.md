@@ -1,4 +1,4 @@
-<h2>Retrospectiva</h2>
+<h2>Retrospectiva Sprint 2</h2>
 <h4>Que hay que comenzar a hacer?</h4>
 Debemos comenzar a dividir el trabajo, y aprovechar la filosofia de la metodologia Scrum. Esto nos ayudara a ser mas eficientes en las reuniones de revision de avances, y poder despejar las dudas que tengamos mas rapidamente. Comenzar a alternarse como Scrum Master, para que todos podamos experimentar el rol. 
 
@@ -18,5 +18,24 @@ No apurarse en la codificacion, ir linea a linea verificando el funcionamiento. 
 
 <h4>Que debemos continuar evitando?</h4>
 Continuar sin individualizar el trabajo, para poder abarcar todos los temas/problemas de forma conjunta. 
+
+
+<h2>Retrospectiva Sprint 3</h2>
+<h4>Que hicimos bien en el sprint anterior?</h4>
+
+
+
+<h4>Que hicimos mal en el sprint anterior?</h4>
+
+
+
+<h4>Que deberiamos empezar a hacer?</h4>
+
+
+
+<h4>Que deberiamos dejar de hacer?</h4>
+
+
+
 
 
