@@ -12,31 +12,31 @@ app.listen(3000, () =>
 console.log("Servidor corriendo en el puerto http://localhost:3000"));
 
 app.get('/', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./views/index.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/index.html");
     res.sendFile(viewsPath);
 })
 
 app.post("/", function(req, res){
-    res.sendFile(path.resolve(__dirname,"./views/index.html"))
+    res.sendFile(path.resolve(__dirname,"./src/views/index.html"))
 })
 
 app.get('/register', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./views/register.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/register.html");
     res.sendFile(viewsPath);
 })
 
 app.get('/login', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./views/login.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/login.html");
     res.sendFile(viewsPath);
 })
 
 app.get("/detail", (req, res) => {
-  let viewsPath = path.resolve(__dirname, "./views/details.html");
+  let viewsPath = path.resolve(__dirname, "./src/views/details.html");
   res.sendFile(viewsPath);
 });
 
 app.get('/shopping-cart', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./views/shoppingcart.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/shoppingcart.html");
     res.sendFile(viewsPath);
    
 })
