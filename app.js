@@ -21,22 +21,22 @@ app.post("/", function(req, res){
 })
 
 app.get('/register', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./src/views/register.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/users/register.html");
     res.sendFile(viewsPath);
 })
 
 app.get('/login', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./src/views/login.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/users/login.html");
     res.sendFile(viewsPath);
 })
 
 app.get("/detail", (req, res) => {
-  let viewsPath = path.resolve(__dirname, "./src/views/details.html");
+  let viewsPath = path.resolve(__dirname, "./src/views/products/details.html");
   res.sendFile(viewsPath);
 });
 
 app.get('/shopping-cart', (req,res) => {
-    let viewsPath = path.resolve(__dirname, "./src/views/shoppingcart.html");
+    let viewsPath = path.resolve(__dirname, "./src/views/users/shoppingcart.html");
     res.sendFile(viewsPath);
    
 })
