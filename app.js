@@ -39,4 +39,9 @@ app.get('/shopping-cart', (req,res) => {
     let viewsPath = path.resolve(__dirname, "./src/views/users/shoppingcart.html");
     res.sendFile(viewsPath);
    
-})
+});
+
+app.get("/create", (req, res) => {
+    let viewsPath = path.resolve(__dirname, "./src/views/products/create.html");
+    res.sendFile(viewsPath);
+  });
