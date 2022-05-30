@@ -45,18 +45,12 @@
         <section class="main">
             <p class="titulos-principal">Más Visitados</p>
             <div class="home-general">
+                <% for( let i = 0; i < nft.length; i++ ) {  %>
                 <div class="slider-principal">
-                    <a href="/detail"><img src="/img/slider1.jpg" alt="slider"></a>
-                    <p class="name-section">Nombre</p>
-                </div>
-                <div class="slider-principal">
-                    <img src="/img/slider2.jpg" alt="slider">
-                    <p class="name-section">Nombre</p>
-                </div>
-                <div class="slider-principal">
-                    <img src="/img/slider3.jpg" alt="slider">
-                    <p class="name-section">Nombre</p>
-                </div>
+                    <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider"></a>
+                    <p class="name-section"><%= nft[i].name %></p>
+                </div>                
+                <% } %>
             </div>
             <p class="titulos-principal">Categorias NFT</p>
             <div class="categorias-home">

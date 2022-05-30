@@ -45,25 +45,25 @@
     </header>
     <main>
        <div class="tituloyreturn">
-           <h1>ONE APE#1901</h1>
+           <h1><%= nftDetail.name %> </h1>
            <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
        </div>
        <div class="detallecompra">
-        <img class="imagendetalle" src="/img/slider1.jpg" alt="slider">
+        <img class="imagendetalle" src="<%= nftDetail.img %> " alt="slider">
        </div>
        <div class="valorcompra">
            <p>Precio:</p>
-           <p>~0.098 ETH</p>
-           <p>(299.55 USD)</p>
+           <p>~<%= nftDetail.priceEth %>  ETH</p>
+           <p>(<%= nftDetail.priceUSD %>  USD)</p>
            <a href="/cart"><i class="fas fa-shopping-cart fa-bars botoncompra2"></i></a>
        </div>
        <button class="botoncomprar">Comprar Ahora</button>
        <div class="datosvendedor">
            <h2>Vendedor</h2>
            <div class="ranknft">
-           <p>One APE</p>
+           <p><%= nftDetail.author %> </p>
            <i class="fa-solid fa-star"></i>
-           <p>4.1/5</p>
+           <p><%= nftDetail.rating %> </p>
            <i class="fa-solid fa-images"></i>
            </div>
         </div>
@@ -71,7 +71,7 @@
        
        <div class="descripcionnft">
            <h2>Descripcion:</h2>
-           <p>Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.</p>
+           <p><%= nftDetail.description %> </p>
        </div>
 
     </main>
