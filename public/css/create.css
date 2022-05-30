@@ -1,0 +1,25 @@
+:root {
+    --VerdeOscuro: #3AAFB9;
+    --Celeste: #97C8EB;
+    --VerdeClaro: #B9F18C;
+  }
+
+body {
+    width: 100%;
+    margin: 0;
+  }
+
+.container-principal{
+    margin: auto;
+    width: 90%;
+    box-shadow: -1px 23px 50px -18px #000000;
+
+}
+
+.container-principal p{
+    font-size: 1em;
+    color: var(--VerdeOscuro);
+}
+.formulario{
+    width: 100%;
+}

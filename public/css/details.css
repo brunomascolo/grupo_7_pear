@@ -3,6 +3,11 @@
     font-size: 20px;
 }
 
+body {
+    width: 100%;
+    margin: 0;
+  }
+
 .tituloyreturn{
     display: flex;
     justify-content: space-around;
