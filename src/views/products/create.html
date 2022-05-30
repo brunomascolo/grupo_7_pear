@@ -46,15 +46,30 @@
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
        <div class="container-principal">
            <p>Publica tu NFT</p>
-           <form action="" class="formulario">
-            <label>Nombre</label>
-            <input type="text">
-            <label>Descripcion</label>
-            <input type="text">
-            <label>URL ITFS</label>
-            <input type="text">
-            <label>Precio</label>
-            <input type="text">
+           <form action="" method="POST" enctype="multipart/form-data">
+            <label class="etiquetas">Nombre(*)</label>
+            <input type="text" placeholder="Nombre" class="textField">
+            <label class="etiquetas">Categoria(*)</label>
+            <select class="textField">
+                <option value="arte">Arte</option>
+                <option value="musica">Musica</option>
+                <option value="fotografia">Fotografia</option>
+                <option value="videojuegos">Videojuegos</option>
+                <option value="cine">Cine</option>
+                <option value="deporte">Deportes</option>
+            </select>
+            <label class="etiquetas">Descripcion(*)</label>
+            <input type="text" class="textField" placeholder="Ingresa una breve descripción del NFT que venderas">
+            <label class="etiquetas">URL ITFS (Recomendable)</label>
+            <input type="text" class="textField" placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
+            <label class="etiquetas">o subé tu imagen</label>
+            <input type="file" class="textField">
+            <label class="etiquetas">Precio(*) ETH</label>
+            <input type="text" class="textField" placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
+            <div class="botonCrear">
+                <button type="submit" class="botones">Borrar</button>  
+                <button type="submit" class="botones">Publicar</button>  
+            </div>
            </form>
        </div>
     </main>

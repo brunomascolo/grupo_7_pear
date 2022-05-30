@@ -1,25 +1,52 @@
 :root {
-    --VerdeOscuro: #3AAFB9;
-    --Celeste: #97C8EB;
-    --VerdeClaro: #B9F18C;
-  }
+  --VerdeOscuro: #3AAFB9;
+  --Celeste: #97C8EB;
+  --VerdeClaro: #B9F18C;
+}
 
 body {
-    width: 100%;
-    margin: 0;
-  }
+  width: 100%;
+  margin: 0;
+}
 
-.container-principal{
-    margin: auto;
-    width: 90%;
-    box-shadow: -1px 23px 50px -18px #000000;
+.container-principal {
+  margin: auto;
+  width: 90%;
+  margin-bottom: 30px;
+  /* box-shadow: -1px 23px 50px -18px #000000; */
 
 }
 
-.container-principal p{
-    font-size: 1em;
-    color: var(--VerdeOscuro);
+.container-principal p {
+  font-size: 1em;
+  color: var(--VerdeOscuro);
 }
-.formulario{
-    width: 100%;
+
+.etiquetas {
+  font-size: 1.2em;
+
+}
+
+.textField {
+  font-size: 1.2em;
+  width: 100%;
+  padding: 3px 3px;
+  border-radius: 5px;
+  border: 1px solid gray
+}
+
+.botonCrear{
+  text-align: center;
+}
+
+.botones{
+background-color: var(--Celeste);
+border-radius: 4px;
+color: white;
+border: blue;
+font-size: 1.2em;
+font-weight: bold;
+margin-bottom: 10px;
+margin-top: 15px;
+padding: 5px;
 }
