@@ -11,7 +11,9 @@
 <h4>Que se va hacer hoy</h4>
 -Corregimos los errores encontrados.
 -Asignamos tareas por integrantes:
-Bruno  // Implementar el motor de templates
-Juan Carlos // Separa las vistas en carpetas
-Kevin // Creación y edición
-Cayetano // Separar componentes
+<ul>
+<li>Bruno  // Implementar el motor de templates</li>
+<li>Juan Carlos // Separa las vistas en carpetas</li>
+<li>Kevin // Creación y edición</li>
+<li>Cayetano // Separar componentes</li>
+</ul>
