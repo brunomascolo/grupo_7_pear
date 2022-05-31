@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5e4bcf93eb.js" crossorigin="anonymous"></script>
-     <script src="https://kit.fontawesome.com/718cbc015b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/718cbc015b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/create.css">
     <link rel="stylesheet" href="/css/footer.css">
@@ -44,34 +45,49 @@
     </header>
     <main>
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
-       <div class="container-principal">
-           <p>Publica tu NFT</p>
-           <form action="" method="POST" enctype="multipart/form-data">
-            <label class="etiquetas">Nombre(*)</label>
-            <input type="text" placeholder="Nombre" class="textField">
-            <label class="etiquetas">Categoria(*)</label>
-            <select class="textField">
-                <option value="arte">Arte</option>
-                <option value="musica">Musica</option>
-                <option value="fotografia">Fotografia</option>
-                <option value="videojuegos">Videojuegos</option>
-                <option value="cine">Cine</option>
-                <option value="deporte">Deportes</option>
-            </select>
-            <label class="etiquetas">Descripcion(*)</label>
-            <input type="text" class="textField" placeholder="Ingresa una breve descripción del NFT que venderas">
-            <label class="etiquetas">URL ITFS (Recomendable)</label>
-            <input type="text" class="textField" placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
-            <label class="etiquetas">o subé tu imagen</label>
-            <input type="file" class="textField">
-            <label class="etiquetas">Precio(*) ETH</label>
-            <input type="text" class="textField" placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
-            <div class="botonCrear">
-                <button type="submit" class="botones">Borrar</button>  
-                <button type="submit" class="botones">Publicar</button>  
-            </div>
-           </form>
-       </div>
+        <div class="container-principal">
+            <p>Publica tu NFT</p>
+            <form action="" method="POST" enctype="multipart/form-data" class="formulario">
+                <div class="fieldForm">
+                    <label class="etiquetas">Nombre(*)</label>
+                    <input type="text" placeholder="Nombre" class="textField">
+                </div>
+                <div class="fieldForm">
+                    <label class="etiquetas">Categoria(*)</label>
+                    <select class="textField">
+                        <option value="arte">Arte</option>
+                        <option value="musica">Musica</option>
+                        <option value="fotografia">Fotografia</option>
+                        <option value="videojuegos">Videojuegos</option>
+                        <option value="cine">Cine</option>
+                        <option value="deporte">Deportes</option>
+                    </select>
+                </div>
+                <div class="fieldForm">
+                    <label class="etiquetas">Descripcion(*)</label>
+                    <input type="text" class="textField"
+                        placeholder="Ingresa una breve descripción del NFT que venderas">
+                </div>
+                <div class="fieldForm">
+                    <label class="etiquetas">URL ITFS</label>
+                    <input type="text" class="textField"
+                        placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
+                </div>
+                <div class="fieldForm">
+                    <label class="etiquetas">o subé tu imagen</label>
+                    <input type="file" class="textField">
+                </div>
+                <div class="fieldForm">
+                    <label class="etiquetas">Precio(*) ETH</label>
+                    <input type="text" class="textField"
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
+                </div>
+                <div class="botonCrear">
+                    <button type="reset" class="botones">Borrar</button>
+                    <button type="submit" class="botones">Publicar</button>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
         <div class="secciones">

@@ -35,18 +35,72 @@ body {
   border: 1px solid gray
 }
 
-.botonCrear{
+.botonCrear {
   text-align: center;
 }
 
-.botones{
-background-color: var(--Celeste);
-border-radius: 4px;
-color: white;
-border: blue;
-font-size: 1.2em;
-font-weight: bold;
-margin-bottom: 10px;
-margin-top: 15px;
-padding: 5px;
+.botones {
+  background-color: var(--Celeste);
+  border-radius: 4px;
+  color: white;
+  border: blue;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+@media (min-width: 430px) and (max-width: 800px) {
+  .formulario {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fieldForm {
+    width: 50%;
+  }
+
+  .textField {
+    width: 90%;
+  }
+
+  .botonCrear {
+    margin: auto;
+  }
+
+  .container-principal p {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 801px) {
+  .formulario {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fieldForm {
+    width: 50%;
+  }
+
+  .textField {
+    width: 90%;
+  }
+
+  .container-principal {
+    width: 60%;
+    -webkit-box-shadow: 0px 3px 47px 0px rgba(219, 219, 219, 1);
+    -moz-box-shadow: 0px 3px 47px 0px rgba(219, 219, 219, 1);
+    box-shadow: 0px 3px 47px 0px rgba(219, 219, 219, 1);
+    padding: 20px;
+  }
+
+  .botonCrear {
+    margin: auto;
+  }
+
+  .container-principal p {
+    font-size: 2em;
+  }
 }
