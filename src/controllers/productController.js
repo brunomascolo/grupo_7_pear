@@ -10,7 +10,7 @@ const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
 
 const controladorProduct = {
     create: (req,res)=>{
-        res.render('products/create')
+        res.render('products/create.ejs')
     }, 
     detail: (req,res)=>{
         let nftDetail = nft.find(nft => req.params.id == nft.id)
