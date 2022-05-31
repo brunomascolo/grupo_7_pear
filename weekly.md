@@ -9,8 +9,8 @@
 
 
 <h4>Que se va hacer hoy</h4>
--Corregimos los errores encontrados.
--Asignamos tareas por integrantes:
+<li>Corregimos los errores encontrados.</li>
+<li>Asignamos tareas por integrantes:</li>
 <ul>
 <li>Bruno  // Implementar el motor de templates</li>
 <li>Juan Carlos // Separa las vistas en carpetas</li>
