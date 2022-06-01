@@ -1,7 +1,6 @@
 const path = require('path');
-const publicPath = path.resolve(__dirname, "./public")
-const express = require ('express');
-const app = express();
+const fs = require('fs');
+
 
 const controladorUser = {
     login: (req,res) => {

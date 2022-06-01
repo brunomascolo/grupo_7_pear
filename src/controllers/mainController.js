@@ -1,10 +1,6 @@
 const path = require('path');
-const publicPath = path.resolve(__dirname, "./public")
-const express = require ('express');
-const app = express();
 const fs = require('fs');
 
-app.use(express.static(publicPath))
 const nftFilePath = path.resolve(__dirname, '../data/nft.json');
 const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
 

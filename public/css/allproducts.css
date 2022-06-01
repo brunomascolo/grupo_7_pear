@@ -1,0 +1,78 @@
+:root {
+    --VerdeOscuro: #3AAFB9;
+    --Celeste: #97C8EB;
+    --VerdeClaro: #B9F18C;
+}
+
+.container-principal {
+    width: 100%;
+    margin: auto;
+
+}
+
+.productosDetail {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 90%;
+    border-bottom: 1px gray solid;
+
+}
+
+.imagenDetail {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 200px;
+    border-radius: 10%;
+}
+.name-nft{
+    font-weight: bold;
+}
+.titulo{
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--VerdeOscuro);
+}
+.boton-modificar{
+    background-color: var(--VerdeOscuro);
+    border: none;
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.boton-modificar a {
+    text-decoration: none;
+    color: white;
+}
+.li-boton {
+    list-style:none;
+}
+
+@media (min-width: 430px) and (max-width: 800px) {
+    .productosDetail{
+        width: 70%;
+    }
+    .titulo{
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--VerdeOscuro);
+        text-align: center;
+    }
+}
+
+@media (min-width: 801px) {
+    .productosDetail{
+        width: 70%;
+    }
+    .titulo{
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--VerdeOscuro);
+        text-align: center;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs", {titulo: "Pear, sitio de compra y venda de NFT" , cssSheet: "allproducts" }) %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
+                <div class="container-principal">
+                    <p class="titulo">Listado de NFT publicados</p>
+                    <!-- Mostrar los productos VISITADOS dinámicamente (usando un for o foreach) -->
+                    <% for (let i=0; i < nft.length; i++) { %>
+                        <div class="productosDetail">
+                            <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider" class="imagenDetail"></a>
+                            <ul class="info-product">
+                                <li>
+                                    <a href="/products/<%= nft[i].id %>">
+                                        <p class="name-nft">
+                                            <%= nft[i].name %>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <p>Creador: <%= nft[i].author %>
+                                    </p> <!-- Podriamos crear la vista de autores -->
+                                </li>
+                                <li>
+                                    <p>Valor: $<%= nft[i].priceUSD %>
+                                    </p> <!--  Agregar valor en ETH -->
+                                </li>
+                                <li class="li-boton">
+                                    <button class="boton-modificar"><a href="/products/<%= nft[i].id%>/edit">Modificar</a></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <% } %>
+                </div>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
+</html>

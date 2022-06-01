@@ -1,8 +1,10 @@
-const mainController = require ('../controllers/mainController')
 const express = require ('express');
-const routerMain = express.Router();
+const router = express.Router();
 
-routerMain.get('/', mainController.index);
-routerMain.get('/cart',mainController.cart);
+const mainController = require ('../controllers/mainController')
 
-module.exports = routerMain;
+router.post('/', mainController.index);
+router.get('/', mainController.index);
+router.get('/cart',mainController.cart);
+
+module.exports = router;

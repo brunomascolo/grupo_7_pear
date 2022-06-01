@@ -8,11 +8,11 @@
     <main>
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
-            <p>Publica tu NFT</p>
+            <p>Edita tu NFT</p>
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" placeholder="Nombre" class="textField">
+                    <input type="text" placeholder="Nombre" class="textField" name="nombre" value="<%= productToEdit.name %>" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
@@ -29,21 +29,21 @@
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
                     <input type="text" class="textField"
-                        placeholder="Ingresa una breve descripción del NFT que venderas">
+                        placeholder="Ingresa una breve descripción del NFT que venderas" name="descripcion" value="<%= productToEdit.description %>" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">URL ITFS</label>
                     <input type="text" class="textField"
-                        placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
+                        placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá" name="urlifts" value="<%= productToEdit.img %>"> 
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" class="textField">
+                    <input type="file" class="textField"  name="imgNft">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
                     <input type="text" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras"  name="precio" value="<%= productToEdit.priceEth %>" required>
                 </div>
                 <div class="botonCrear">
                     <button type="reset" class="botones">Borrar</button>
