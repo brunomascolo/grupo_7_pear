@@ -58,5 +58,25 @@
         "rating":"4.2/5",
         "description":"Rumble Kong League is a competitive 3 vs 3 basketball experience, combining play-to-earn functionality with NFT Collection mechanics, enabling users to compete in engaging ways through NFTs.",
         "img":"/img/slider6.png"
+    },
+    {
+        "id":5,
+        "name":"Ghost #1125",
+        "author": "One APE",
+        "priceEth":0.085,
+        "priceUSD":163.39,
+        "rating":"4.3/5",
+        "description":"The black portal suddenly opened and 10,000 ghosts came over from the other dimension. Let's call out the ghosts, hear their voices, and revive the memories. Turn on your camera and be possessed by the ghost. https://ghostsproject.com/",
+        "img":"/img/slider5.png"
+    },
+    {
+        "id":6,
+        "name":"Kong #3295",
+        "author": "AlgoTwo",
+        "priceEth":0.85,
+        "priceUSD":1582.83,
+        "rating":"4.2/5",
+        "description":"Rumble Kong League is a competitive 3 vs 3 basketball experience, combining play-to-earn functionality with NFT Collection mechanics, enabling users to compete in engaging ways through NFTs.",
+        "img":"/img/slider6.png"
     }
 ]

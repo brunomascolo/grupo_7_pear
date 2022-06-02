@@ -59,6 +59,7 @@ body {
 
   .fieldForm {
     width: 50%;
+    padding-bottom: 20px;
   }
 
   .textField {
@@ -83,6 +84,7 @@ body {
 
   .fieldForm {
     width: 50%;
+    padding-bottom: 20px;
   }
 
   .etiquetas {
@@ -92,13 +94,13 @@ body {
   .textField {
     width: 90%;
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1em;
     border-radius: 10px;
     border-color: gray;
   }
 
   .container-principal {
-    width: 60%;
+    width: 70%;
     padding: 20px;
   }
 
