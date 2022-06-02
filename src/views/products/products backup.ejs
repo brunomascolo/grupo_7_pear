@@ -7,8 +7,8 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
-                <p class="titulo">Listado de NFT publicados</p>
                 <div class="container-principal">
+                    <p class="titulo">Listado de NFT publicados</p>
                     <!-- Mostrar los productos VISITADOS dinámicamente (usando un for o foreach) -->
                     <% for (let i=0; i < nft.length; i++) { %>
                         <div class="productosDetail">
@@ -30,8 +30,7 @@
                                     </p> <!--  Agregar valor en ETH -->
                                 </li>
                                 <li class="li-boton">
-                                    <button class="boton-modificar"><a
-                                            href="/products/<%= nft[i].id%>/edit">Modificar</a></button>
+                                    <button class="boton-modificar"><a href="/products/<%= nft[i].id%>/edit">Modificar</a></button>
                                 </li>
                             </ul>
                         </div>
