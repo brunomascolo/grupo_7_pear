@@ -13,5 +13,6 @@ router.get('/create', productsController.create);
 router.get('/:id', productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.edit);
+router.patch('/:id/edit', productsController.update);  
 
 module.exports = router;

@@ -9,7 +9,7 @@
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
             <p>Edita tu NFT</p>
-            <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
+            <form action="/products/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
                     <input type="text" placeholder="Nombre" class="textField" name="nombre" value="<%= productToEdit.name %>" required>
@@ -32,7 +32,7 @@
                         placeholder="Ingresa una breve descripción del NFT que venderas" name="descripcion" value="<%= productToEdit.description %>" required>
                 </div>
                 <div class="fieldForm">
-                    <label class="etiquetas">URL IPFS</label>
+                    <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
                     <input type="text" class="textField"
                         placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá" name="urlifts" value="<%= productToEdit.img %>"> 
                 </div>
@@ -46,7 +46,6 @@
                         placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras"  name="precio" value="<%= productToEdit.priceEth %>" required>
                 </div>
                 <div class="botonCrear">
-                    <button type="reset" class="botones">Borrar</button>
                     <button type="submit" class="botones">Publicar</button>
                 </div>
             </form>

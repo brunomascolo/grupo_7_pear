@@ -22,8 +22,11 @@ const controladorProducts = {
 		let id = req.params.id
 		let productToEdit = nft.find(nft => nft.id == id)
 		res.render('products/edit', { productToEdit })
-
-    }
+    },
+    update: (req, res)=>{
+        const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
+		res.render('products/products.ejs', { nft })
+    },
 }
 
 module.exports = controladorProducts;
