@@ -12,11 +12,11 @@
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="nombrenft" id="nombrenft" placeholder="Nombre" class="textField">
+                    <input type="text" name="nombrenft" id="nombrenft" placeholder="Nombre" class="textField" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField" name="categoria" ic="categoria">
+                    <select class="textField" name="categoria" ic="categoria" required>
                         <option value="">Selecciona una catergoria</option>
                         <option value="arte">Arte</option>
                         <option value="cine">Cine</option>
@@ -34,16 +34,16 @@
                 <div class="fieldForm">
                     <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
                     <input type="text" name="url" id="url" class="textField"
-                        placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
+                        placeholder="Sugerimos subir tu nft a IPFS y copies tu enlace acá">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" name="imgnft" name="imgnft" class="textField">
+                    <input type="file" name="imgnft" name="imgnft" class="textField" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
                     <input type="text" name="precioeth" id="precioeth" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" required>
                 </div>
                 <div class="botonCrear">
                     <button type="reset" class="botones">Borrar</button>
