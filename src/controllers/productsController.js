@@ -27,6 +27,10 @@ const controladorProducts = {
         const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
 		res.render('products/products.ejs', { nft })
     },
+    store: (req, res)=>{
+        /* console.log(req.file); */
+        res.redirect("/products")
+    }
 }
 
 module.exports = controladorProducts;

@@ -12,7 +12,8 @@
                     <!-- Mostrar los productos VISITADOS dinámicamente (usando un for o foreach) -->
                     <% for (let i=0; i < nft.length; i++) { %>
                         <div class="productosDetail">
-                            <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider" class="imagenDetail"></a>
+                            <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider"
+                                    class="imagenDetail"></a>
                             <ul class="info-product">
                                 <li>
                                     <a href="/products/<%= nft[i].id %>">
@@ -31,7 +32,7 @@
                                 </li>
                                 <li class="li-boton">
                                     <button class="boton-modificar"><a
-                                            href="/products/<%= nft[i].id%>/edit">Modificar</a></button>
+                                            href="/products/edit/<%= nft[i].id%>">Modificar</a></button>
                                 </li>
                             </ul>
                         </div>

@@ -12,11 +12,11 @@
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" placeholder="Nombre" class="textField">
+                    <input type="text" name="nombrenft" id="nombrenft" placeholder="Nombre" class="textField">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField">
+                    <select class="textField" name="categoria" ic="categoria">
                         <option value="">Selecciona una catergoria</option>
                         <option value="arte">Arte</option>
                         <option value="cine">Cine</option>
@@ -28,21 +28,21 @@
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
-                    <input type="text" class="textField"
+                    <input type="text" name="descripcion" id="descripcion" class="textField"
                         placeholder="Ingresa una breve descripción del NFT que venderas">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
-                    <input type="text" class="textField"
+                    <input type="text" name="url" id="url" class="textField"
                         placeholder="Sugerimos subir tu nft a ITFS y copies tu enlace acá">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" class="textField">
+                    <input type="file" name="imgnft" name="imgnft" class="textField">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
-                    <input type="text" class="textField"
+                    <input type="text" name="precioeth" id="precioeth" class="textField"
                         placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
                 </div>
                 <div class="botonCrear">
