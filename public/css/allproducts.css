@@ -48,20 +48,19 @@
 .boton-modificar {
     background-color: var(--VerdeOscuro);
     border: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 7px;
     font-size: 1em;
     font-weight: bold;
-}
-
-.boton-modificar a {
     text-decoration: none;
     color: white;
 }
 
 .li-boton {
     list-style: none;
+    padding: 10px;
 }
+
 
 @media (min-width: 430px) and (max-width: 800px) {
     .productosDetail {
