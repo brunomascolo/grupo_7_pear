@@ -12,11 +12,11 @@
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="nombrenft" id="nombrenft" placeholder="Nombre" class="textField" required>
+                    <input type="text" name="name" id="nombrenft" placeholder="Nombre" class="textField" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField" name="categoria" ic="categoria" required>
+                    <select class="textField" name="category" id="categoria" required>
                         <option value="">Selecciona una catergoria</option>
                         <option value="Art">Arte</option>
                         <option value="Cinema">Cine</option>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
-                    <input type="text" name="descripcion" id="descripcion" class="textField"
+                    <input type="text" name="description" id="descripcion" class="textField"
                         placeholder="Ingresa una breve descripción del NFT que venderas">
                 </div>
                 <div class="fieldForm">
@@ -38,11 +38,11 @@
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" name="imgnft" name="imgnft" class="textField">
+                    <input type="file" name="img" class="textField">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
-                    <input type="text" name="precioeth" id="precioeth" class="textField"
+                    <input type="text" name="priceeth" id="priceeth" class="textField"
                         placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" required>
                 </div>
                 <div class="botonCrear">

@@ -24,7 +24,7 @@ router.get('/', productsController.index);
 router.get('/', productsController.index);
 //Crear un producto
 router.get('/create', productsController.create);
-router.post('/', upload.single("imgnft"), productsController.store);
+router.post('/', upload.single("img"), productsController.store);
 //Obtener un producto
 router.get('/:id', productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 

@@ -9,14 +9,14 @@
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
             <p>Edita tu NFT</p>
-            <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="formulario">
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="nombrenft" class="textField" value="<%= productToEdit.name %>" required>
+                    <input type="text" name="name" class="textField" value="<%= productToEdit.name %>" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField" name="categoria">
+                    <select class="textField" name="category">
                         <option value="">Selecciona una catergoria</option>
                         <option value="Art">Arte</option>
                         <option value="Cinema">Cine</option>
@@ -28,8 +28,9 @@
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
-                    <input type="text" class="textField"
-                        placeholder="Ingresa una breve descripción del NFT que venderas" name="descripcion" value="<%= productToEdit.description %>">
+                    <input type="text" class="textField" 
+                    name="description" placeholder="Ingresa una breve descripción del NFT que venderas"  
+                    value="<%= productToEdit.description %>">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
@@ -38,15 +39,18 @@
                 </div>
                 <!-- <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" name="imgnft"class="textField">
+                    <input type="file" name="img"class="textField">
                 </div> -->
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
-                    <input type="text" name="precioeth" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= productToEdit.priceEth %>">
+                    <input type="text" name="priceeth" class="textField"
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= productToEdit.priceeth %>">
+                </div>
+                <div class="fieldForm">
+                    <h3>La imagen no puede ser modificada. Para eso debes crear una nueva publicación.</h3>
                 </div>
                 <div class="botonCrear">
-                    <button type="submit" class="botones">Publicar</button>
+                    <button type="submit" class="botones">Guardar</button>
                 </div>
             </form>
         </div>
