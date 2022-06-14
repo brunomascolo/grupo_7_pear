@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include("../partials/head.ejs", {titulo: "Pear, sitio de compra y venda de NFT", cssSheet: "create"}) %>
-
+    <% include("../partials/head.ejs", {titulo: "Pear, sitio de compra y venda de NFT", cssSheet: "create"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
@@ -12,11 +10,11 @@
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="name" id="nombrenft" placeholder="Nombre" class="textField" required>
+                    <input type="text" name="name" id="nombrenft" placeholder="Nombre" class="textField">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField" name="category" id="categoria" required>
+                    <select class="textField" name="category" id="categoria">
                         <option value="">Selecciona una catergoria</option>
                         <option value="Art">Arte</option>
                         <option value="Cinema">Cine</option>
@@ -43,7 +41,7 @@
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
                     <input type="text" name="priceeth" id="priceeth" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" required>
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras">
                 </div>
                 <div class="botonCrear">
                     <button type="reset" class="botones">Borrar</button>
