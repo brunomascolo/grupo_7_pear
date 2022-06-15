@@ -4,7 +4,7 @@
   "name": "LOVE APE #1989",
   "author": "One APE",
   "category": "",
-  "priceeth": "5",
+  "priceeth": "6",
   "priceusd": "277.55",
   "url": "default",
   "rating": "4.1/5",
@@ -129,5 +129,17 @@
   "rating": "5/5",
   "description": "BREVE",
   "img": "/img/images/nft_1655170464958.gif"
+ },
+ {
+  "id": "1011",
+  "name": "TEST NF1",
+  "author": "defaultAuthor",
+  "category": "Photography",
+  "priceeth": "15",
+  "priceusd": "15",
+  "url": "binance.com",
+  "rating": "5/5",
+  "description": "Descripcion breve",
+  "img": "/img/images/nft_1655257659325.png"
  }
 ]
