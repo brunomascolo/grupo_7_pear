@@ -4,7 +4,7 @@
   "name": "LOVE APE #1989",
   "author": "One APE",
   "category": "",
-  "priceeth": "6",
+  "priceeth": "5",
   "priceusd": "277.55",
   "url": "default",
   "rating": "4.1/5",
@@ -141,5 +141,29 @@
   "rating": "5/5",
   "description": "Descripcion breve",
   "img": "/img/images/nft_1655257659325.png"
+ },
+ {
+  "id": "10111",
+  "name": "NFT 4",
+  "author": "defaultAuthor",
+  "category": "",
+  "priceeth": "10",
+  "priceusd": "2",
+  "url": "google.cl",
+  "rating": "5/5",
+  "description": "Descripcion breve",
+  "img": "/img/images/nft_1655258747307.jpeg"
+ },
+ {
+  "id": "101111",
+  "name": "NFT6",
+  "author": "defaultAuthor",
+  "category": "Cinema",
+  "priceeth": "2",
+  "priceusd": "2",
+  "url": "google.cl",
+  "rating": "5/5",
+  "description": "Descripcion breve",
+  "img": "/img/images/nft_1655258905563.jpeg"
  }
 ]
