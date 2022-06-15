@@ -1,10 +1,10 @@
 [
  {
   "id": "1",
-  "name": "LOVE APE #1985",
+  "name": "LOVE APE #1989",
   "author": "One APE",
   "category": "",
-  "priceeth": "1.2",
+  "priceeth": "5",
   "priceusd": "277.55",
   "url": "default",
   "rating": "4.1/5",
@@ -72,10 +72,10 @@
   "img": "/img/images/slider6.png"
  },
  {
-  "id": 7,
-  "name": "ONE APE #**",
+  "id": "7",
+  "name": "ONE APE 00",
   "author": "One APE",
-  "category": "Art",
+  "category": "",
   "priceeth": "0.085",
   "priceusd": "163.39",
   "url": "default",
@@ -109,10 +109,10 @@
  },
  {
   "id": "10",
-  "name": "TEST NF1",
+  "name": "TEST NF100",
   "author": "defaultAuthor",
-  "category": "Sports",
-  "priceeth": "11",
+  "category": "",
+  "priceeth": "15",
   "url": "google.cl",
   "rating": "5/5",
   "description": "Una breve descripcion",
