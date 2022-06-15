@@ -49,7 +49,8 @@ const controladorProducts = {
         res.render('products/products.ejs', { nft }) */
     },
     store: (req, res) => {
-        if (req.file) {
+        //El if lo utilizaremos para rescatar errores. Por el momento no se exigen validaciones, simplemente lo cargo vacio y con una imagen por defecto
+        /* if (req.file) {
             const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
             let newNFT = {
                 id: nft[nft.length - 1].id + 1,
@@ -66,9 +67,25 @@ const controladorProducts = {
             nft.push(newNFT);
             fs.writeFileSync(nftFilePath, JSON.stringify(nft, null, " "));
             res.redirect("/products")
-        } else {
-            res.render('products/create.ejs')
-        }
+        } else { */
+            const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
+            let newNFT = {
+                id: nft[nft.length - 1].id + 1,
+                name: req.body.name,
+                author: "defaultAuthor",
+                category: req.body.category,
+                priceeth: req.body.priceeth,
+                priceusd: req.body.priceeth,
+                url: req.body.url,
+                rating: "5/5",
+                description: req.body.description,
+                img: req.file == undefined ? "/img/images/default.jpg" : "/img/images/" + req.file.filename
+            }
+            nft.push(newNFT);
+            fs.writeFileSync(nftFilePath, JSON.stringify(nft, null, " "));
+            res.redirect("/products")
+            /* res.render('products/create.ejs') */
+        /* } */
     }
 }
 
