@@ -29,6 +29,6 @@ router.post('/', upload.single("img"), productsController.store);
 router.get('/:id', productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id', productsController.update);  
+router.patch('/edit/:id', upload.single("img"), productsController.update);  
 
 module.exports = router;

@@ -27,19 +27,20 @@ const controladorProducts = {
         res.render('products/edit', { productToEdit })
     },
     update: (req, res) => {
+        //Hay campos como el autor, el price en usd y el rating que no deben poder modificarse.
         const products = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
 		let productToEdit = products.find(product => product.id == req.params.id)
         let editedProduct = {
 			id: req.params.id,
 			name: req.body.name,
             author: productToEdit.author,
-            category: req.body.category,
+            category: req.body.category == "" ? productToEdit.category : req.body.category,
 			priceeth: req.body.priceeth,
             priceusd: productToEdit.priceusd,
 			url: req.body.url,
             rating: productToEdit.rating,
 			description: req.body.description,
-			img: productToEdit.img
+            img: req.file == undefined ? productToEdit.img : "/img/images/" + req.file.filename
 		}
 		let indice = products.findIndex(product => product.id == req.params.id);
 		products[indice] = editedProduct;
@@ -77,7 +78,7 @@ const controladorProducts = {
                 priceeth: req.body.priceeth,
                 priceusd: req.body.priceeth,
                 url: req.body.url,
-                rating: "5/5",
+                rating: "0/5",
                 description: req.body.description,
                 img: req.file == undefined ? "/img/images/default.jpg" : "/img/images/" + req.file.filename
             }

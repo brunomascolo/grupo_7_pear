@@ -9,7 +9,7 @@
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
             <p>Edita tu NFT</p>
-            <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="formulario">
+            <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" enctype="multipart/form-data" method="POST" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
                     <input type="text" name="name" class="textField" value="<%= productToEdit.name %>" required>
@@ -37,17 +37,14 @@
                     <input type="text" name="url" class="textField"
                         placeholder="Sugerimos subir tu nft a IPFS y copies tu enlace acá" value="<%= productToEdit.url %>"> 
                 </div>
-                <!-- <div class="fieldForm">
+                <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
                     <input type="file" name="img"class="textField">
-                </div> -->
+                </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
                     <input type="text" name="priceeth" class="textField"
                         placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= productToEdit.priceeth %>">
-                </div>
-                <div class="fieldForm">
-                    <h3>La imagen no puede ser modificada. Para eso debes crear una nueva publicación.</h3>
                 </div>
                 <div class="botonCrear">
                     <button type="submit" class="botones">Guardar</button>
