@@ -51,6 +51,23 @@ body {
   padding: 10px;
 }
 
+.formEliminar{
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+
+.botones_eliminar {
+  background-color: rgb(210, 97, 97);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
   .formulario {
     display: flex;

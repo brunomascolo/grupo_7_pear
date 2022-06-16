@@ -1,15 +1,16 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "name": "LOVE APE #1989",
   "author": "One APE",
-  "category": "Cinema",
+  "category": "Art",
   "priceeth": "5",
   "priceusd": "277.55",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.1/5",
-  "description": "Nothing",
-  "img": "/img/images/slider1.jpg"
+  "description": "Descripcion breve",
+  "condition": 1,
+  "img": "/img/images/nft_1655421160265.jpeg"
  },
  {
   "id": 2,
@@ -18,9 +19,10 @@
   "category": "Art",
   "priceeth": "0.088",
   "priceusd": "277.55",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.1/5",
   "description": "Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.",
+  "condition": 1,
   "img": "/img/images/slider3.jpg"
  },
  {
@@ -30,9 +32,10 @@
   "category": "Art",
   "priceeth": "0.098",
   "priceusd": "299.55",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "3.1/5",
   "description": "Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.",
+  "condition": 1,
   "img": "/img/images/slider2.jpg"
  },
  {
@@ -42,9 +45,10 @@
   "category": "Art",
   "priceeth": "2.4806",
   "priceusd": "4755.28",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.5/5",
   "description": "AAAAAAAUUUUUGGGHHHHH gobblins goblinns GOBLINNNNNNNNns wekm ta goblintown yoo sniksnakr DEJEN RATS oooooh rats are yummmz dis a NEFTEEE O GOBBLINGS on da BLOKCHIN wat? oh. crustybutt da goblinking say GEE EMMM DEDJEN RUTS an queenie saay HLLO SWEATIES ok dats all byeby",
+  "condition": 1,
   "img": "/img/images/slider4.png"
  },
  {
@@ -54,9 +58,10 @@
   "category": "Art",
   "priceeth": "0.085",
   "priceusd": "163.39",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.3/5",
   "description": "The black portal suddenly opened and 10,000 ghosts came over from the other dimension. Let's call out the ghosts, hear their voices, and revive the memories. Turn on your camera and be possessed by the ghost. https://ghostsproject.com/",
+  "condition": 1,
   "img": "/img/images/slider5.png"
  },
  {
@@ -66,21 +71,23 @@
   "category": "Art",
   "priceeth": "0.85",
   "priceusd": "1582.83",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.2/5",
   "description": "Rumble Kong League is a competitive 3 vs 3 basketball experience, combining play-to-earn functionality with NFT Collection mechanics, enabling users to compete in engaging ways through NFTs.",
+  "condition": 1,
   "img": "/img/images/slider6.png"
  },
  {
-  "id": "7",
+  "id": 7,
   "name": "ONE APE 00",
   "author": "One APE",
   "category": "Art",
   "priceeth": "0.085",
   "priceusd": "163.39",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.3/5",
   "description": "The black portal suddenly opened and 10,000 ghosts came over from the other dimension. Let's call out the ghosts, hear their voices, and revive the memories. Turn on your camera and be possessed by the ghost. https://ghostsproject.com/",
+  "condition": 1,
   "img": "/img/images/slider9.gif"
  },
  {
@@ -90,9 +97,10 @@
   "category": "Art",
   "priceeth": "0.85",
   "priceusd": "1582.83",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.2/5",
   "description": "Rumble Kong League is a competitive 3 vs 3 basketball experience, combining play-to-earn functionality with NFT Collection mechanics, enabling users to compete in engaging ways through NFTs.",
+  "condition": 1,
   "img": "/img/images/slider8.gif"
  },
  {
@@ -102,45 +110,59 @@
   "category": "Art",
   "priceeth": "0.098",
   "priceusd": "299.55",
-  "url": "default",
+  "url": "www.binance.com",
   "rating": "4.1/5",
   "description": "Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.",
+  "condition": 1,
   "img": "/img/images/slider7.png"
  },
  {
   "id": 10,
-  "name": "Test NF3",
-  "author": "defaultAuthor",
-  "category": "Sports",
-  "priceeth": "11",
-  "priceusd": "11",
-  "url": "google.cl",
-  "rating": "5/5",
-  "description": "Descripcion breve",
-  "img": "/img/images/default.jpg"
+  "name": "ONE APE #1",
+  "author": "One APE",
+  "category": "Art",
+  "priceeth": "0.098",
+  "priceusd": "299.55",
+  "url": "default",
+  "rating": "4.1/5",
+  "condition": 1,
+  "description": "Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.",
+  "img": "/img/images/slider7.png"
  },
  {
-  "id": "11",
+  "id": 11,
   "name": "TEST FN15",
   "author": "defaultAuthor",
   "category": "Art",
-  "priceeth": "123",
-  "priceusd": "",
-  "url": "123",
+  "priceeth": "11",
+  "priceusd": "11",
+  "url": "www.binance.com",
   "rating": "5/5",
-  "description": "13",
+  "condition": 1,
   "img": "/img/images/nft_1655339863410.jpeg"
  },
  {
-  "id": "111",
+  "id": 12,
   "name": "TEST NFT4",
   "author": "defaultAuthor",
-  "category": "Cinema",
+  "category": "Art",
   "priceeth": "10",
   "priceusd": "10",
-  "url": "www.binance.com",
+  "url": "www.binance.eth",
   "rating": "5/5",
-  "description": "Breve descripcion",
+  "condition": 1,
   "img": "/img/images/nft_1655339851427.jpeg"
+ },
+ {
+  "id": 13,
+  "name": "NFT PRUEBA",
+  "author": "defaultAuthor",
+  "category": "Cinema",
+  "priceeth": "2",
+  "priceusd": "2",
+  "url": "google.cl",
+  "rating": "0/5",
+  "condition": 0,
+  "img": "/img/images/nft_1655421207584.png"
  }
 ]

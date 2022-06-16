@@ -29,6 +29,8 @@ router.post('/', upload.single("img"), productsController.store);
 router.get('/:id', productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id', upload.single("img"), productsController.update);  
+router.patch('/edit/:id', upload.single("img"), productsController.update); 
+//Ruta para deshabilitar productos
+router.delete('/delete/:id', productsController.disable);
 
 module.exports = router;

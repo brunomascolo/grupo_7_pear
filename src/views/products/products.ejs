@@ -10,29 +10,28 @@
                 <p class="titulo">Listado de NFT publicados</p>
                 <div class="container-principal">
                     <!-- Mostrar los productos VISITADOS dinámicamente (usando un for o foreach) -->
-                    <% for (let i=0; i < nft.length; i++) { %>
+                    <% for (let i=0; i < nftFiltrados.length; i++) { %>
                         <div class="productosDetail">
-                            <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider"
+                            <a href="/products/<%= nftFiltrados[i].id %>"><img src="<%= nftFiltrados[i].img %>" alt="slider"
                                     class="imagenDetail"></a>
                             <ul class="info-product">
                                 <li>
-                                    <a href="/products/<%= nft[i].id %>">
+                                    <a href="/products/<%= nftFiltrados[i].id %>">
                                         <p class="name-nft">
-                                            <%= nft[i].name %>
+                                            <%= nftFiltrados[i].name %>
                                         </p>
                                     </a>
                                 </li>
                                 <li>
-                                    <p>Creador: <%= nft[i].author %>
+                                    <p>Creador: <%= nftFiltrados[i].author %>
                                     </p> <!-- Podriamos crear la vista de autores -->
                                 </li>
                                 <li>
-                                    <p>Valor: <i class="fab fa-ethereum"></i> <%= nft[i].priceeth %>
+                                    <p>Valor: <i class="fab fa-ethereum"></i> <%= nftFiltrados[i].priceeth %>
                                     </p> <!--  Agregar valor en ETH -->
                                 </li>
                                 <li class="li-boton">
-                                    <a href="/products/edit/<%= nft[i].id%>" class="boton-modificar">Modificar</a>
-                                    <!-- <button class="boton-modificar"><a href="/products/edit/<%= nft[i].id%>">Modificar</a></button> -->
+                                    <a href="/products/edit/<%= nftFiltrados[i].id%>" class="boton-modificar">Modificar</a>
                                 </li>
                             </ul>
                         </div>
