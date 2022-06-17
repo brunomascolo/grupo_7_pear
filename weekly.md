@@ -43,5 +43,5 @@
 <li>Se genero un impedimento al trabajar con las funciones del producto, por falta de comunicación</li>
 
 <h4>Que se va hacer hoy</h4>
-<li>Revisar el avance de cada compañero
+<li>Revisar el avance de cada compañero</li>
 <li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
