@@ -10,30 +10,36 @@
         <div class="iconoFotoPerfil">
             <i class="fas fa-user-alt"></i>
         </div>
-        <form action="/" method="POST">
+        <form action="/users" method="POST" enctype="multipart/form-data">
             <div class="formulario">
+                <input type="file" name="img"> 
                 <label for="register">
-                    <input class="inputs" type="text" name="register" id="name" placeholder="   Nombre Completo" minlength="5" required>
+                    <input class="inputs" type="text" name="first_name" id="first_name" placeholder="   Nombre Completo" minlength="5" required>
                 </label>
                 <label for="register">
-                    <input class="inputs" type="email" name="register" id="email" placeholder="   Email" minlength="5" required>
+                    <input class="inputs" type="text" name="last_name" id="last_name" placeholder="   Apellido" minlength="5" required>
                 </label>
                 <label for="register">
-                    <input class="inputs" type="password" name="register" id="password" placeholder="   Contraseña" minlength="5" required>
+                    <input class="inputs" type="email" name="email" id="email" placeholder="   Email" minlength="5" required>
+                </label>
+                <label for="register">
+                    <input class="inputs" type="password" name="password" id="password" placeholder="   Contraseña" minlength="5" required>
                 </label>   
                 <label for="register">
-                    <input class="inputs" type="password" name="register" id="repeatPassword" placeholder="   Repetir Contraseña" minlength="5" required>
-                </label>             
+                    <input class="inputs" type="password" name="repeatPassword" id="repeatPassword" placeholder="   Repeti tu Contraseña" minlength="5" required>
+                </label> 
+               
+                            
             </div>
             <div class="checksWrap">
                 <label for="register">
-                    <input type="checkbox" name="register" id="terminos" value="acepto" class="checks">
+                    <input type="checkbox" name="terminos" id="terminos" value="acepto" class="checks">
                     <a href="">He leido y acepto los terminos y condiciones</a>
                 </label>
             </div>
             <div class="checksWrap">
                 <label for="register">
-                    <input type="checkbox" name="register" id="mayor" value="mayor" class="checks">
+                    <input type="checkbox" name="mayor" id="mayor" value="mayor" class="checks">
                     Soy mayor de 18 años
                 </label>                
             </div>
