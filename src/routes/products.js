@@ -2,6 +2,8 @@ const express = require ('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require("path");
+const guestMiddleware = require("../middlewares/guestMiddleware")
+const authMiddleware = require("../middlewares/authMiddleware")
 
 
 //Configurar multer
@@ -19,11 +21,11 @@ const upload = multer({storage: storage});
 const productsController = require ('../controllers/productsController')
 
 //Obtener todos los productos para la vista products
-router.get('/', productsController.index);
-//Crear todos los productos producto
-router.get('/', productsController.index);
+router.get('/', authMiddleware,productsController.index);
+/* //Crear todos los productos producto
+router.get('/', productsController.index); */
 //Crear un producto
-router.get('/create', productsController.create);
+router.get('/create', authMiddleware, productsController.create);
 router.post('/', upload.single("img"), productsController.store);
 //Obtener un producto
 router.get('/:id', productsController.detail);

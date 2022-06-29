@@ -51,7 +51,7 @@ const controladorUser = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password,10),
                 category: "user",
-                image: req.file == undefined ? "/img/images/default.jpg" : "/img/images/" + req.file.filename
+                image: req.file == undefined ? "/img/images/users/default_user.jpg" : "/img/images/users/" + req.file.filename
             }
             
         users.push(newUser);

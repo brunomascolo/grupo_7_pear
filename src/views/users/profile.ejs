@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs", {titulo: "Iniciar Sesión", cssSheet: "profile"}) %>
+<%- include("../partials/head.ejs", {titulo: "Perfil de Usuario", cssSheet: "profile"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
@@ -8,7 +8,7 @@
             <i class="fas fa-times"></i>
         </a>
         <div class="contenedorFotoDePerfil">
-            <img src="/img/images/users/<%=user.image%>" alt="" class="fotoDePerfil">
+            <img src="<%=user.image%>" alt="" class="fotoDePerfil">
         </div>
         <div>
             <h3><%=user.first_name%></h3>
