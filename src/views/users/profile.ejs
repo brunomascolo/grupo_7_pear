@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs", {titulo: "Iniciar Sesión", cssSheet: "profile"}) %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <a class="iconoCerrar" href="/user/logout">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="contenedorFotoDePerfil">
+            <img src="/img/images/users/<%=user.image%>" alt="" class="fotoDePerfil">
+        </div>
+        <div>
+            <h3><%=user.first_name%></h3>
+        </div>
+        <div>
+            <h3><%=user.last_name%></h3>
+        </div>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+
+</div>
+    
+</body>
+</html>

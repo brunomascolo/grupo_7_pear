@@ -10,14 +10,17 @@
         <div class="iconoFotoPerfil">
             <i class="fas fa-user-alt"></i>
         </div>
-        <form action="/" method="POST">
+        <form action="/user/login" method="POST">
             <div class="formulario">
-                <label for="login">
-                    <input type="text" id="username" name="login" placeholder="  Nombre de usuario" class="textos" minlength="3">
+                <label for="email">
+                    <input type="text" id="username" name="email" placeholder="  Correo electrónico" class="textos" minlength="3">
                 </label>
-                <label for="login">
-                    <input type="password" name="login" id="password" placeholder="  Contraseña" class="textos" minlength="8">
-                </label>                  
+                <label for="password">
+                    <input type="password" name="password" id="password" placeholder="  Contraseña" class="textos" minlength="8">
+                </label>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorLogin"><%= errors.email.msg%></div>
+                   <% } %>                  
             </div>
             <div class="botonIniciarSesion">
                 <button type="submit" class="botones">Iniciar Sesión</button>  

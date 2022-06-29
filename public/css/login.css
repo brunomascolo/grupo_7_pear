@@ -87,7 +87,9 @@ main form input{
     align-items: center;      
 }
 
-
+.errorLogin{
+    color: red;
+}
 
 label{
     width: 80%;
