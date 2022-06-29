@@ -205,5 +205,41 @@
   "password": "tomas123",
   "category": "user",
   "image": "/img/images/user_1656470534237.png"
+ },
+ {
+  "id": 24,
+  "first_name": "Rocio",
+  "last_name": "Diaz Lopez",
+  "email": "rocio@gmail.com",
+  "password": "rocio123",
+  "category": "user",
+  "image": "/img/images/user_1656470747589.png"
+ },
+ {
+  "id": 25,
+  "first_name": "Brenda",
+  "last_name": "Garcia",
+  "email": "brenda@gmail.com",
+  "password": "$2a$10$qAv7.HDe39CcrFETJTXPPOd3Nau2Gq3Ars2OgcCSK9A7aEWXoYlN6",
+  "category": "user",
+  "image": "/img/images/user_1656470898683.png"
+ },
+ {
+  "id": 26,
+  "first_name": "Rodolfo",
+  "last_name": "Rupenstein",
+  "email": "rodolfo@gmail.com",
+  "password": "$2a$10$K5B1wYJp1hg9EJFvxKuMKOf14c5XYoDfWZbJL0bPcFpG6Xbh4Qqmq",
+  "category": "user",
+  "image": "/img/images/user_1656471077946.png"
+ },
+ {
+  "id": 27,
+  "first_name": "Virginia",
+  "last_name": "Nasiff",
+  "email": "virginia@gmail.com",
+  "password": "$2a$10$6VPmntOZxpFsezwES1JVXeDkf867JNallB7CvUZ13Tlo9HQf3vw4e",
+  "category": "user",
+  "image": "/img/images/user_1656471115502.jpeg"
  }
 ]
