@@ -187,5 +187,23 @@
   "password": "bruno123",
   "category": "user",
   "image": "/img/images/user_1656467920216.jpg"
+ },
+ {
+  "id": 22,
+  "first_name": "Pablo",
+  "last_name": "Rodriguez",
+  "email": "pablorodriguez@gmail.com",
+  "password": "bruno123",
+  "category": "user",
+  "image": "/img/images/user_1656470488801.png"
+ },
+ {
+  "id": 23,
+  "first_name": "Tomas",
+  "last_name": "Gomez",
+  "email": "tomas@gmail.com",
+  "password": "tomas123",
+  "category": "user",
+  "image": "/img/images/user_1656470534237.png"
  }
 ]
