@@ -186,7 +186,7 @@
   "email": "usuario@usuario.com",
   "password": "$2a$10$z0WHdNq5VdEStD.bHSmhBucN7V2oURJzl9mNG/6S.K6eA66fcACwm",
   "category": "user",
-  "image": "user_9.jpg"
+  "image": "/img/images/users/default_user.jpg"
  },
  {
   "id": 22,

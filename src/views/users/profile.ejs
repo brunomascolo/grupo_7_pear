@@ -4,17 +4,16 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
-        <a class="iconoCerrar" href="/user/logout">
-            <i class="fas fa-times"></i>
-        </a>
-        <div class="contenedorFotoDePerfil">
-            <img src="<%=user.image%>" alt="" class="fotoDePerfil">
-        </div>
-        <div>
-            <h3><%=user.first_name%></h3>
-        </div>
-        <div>
-            <h3><%=user.last_name%></h3>
+        <div class="contenedorPerfil">    
+            <a class="iconoCerrar" href="/user/logout">
+                <i class="fas fa-times"></i>
+            </a>
+            <div>
+                <img src="<%=user.image%>" alt="" class="fotoDePerfil">
+            </div>
+            <div>
+                <h2 class="nombreUsuario"><%=user.first_name%> <%=user.last_name%></h2>
+            </div>
         </div>
     </main>
     <%- include("../partials/footer.ejs") %>
