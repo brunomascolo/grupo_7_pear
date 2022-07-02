@@ -11,6 +11,7 @@ const controladorProducts = {
     index: (req, res) => {
         const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
         let nftFiltrados = nft.filter(article => article.condition == 1)
+        
         res.render('products/products.ejs', { nftFiltrados })
     },
     create: (req, res) => {
@@ -18,7 +19,11 @@ const controladorProducts = {
     },
     detail: (req, res) => {
         let nftDetail = nft.find(nft => req.params.id == nft.id)
+        if(nftDetail.condition == 0){
+            res.render('products/404')
+        }else{
         res.render('products/details', { nftDetail: nftDetail })
+        }
     },
 
     edit: (req, res) => {

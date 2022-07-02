@@ -3,8 +3,16 @@ const path = require('path');
 const methodOverride = require('method-override');
 const app = express();
 const session = require("express-session");
+const cookies = require("cookie-parser");
+
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(session({secret: "grupoPear", resave: false, saveUninitialized: false}));
+
+app.use(cookies());
+app.use(userLoggedMiddleware);
+app.use(cookies());
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());

@@ -30,9 +30,11 @@
                                     <p>Valor: <i class="fab fa-ethereum"></i> <%= nftFiltrados[i].priceeth %>
                                     </p> <!--  Agregar valor en ETH -->
                                 </li>
+                                <% if(locals.isLogged) { %>
                                 <li class="li-boton">
                                     <a href="/products/edit/<%= nftFiltrados[i].id%>" class="boton-modificar">Modificar</a>
                                 </li>
+                                <% } %>
                             </ul>
                         </div>
                         <% } %>

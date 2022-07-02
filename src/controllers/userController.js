@@ -24,7 +24,7 @@ const controladorUser = {
                 return res.redirect("/user/profile")
             }
         };
-          
+               
         return res.render('users/login.ejs', {
             errors: {
                 email: {

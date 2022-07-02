@@ -21,7 +21,7 @@ const upload = multer({storage: storage});
 const productsController = require ('../controllers/productsController')
 
 //Obtener todos los productos para la vista products
-router.get('/', authMiddleware,productsController.index);
+router.get('/',productsController.index);
 /* //Crear todos los productos producto
 router.get('/', productsController.index); */
 //Crear un producto
