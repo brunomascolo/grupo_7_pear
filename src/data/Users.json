@@ -196,5 +196,23 @@
   "password": "$2a$10$I3QNLeg21DnFsN.n8/qmqOh7u8dYU6n6gyYthzoppjrCVeMxpefz.",
   "category": "user",
   "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 24,
+  "first_name": "Kevin",
+  "last_name": "Contreras",
+  "email": "kevin1@gmail.com",
+  "password": "$2a$10$2T6eJMVP0iaJ6iwza3wsHOHMUEiRrA.5AzyplcN/NNNT.nNUWYpu2",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 25,
+  "first_name": "kevin",
+  "last_name": "palma",
+  "email": "kevin2@gmail.com",
+  "password": "$2a$10$4YXuM7Uz/eQ6zoHcipy2eeuIwtSMvta/WiQshFHzolM1SqDbVuIcW",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
  }
 ]

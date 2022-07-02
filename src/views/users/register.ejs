@@ -22,6 +22,9 @@
                 <label for="register">
                     <input class="inputs" type="email" name="email" id="email" placeholder="   Email" minlength="5" required>
                 </label>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorLogin" style="color: #FF0000"><%= errors.email.msg%></div>
+                   <% } %> 
                 <label for="register">
                     <input class="inputs" type="password" name="password" id="password" placeholder="   Contraseña" minlength="5" required>
                 </label>   
@@ -29,7 +32,6 @@
                     <input class="inputs" type="password" name="repeatPassword" id="repeatPassword" placeholder="   Repeti tu Contraseña" minlength="5" required>
                 </label> 
                
-                            
             </div>
             <div class="checksWrap">
                 <label for="register">
