@@ -205,5 +205,14 @@
   "password": "$2a$10$4YXuM7Uz/eQ6zoHcipy2eeuIwtSMvta/WiQshFHzolM1SqDbVuIcW",
   "category": "user",
   "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 26,
+  "first_name": "Carlos Cayetano",
+  "last_name": "Fabrissin",
+  "email": "cayefa@gmail.com",
+  "password": "$2a$10$LANULqF.Pw0Zxf86PsrFoeEcdp.BiDfJKOCnAQ2bYSrmLy4Px7VF.",
+  "category": "user",
+  "image": "/img/images/users/user_1656948780450.jpeg"
  }
 ]

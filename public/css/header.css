@@ -12,6 +12,16 @@
     width: 50%;
 }
 
+.fotoYNombreUsuario{
+    display: flex;
+}
+
+.fotoIcono{
+    width:30px;
+    height:30px;
+    border-radius:150px;
+    border: #3AAFB9 solid 1px;
+}
 
 .cabecera {
     display: flex;
