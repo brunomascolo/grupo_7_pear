@@ -14,7 +14,7 @@
             <div class="formulario">
                 <input type="file" name="img"> 
                 <label for="register">
-                    <input class="inputs" type="text" name="first_name" id="first_name" placeholder="   Nombre Completo" minlength="5" required>
+                    <input class="inputs" type="text" name="first_name" id="first_name" placeholder="   Nombre" minlength="5" required>
                 </label>
                 <label for="register">
                     <input class="inputs" type="text" name="last_name" id="last_name" placeholder="   Apellido" minlength="5" required>
@@ -31,7 +31,9 @@
                 <label for="register">
                     <input class="inputs" type="password" name="repeatPassword" id="repeatPassword" placeholder="   Repeti tu Contraseña" minlength="5" required>
                 </label> 
-               
+                <% if (locals.errors && errors.password) { %>
+                    <div class="errorLogin" style="color: #FF0000"><%= errors.password.msg%></div>
+                   <% } %> 
             </div>
             <div class="checksWrap">
                 <label for="register">

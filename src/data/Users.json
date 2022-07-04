@@ -191,7 +191,7 @@
  {
   "id": 24,
   "first_name": "Kevin",
-  "last_name": "Contreras",
+  "last_name": "Palma",
   "email": "kevin@gmail.com",
   "password": "$2a$10$2T6eJMVP0iaJ6iwza3wsHOHMUEiRrA.5AzyplcN/NNNT.nNUWYpu2",
   "category": "user",
@@ -199,8 +199,8 @@
  },
  {
   "id": 25,
-  "first_name": "kevin",
-  "last_name": "palma",
+  "first_name": "Kevin",
+  "last_name": "Palma",
   "email": "kevin2@gmail.com",
   "password": "$2a$10$4YXuM7Uz/eQ6zoHcipy2eeuIwtSMvta/WiQshFHzolM1SqDbVuIcW",
   "category": "user",
@@ -214,5 +214,14 @@
   "password": "$2a$10$LANULqF.Pw0Zxf86PsrFoeEcdp.BiDfJKOCnAQ2bYSrmLy4Px7VF.",
   "category": "user",
   "image": "/img/images/users/user_1656948780450.jpeg"
+ },
+ {
+  "id": 27,
+  "first_name": "Kevin",
+  "last_name": "Palma",
+  "email": "kevin3@gmail.com",
+  "password": "$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
  }
 ]

@@ -55,7 +55,17 @@ const controladorUser = {
                     }
                 }
             })
-        }else{
+        }
+        if(req.body.password != req.body.repeatPassword){
+            return res.render('users/register.ejs', {
+                errors: {
+                    password: {
+                        msg: "Las contraseñas no coinciden."
+                    }
+                }
+            })
+        }
+        else{
             let newUser = {
                 id: users[users.length - 1].id + 1,
                 first_name: req.body.first_name,
