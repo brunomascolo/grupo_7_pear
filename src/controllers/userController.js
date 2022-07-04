@@ -19,7 +19,7 @@ const controladorUser = {
         if(userToLogin){
             let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password);
             if(contraseñaCorrecta){
-                delete userToLogin.password;
+                /* delete userToLogin.password; */
                 req.session.userLogged = userToLogin;
                 return res.redirect("/user/profile")
             }
