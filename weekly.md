@@ -45,3 +45,17 @@
 <h4>Que se va hacer hoy</h4>
 <li>Revisar el avance de cada compañero</li>
 <li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
+
+<h2>Weekly Sprint 5 20/06/2022</h2>
+
+<h4>Que se hizo ayer?</h4>
+<li>Todos los integrantes trabajamos en las tareas asignadas</li>
+<li>Nos organizamos para la reunión del día de hoy</li>
+
+<h4>Existieron impedimentos</h4>
+<li>Se genero un breve retraso por el trabajo en equipo que dependia de que otro compañero finalice su tarea</li>
+<li>Detectamos una falla que no permitia volver a logear en el sistema, pero lo pudimos solucionar</li>
+
+<h4>Que se va hacer hoy</h4>
+<li>Revisar el avance de cada compañero</li>
+<li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
