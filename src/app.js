@@ -24,9 +24,11 @@ app.set('views', path.join(__dirname, '/views'));
 const mainRouter = require("./routes/main");
 const productsRouter = require("./routes/products");
 const userRouter = require("./routes/user");
+const categoriesRouter = require("./routes/category");
 
 app.use('/', mainRouter); //Rutas del menu principal
 app.use('/products', productsRouter); // Rutas de los productos
+app.use('/categories', categoriesRouter); // Rutas de las categorias
 app.use('/user', userRouter);
 
 app.listen(3000, () => {
