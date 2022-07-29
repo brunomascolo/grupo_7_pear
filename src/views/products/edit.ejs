@@ -9,33 +9,54 @@
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
             <p>Edita tu NFT</p>
-            <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" enctype="multipart/form-data" method="POST" class="formulario">
+            <form action="/products/edit/<%= product.id %>?_method=PATCH" enctype="multipart/form-data" method="POST" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="name" class="textField" value="<%= productToEdit.name %>" required>
+                    <input type="text" name="name" class="textField" value="<%= product.name %>" required>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
                     <select class="textField" name="category">
-                        <option value="">Selecciona una catergoria</option>
+
+                        <% for (let i = 0; i < category.length; i++){ %>
+                            <% if (category[i].id == product.id_category){ %>
+            
+                                <option value="<%=category[i].id%>" selected>
+                                    <%=category[i].name%>
+                
+                                </option>
+            
+            
+                            <% } else {%>
+                                <option value="<%=category[i].id%>" >
+                                    <%=category[i].name%>
+                
+                                </option>
+            
+            
+                                <% } %>
+                            
+                        <% } %>
+
+                        <!-- <option value="">Selecciona una catergoria</option>
                         <option value="Art">Arte</option>
                         <option value="Cinema">Cine</option>
                         <option value="Sports">Deportes</option>
                         <option value="Photography">Fotografia</option>
                         <option value="Music">Musica</option>
-                        <option value="Videogames">Videojuegos</option>
+                        <option value="Videogames">Videojuegos</option> -->
                     </select>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
                     <input type="text" class="textField" 
                     name="description" placeholder="Ingresa una breve descripción del NFT que venderas"  
-                    value="<%= productToEdit.description %>">
+                    value="<%= product.description %>">
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
                     <input type="text" name="url" class="textField"
-                        placeholder="Sugerimos subir tu nft a IPFS y copies tu enlace acá" value="<%= productToEdit.url %>"> 
+                        placeholder="Sugerimos subir tu nft a IPFS y copies tu enlace acá" value="<%= product.url %>"> 
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
@@ -44,13 +65,13 @@
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
                     <input type="text" name="priceeth" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= productToEdit.priceeth %>">
+                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= product.price %>">
                 </div>
                 <div class="botonCrear">
                     <button type="submit" class="botones">Guardar</button>
                 </div>
             </form>
-            <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST" class="formEliminar">
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" class="formEliminar">
                 <button type="submit" class="botones_eliminar">Eliminar</button>
             </form>
         </div>

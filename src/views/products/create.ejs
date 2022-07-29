@@ -12,16 +12,16 @@
                     <label class="etiquetas">Nombre de tu producto(*)</label>
                     <input type="text" name="name" id="nombrenft" placeholder="Nombre" class="textField">
                 </div>
+                <!-- Modificacion del selector de categoria realizando la lectura desde la db -->
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
                     <select class="textField" name="category" id="categoria">
-                        <option value="">Selecciona una catergoria</option>
-                        <option value="Art">Arte</option>
-                        <option value="Cinema">Cine</option>
-                        <option value="Sports">Deportes</option>
-                        <option value="Photography">Fotografia</option>
-                        <option value="Music">Musica</option>
-                        <option value="Videogames">Videojuegos</option>
+                        <% for (let i = 0; i < categories.length; i++){ %>
+                            <option value="<%=categories[i].id%>">
+                                <%=categories[i].name%>
+            
+                            </option>
+                        <% } %>                       
                     </select>
                 </div>
                 <div class="fieldForm">
