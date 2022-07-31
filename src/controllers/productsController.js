@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const { equal } = require('assert');
 
-const nftFilePath = path.join(__dirname, '../data/nft.json');
-const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
+/* const nftFilePath = path.join(__dirname, '../data/nft.json');
+const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8')); */
 
 let db = require("../database/models");
 

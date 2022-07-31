@@ -17,7 +17,7 @@
         </ul>
         <ul class="login-bar">
             <% if(locals.isLogged) { %>
-                <li class="fotoYNombreUsuario"><img src="<%=locals.userLogged.image%>" class="fotoIcono" alt=""><a href="/user/profile">Hola <%= locals.userLogged.first_name%></a></li>
+                <li class="fotoYNombreUsuario"><img src="<%=locals.userLogged.profile_image%>" class="fotoIcono" alt=""><a href="/user/profile">Hola <%= locals.userLogged.first_name%></a></li>
                 <li></i><a href="/user/logout">Cerrar sesión</a></li>
             <% } else { %>  
             

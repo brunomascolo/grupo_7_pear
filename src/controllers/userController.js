@@ -3,8 +3,8 @@ const fs = require('fs');
 const { equal } = require('assert');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
-const usersFilePath = path.join(__dirname, '../data/Users.json');
-const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+/* const usersFilePath = path.join(__dirname, '../data/Users.json');
+const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 let db = require("../database/models");
 
 
@@ -19,8 +19,8 @@ const controladorUser = {
             if(user){
                 let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
                 if(contraseñaCorrecta){
-                    delete userToLogin.password
-                    req.session.userLogged = userToLogin
+                    /* delete userToLogin.password */
+                    req.session.userLogged = user;
                     return res.redirect("/user/profile")
                 }
             }
@@ -57,7 +57,7 @@ const controladorUser = {
 
     profile: (req, res)=>{
         res.render('users/profile.ejs', {user: req.session.userLogged})
-    },
+ },
 
     register:(req,res) => {
         res.render('users/register.ejs')
