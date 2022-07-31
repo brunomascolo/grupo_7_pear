@@ -223,5 +223,41 @@
   "password": "$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW",
   "category": "user",
   "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 28,
+  "first_name": "Bruno",
+  "last_name": "Diazz",
+  "email": "brunodiaz@gmail.com",
+  "password": "$2a$10$2dtf6S77Mlw64b1t5znCjeKhbEYon75VAis6gcfQaRhkRJIB9CcSS",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 29,
+  "first_name": "Pedro",
+  "last_name": "Gomez",
+  "email": "pedrito@gmail.com",
+  "password": "$2a$10$hUvVFPcij83ydqx4KOSmS.FF975NAwx/VbvZoY1FHhFLnm4//2Pqq",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 30,
+  "first_name": "Pedro ",
+  "last_name": "Gomez",
+  "email": "pedrito@gomez.com",
+  "password": "$2a$10$KFtToBZGx4BTY4SeEh5CQeLFz0yesk9drp3q6m7ws6Df2MmhQDkcm",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 31,
+  "first_name": "pedrito",
+  "last_name": "gomez",
+  "email": "pedritogomez@gmail.com",
+  "password": "$2a$10$duqL6Lo9xdvQrf6gOle8o.AjHQz.uqEbtKtOAbyc462Kkhmg6yuSK",
+  "category": "user",
+  "image": "/img/images/users/default_user.jpg"
  }
 ]
