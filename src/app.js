@@ -25,11 +25,13 @@ const mainRouter = require("./routes/main");
 const productsRouter = require("./routes/products");
 const userRouter = require("./routes/user");
 const categoriesRouter = require("./routes/category");
+const adminRouter = require("./routes/admin")
 
 app.use('/', mainRouter); //Rutas del menu principal
 app.use('/products', productsRouter); // Rutas de los productos
 app.use('/categories', categoriesRouter); // Rutas de las categorias
 app.use('/user', userRouter);
+app.use('/admin', adminRouter); //Rutas del panel de administrador
 
 app.listen(3000, () => {
   console.log("Servidor funcionando en http://localhost:3000")

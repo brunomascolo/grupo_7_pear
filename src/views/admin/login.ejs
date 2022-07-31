@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs", {titulo: "Panel admin", cssSheet: "login"}) %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <a class="iconoCerrar" href="/">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="iconoFotoPerfil">
+            <i class="fas fa-user-alt"></i>
+        </div>
+        <form action="/admin/login" method="POST">
+            <div class="formulario">
+                <label for="email">
+                    <input type="text" id="username" name="email" placeholder="  Correo electrónico" class="textos" minlength="3">
+                </label>
+                <label for="password">
+                    <input type="password" name="password" id="password" placeholder="  Contraseña" class="textos" minlength="3">
+                </label>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="errorLogin"><%= errors.email.msg%></div>
+                   <% } %>                
+            </div>
+            <div class="botonIniciarSesion">
+                <button type="submit" class="botones">Iniciar Sesión</button>  
+            </div>
+            <div class="links">
+                <a href="/user/register">¿No tenés cuenta? Registrate</a>
+                <a href="">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="metamask">
+                <h4>También podes ingresar con:</h4>
+                <img src="../img/MetaMask.png" alt="logo_metamask">
+            </div>
+        </form>       
+    </main>
+    <%- include("../partials/footer.ejs") %>
+
+</div>
+    
+</body>
+</html>
