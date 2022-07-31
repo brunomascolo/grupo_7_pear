@@ -13,7 +13,26 @@ const controladorUser = {
         res.render('users/login.ejs')
     },
     loginProcess: (req, res)=>{
-        let findUser = function(field, text){
+
+        let userToLogin = db.User.findOne({where: {email: req.body.email}})
+        .then((user)=>{
+            if(user){
+                let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
+                if(contraseñaCorrecta){
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin
+                    return res.redirect("/user/profile")
+                }
+            }
+            return res.render('users/login.ejs', {
+                errors: {
+                    email: {
+                        msg: "Datos de usuario incorrectos"
+                    }
+                }
+            }) 
+        })
+        /* let findUser = function(field, text){
             let usuarioBuscado = user.find(oneUser => oneUser[field] === text)
             return usuarioBuscado};
         let userToLogin = findUser("email", req.body.email);
@@ -21,18 +40,19 @@ const controladorUser = {
             let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password);
             if(contraseñaCorrecta){
                 /* delete userToLogin.password; */
+                /*
                 req.session.userLogged = userToLogin;
                 return res.redirect("/user/profile")
             }
-        };
-               
+        }               
         return res.render('users/login.ejs', {
             errors: {
                 email: {
                     msg: "Datos de usuario incorrectos"
                 }
             }
-        })
+        }) 
+        */
     },
 
     profile: (req, res)=>{
