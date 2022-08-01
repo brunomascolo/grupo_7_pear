@@ -13,17 +13,21 @@ const controladorAdmin = {
     },
     loginProcess: (req, res) => {
 
+        let total = db.User.findAll();
+
         let userToLogin = db.User.findOne({ where: { email: req.body.email } })
+
             .then((user) => {
-                if(user.id_rol == 1){
+                if (user.id_rol == 1) {
                     if (user) {
-                    let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
-                    if (contraseñaCorrecta) {
-                        req.session.userLogged = user;
-                        return res.redirect("/admin/profileAdmin")
+                        let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
+                        if (contraseñaCorrecta) {
+                            req.session.userLogged = user;
+                            console.log(total)
+                            return res.redirect("/admin/profileAdmin")
+                        }
                     }
-                }   
-                }else{
+                } else {
                     res.render('users/login.ejs')
                 }
                 /* return res.render('admin/login.ejs', {

@@ -4,21 +4,9 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <main>
-        <div class="contenedorPerfil">    
-            <a class="iconoCerrar" href="/user/logout">
-                <i class="fas fa-times"></i>
-            </a>
-            <div>
-                <img src="<%=user.profile_image%>" alt="" class="fotoDePerfil">
-            </div>
-            <div>
-                <h2 class="nombreUsuario"><%=user.first_name%> <%=user.last_name%></h2>
-            </div>
-        </div>
+        <p>Total de usuarios</p>
+        <p>Total de Productos activos</p>
     </main>
-    <%- include("../partials/footer.ejs") %>
-
-</div>
-    
+    <%- include("../partials/footer.ejs") %>    
 </body>
 </html>
