@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("../partials/head.ejs", {titulo: "Panel de administrador", cssSheet: "profile"}) %>
-<body>
-    <%- include("../partials/header.ejs") %>
-    <main>
-        <p>Total de usuarios</p>
-        <p>Total de Productos activos</p>
-    </main>
-    <%- include("../partials/footer.ejs") %>    
-</body>
+<%- include("../partials/head.ejs", {titulo: "Panel de administrador" , cssSheet: "profile" }) %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h3>Detalle panel de administrador</h3>
+                <ul>
+                    <li><b>Usuarios habilitados: </b><strong><%= totalUserEnable %></strong></li>
+                    <li><b>Usuarios deshabilitados: </b><strong><%= totalUserDisable %></strong></li>
+                    <li><b>Productos activos: </b><strong><%= totalProduct %></strong></li>
+                </ul>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+    </body>
+
 </html>

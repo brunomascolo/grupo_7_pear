@@ -13,8 +13,20 @@ const controladorAdmin = {
     },
     loginProcess: (req, res) => {
 
-        let total = db.User.findAll();
+        let totalUserEnable = db.User.count({ where: { user_state: 1 } })
+            .then((totalUserEnable) => {
+                return totalUserEnable
+            })
 
+        let totalUserDisable = db.User.count({ where: { user_state: 0 } })
+            .then((totalUserDisable) => {
+                return totalUserDisable
+            })
+
+        let totalProduct = db.Product.count({ where: { state: 1 } })
+            .then((totalProduct) => {
+                return totalProduct
+            })
         let userToLogin = db.User.findOne({ where: { email: req.body.email } })
 
             .then((user) => {
@@ -23,8 +35,11 @@ const controladorAdmin = {
                         let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
                         if (contraseñaCorrecta) {
                             req.session.userLogged = user;
-                            console.log(total)
-                            return res.redirect("/admin/profileAdmin")
+                            console.log(totalUserEnable);
+                            Promise.all([totalUserEnable, totalUserDisable, totalProduct])
+                                .then(function ([totalUserEnable, totalUserDisable, totalProduct]) {
+                                    res.render("admin/profileAdmin", { totalUserEnable, totalUserDisable, totalProduct })
+                                })
                         }
                     }
                 } else {

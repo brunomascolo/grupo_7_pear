@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require("path");
 const bcrypt = require('bcryptjs')
 const guestMiddleware = require("../middlewares/guestMiddleware")
-const authMiddleware = require("../middlewares/authMiddleware")
+const authAdminMiddleware = require("../middlewares/authAdminMiddleware")
 
 //Configurar multer
 const storage = multer.diskStorage({
@@ -22,7 +22,7 @@ const adminController = require ('../controllers/adminController')
 
 router.get('/login', guestMiddleware, adminController.login);
 router.post('/login', adminController.loginProcess);
-router.get("/profileAdmin", authMiddleware, adminController.profile);
+router.get("/profileAdmin", authAdminMiddleware, adminController.profile);
 /* router.get('/register', guestMiddleware,userController.register);
 router.post('/', upload.single("img"), userController.store);
 router.get("/profile", authMiddleware, userController.profile);
