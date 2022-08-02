@@ -178,14 +178,14 @@ const controladorUser = {
         db.User.update({
          first_name: req.body.first_name,
          last_name: req.body.last_name,
-         profile_image: req.file == undefined ? "/img/images/users/" + user.profile_image : "/img/images/users/" + req.file.filename,
+         profile_image: req.file == undefined ? user.profile_image : "/img/images/users/" + req.file.filename,
          user_state: 1,
          id_rol: 2
         },{
             where: {id: user.id}
         })
         .then(() => {
-            
+
             req.session.destroy();
             res.redirect("/user/login")
 
