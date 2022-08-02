@@ -10,6 +10,8 @@ const categoriesController = require ('../controllers/categoriesController')
 
 //Obtener todos los productos para la vista products
 router.get('/',categoriesController.list);
+router.get('/create', categoriesController.create);
+router.post('/', categoriesController.store);
 
 
 
