@@ -26,5 +26,7 @@ router.post('/', upload.single("img"), userController.store);
 router.post('/login', userController.loginProcess);
 router.get("/profile", authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
+router.get('/edit/:id', authMiddleware, userController.edit);
+router.patch('/edit/:id', upload.single("img"), userController.update);
 
 module.exports = router;

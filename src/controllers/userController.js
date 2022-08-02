@@ -6,6 +6,7 @@ const session = require('express-session');
 /* const usersFilePath = path.join(__dirname, '../data/Users.json');
 const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 let db = require("../database/models");
+const { default: Swal } = require('sweetalert2');
 
 
 const controladorUser = {
@@ -113,9 +114,11 @@ const controladorUser = {
                 id_rol: 2
             }
             db.User.create(user)
+           
         }
-
         res.redirect("/user/login")
+
+        
 
 
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -162,6 +165,35 @@ const controladorUser = {
     logout: (req, res)=>{
         req.session.destroy();
         return res.redirect("/");
+    }, 
+
+    edit: (req,res)=>{
+        res.render('users/edit.ejs', {user: req.session.userLogged})
+    }, 
+
+    update: (req,res)=>{
+        let user = req.session.userLogged
+        console.log(user.id)
+        
+        db.User.update({
+         first_name: req.body.first_name,
+         last_name: req.body.last_name,
+         profile_image: req.file == undefined ? "/img/images/users/" + user.profile_image : "/img/images/users/" + req.file.filename,
+         user_state: 1,
+         id_rol: 2
+        },{
+            where: {id: user.id}
+        })
+        .then(() => {
+            
+            req.session.destroy();
+            res.redirect("/user/login")
+
+        })
+        .catch(error => res.send(error))
+
+        
+
     }
 }
 
