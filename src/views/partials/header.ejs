@@ -40,18 +40,15 @@
     <nav class="menu-principal">
         <ul class="nav-bar">
             <li><a href="/">Inicio</a></li>
-            <li><a href="/">Categorias</a></li>
-            <li><a href="/products/create">Publicar</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
+                  Productos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="/products/create">Publicar</a>
+                  <a class="dropdown-item" href="/products">Lista de Productos</a>
+                  <a class="dropdown-item" href="#">Categorias</a>
                 </div>
-            <li><a href="/products">Lista de Productos</a></li>
         </ul>
         <ul class="login-bar">
             <% if(locals.isLogged) { %>
