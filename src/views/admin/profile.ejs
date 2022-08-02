@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs", {titulo: "Perfil de Usuario" , cssSheet: "profile" }) %>
+
+    <body>
+        <%- include("../partials/header.ejs") %>
+            <main>
+                <h3>Detalle panel de administrador</h3>
+                <ul>
+                    <li><b>Usuarios habilitados: </b><strong>
+                            <%= totalUserE %>
+                        </strong></li>
+                    <li><b>Usuarios deshabilitados: </b><strong>
+                            <%= totalUserD %>
+                        </strong></li>
+                    <li><b>Productos activos: </b><strong>
+                            <%= totalP %>
+                        </strong></li>
+                </ul>
+            </main>
+            <%- include("../partials/footer.ejs") %>
+
+                </div>
+    </body>
+
+</html>
