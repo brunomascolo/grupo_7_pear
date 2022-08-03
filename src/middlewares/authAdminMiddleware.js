@@ -1,8 +1,9 @@
 function authAdminMiddleware(req, res, next){
-    if (!req.session.userLogged){
-        return res.redirect("/admin/login");
+    if (req.session.userLogged.id_rol == 1) {
+        next();
+    } else {
+        res.render('users/404admin.ejs')
     }
-    next();
 }
 
 module.exports = authAdminMiddleware;

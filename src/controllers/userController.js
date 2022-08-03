@@ -191,9 +191,12 @@ const controladorUser = {
 
         })
         .catch(error => res.send(error))
-
-        
-
+    },
+    list: (req, res) => {
+        db.User.findAll()
+            .then(function (users) {
+                res.render('users/users.ejs', { users: users })
+            })
     }
 }
 
