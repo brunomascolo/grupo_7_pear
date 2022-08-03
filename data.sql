@@ -1,3 +1,13 @@
+insert into roles (id, role) values (1, 'administrador');
+insert into roles (id, role) values (2, 'usuario');
+
+insert into categories (id, name) values (1, 'Arte');
+insert into categories (id, name) values (2, 'Cine');
+insert into categories (id, name) values (3, 'Deportes');
+insert into categories (id, name) values (4, 'Fotografia');
+insert into categories (id, name) values (5, 'Musica');
+insert into categories (id, name) values (6, 'Videojuegos');
+
 insert into users (id, first_name, last_name, username, email, password, profile_image, created_at, updated_at, user_state, id_rol) values (1, 'Kevin', 'Palma','kevin_palma','kevin@gmail.com', '$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW', '/img/image/users/default_user.jpg', '2022-07-19 14:37:36', null, 1, 2);
 insert into users (id, first_name, last_name, username, email, password, profile_image, created_at, updated_at, user_state, id_rol) values (2, 'Cayetano', 'Fabrisin','cayetano_fabrisin','carlos@gmail.com', '$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW', '/img/image/users/default_user.jpg', '2022-07-19 14:37:36', null, 1, 2);
 insert into users (id, first_name, last_name, username, email, password, profile_image, created_at, updated_at, user_state, id_rol) values (3, 'Bruno', 'Mascolo','bruno_mascolo','bruno@gmail.com', '$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW', '/img/image/users/default_user.jpg', '2022-07-19 14:37:36', null, 1, 2);
