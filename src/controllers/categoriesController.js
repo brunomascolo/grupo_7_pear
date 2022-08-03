@@ -18,11 +18,11 @@ let categoriesController = {
     },
     store: (req, res) => {
         //creacion de las categorias en la base de datos
+        console.log(req.body.name)
         db.Category.create({ 
-            name: req.body.name == "" ? "Test categoria" : req.body.name,
+            name: req.body.name == undefined ? "Test categoria" : req.body.name,
         })
             .then(() => {
-                console.log(req.body.name)
                 res.redirect("/categories")
 
             })
