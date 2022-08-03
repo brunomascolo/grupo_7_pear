@@ -9,9 +9,9 @@ const authMiddleware = require("../middlewares/authMiddleware")
 const categoriesController = require ('../controllers/categoriesController')
 
 //Obtener todos los productos para la vista products
-router.get('/',categoriesController.list);
-router.get('/create', categoriesController.create);
-router.post('/', categoriesController.store);
+router.get('/', authMiddleware, categoriesController.list);
+router.get('/create', authMiddleware, categoriesController.create);
+router.post('/', authMiddleware, categoriesController.store);
 
 
 
