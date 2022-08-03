@@ -2,10 +2,12 @@ const path = require('path');
 const fs = require('fs');
 const { equal } = require('assert');
 
+
 /* const nftFilePath = path.join(__dirname, '../data/nft.json');
 const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8')); */
 
 let db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 const controladorProducts = {
     index: (req, res) => {
@@ -199,6 +201,26 @@ const controladorProducts = {
         products[indice] = editedProduct;
         fs.writeFileSync(nftFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products"); */
+    },
+    search: (req,res)  => {
+        let nftBuscado = '%' + req.query.search + '%';
+
+        let pedidoCreador = db.User.findAll();
+
+        let pedidoProducto = db.Product.findAll({
+            where: {
+                name: {[Op.like]: nftBuscado} 
+            }
+        });
+
+
+        Promise.all([pedidoProducto, pedidoCreador])
+            .then(function ([results, creators]) {
+
+                res.render('products/productsSearch.ejs', { results: results, creators: creators })
+            })
+       
+            .catch(error => res.send(error))
     }
 }
 

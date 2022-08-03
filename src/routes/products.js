@@ -24,6 +24,8 @@ const productsController = require ('../controllers/productsController')
 router.get('/',productsController.index);
 /* //Crear todos los productos producto
 router.get('/', productsController.index); */
+// Ruta para buscar
+router.get('/search', productsController.search);
 //Crear un producto
 router.get('/create', authMiddleware, productsController.create);
 router.post('/', upload.single("img"), productsController.store);
@@ -34,5 +36,6 @@ router.get('/edit/:id', productsController.edit);
 router.patch('/edit/:id', upload.single("img"), productsController.update); 
 //Ruta para deshabilitar productos
 router.delete('/delete/:id', productsController.disable);
+
 
 module.exports = router;
