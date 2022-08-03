@@ -65,6 +65,18 @@
         <% } %>
     </ul>
     <ul class="login-bar">
+      <!-- Borrar desde acá -->
+      <form class="navbar-form navbar-left" action="#">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Busqueda">
+          <div class="input-group-btn">
+            <button class="btn btn-light" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <!-- Borrar hasta acá -->
       <% if(locals.isLogged) { %>
         <li class="fotoYNombreUsuario"><img src="<%=locals.userLogged.profile_image%>" class="fotoIcono" alt=""><a
             href="/user/profile">Hola <%= locals.userLogged.first_name%></a></li>

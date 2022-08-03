@@ -77,6 +77,26 @@ Seguir trabajando en equipo para lograr los objetivos de cada sprint, y replicar
 <h4>Que hay que dejar de hacer?</h4>
 <li>No apurarse en la codificacion, ir linea a linea verificando el funcionamiento. (Para evitar conflictos con git)</li>
 
+<h2>Retrospectiva Sprint 6</h2>
+<h4>Que hay que comenzar a hacer?</h4>
+<li>Tomar mas tiempo para dividir las tareas y sea mas equitativo con el equipo.</li>
+<li>Generar comentarios mas claros en la codificación.</li>
+<li>Dividir el trabajo en un mayor numero de integrantes.</li>
+
+<h4>Que hay que hacer mas?</h4>
+<li>Lograr reunir al equipo mas oportunidades para conocer el avance del resto, previo a la entrega del sprint. </li>
+<li>Organizar de mejor forma las tareas, ya que se comienzan a separar en distintas areas (Backend/Frontend) y la carga de trabajo es distinta. </li>
+
+<h4>Que hay que continuar haciendo?</h4>
+<li>Seguir trabajando en equipo para lograr los objetivos de cada sprint, y replicar lo del sprint 3, donde se logro todo.</li>
+
+<h4>Que hay que hacer menos?</h4>
+<li>Subestimar los sprints y relajarse. </li>
+<li>No informar los avances en los canales disponibles </li>
+
+<h4>Que hay que dejar de hacer?</h4>
+<li>No apurarse en la codificacion, ir linea a linea verificando el funcionamiento. (Para evitar conflictos con git)</li>
+
 
 
 
