@@ -118,16 +118,15 @@
  },
  {
   "id": 10,
-  "name": "ONE APE #1",
+  "name": "NFT PRUEBA",
   "author": "One APE",
-  "category": "Art",
-  "priceeth": "0.098",
+  "category": "4",
+  "priceeth": "277.00",
   "priceusd": "299.55",
-  "url": "default",
+  "url": "www.opensea.com",
   "rating": "4.1/5",
-  "condition": 1,
-  "description": "Rarity: Gold amulet ONE APE - a unique collection consisting of 1991 NFTs. these cheerful apes bring good to the world, fight for freedom od thought and exprssion Every ONEAPE has it own amulet.",
-  "img": "/img/images/slider7.png"
+  "condition": 0,
+  "img": "/img/images/nft_1659123529690.jpeg"
  },
  {
   "id": 11,

@@ -46,12 +46,12 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsTo(models.Category, { 
             as: "category",
             foreignKey: "id_category"
-        });
+        })
 
         Product.belongsTo(models.User,{
             as: "creator",
             foreignKey: "id_creator"
-        });
+        })
     }
     return Product;
 }
