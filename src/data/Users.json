@@ -223,5 +223,14 @@
   "password": "$2a$10$e15xHHf37nP27fCC8pxOLeGXiztCWfQjAzHdwkh/kaRJgmHS8qoUW",
   "category": "user",
   "image": "/img/images/users/default_user.jpg"
+ },
+ {
+  "id": 28,
+  "first_name": "ludmila",
+  "last_name": "gomez",
+  "email": "ludmi1628@gmail.com",
+  "password": "$2a$10$s4ohJvEuXBMFqLWlhstd1.ujeBM79yYaza1YWOXCxd.ZAv2WRmSSu",
+  "category": "user",
+  "image": "/img/images/users/user_1659115724090.jpeg"
  }
 ]
