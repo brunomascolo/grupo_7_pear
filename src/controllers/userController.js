@@ -114,8 +114,9 @@ const controladorUser = {
                 id_rol: 2
             }
             db.User.create(user)
+           
         }
-        res.render('users/login.ejs')
+        res.redirect("/user/login")
 
         
 
