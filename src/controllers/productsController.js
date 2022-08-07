@@ -79,7 +79,7 @@ const controladorProducts = {
         db.Product.update({
             name: req.body.name,
             id_category: req.body.category,
-            image: req.file == undefined ? "/img/images/default.jpg" : "/img/images/" + req.file.filename,
+            image: req.file == undefined ? "default.jpg" : req.file.filename,
             url: req.body.url,
             cid: req.file == undefined ? req.body.name : req.file.filename,
             price: req.body.priceeth,
@@ -128,7 +128,7 @@ const controladorProducts = {
         db.Product.create({
             name: req.body.name,
             id_category: req.body.category,
-            image: req.file == undefined ? "/img/images/default.jpg" : "/img/images/" + req.file.filename,
+            image: req.file == undefined ? "default.jpg" : req.file.filename,
             url: req.body.url,
             cid: req.file == undefined ? req.body.name : req.file.filename,
             price: req.body.priceeth,

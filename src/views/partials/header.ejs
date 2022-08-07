@@ -79,7 +79,7 @@
       </form>
       <!-- Borrar hasta acá -->
       <% if(locals.isLogged) { %>
-        <li class="fotoYNombreUsuario"><img src="<%=locals.userLogged.profile_image%>" class="fotoIcono" alt=""><a
+        <li class="fotoYNombreUsuario"><img src="/img/images/users/<%=locals.userLogged.profile_image%>" class="fotoIcono" alt=""><a
             href="/user/profile">Hola <%= locals.userLogged.first_name%></a></li>
         <li></i><a href="/user/logout">Cerrar sesión</a></li>
         <% } else { %>

@@ -109,14 +109,13 @@ const controladorUser = {
                 username: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password,10),
-                profile_image: req.file == undefined ? "/img/images/users/default_user.jpg" : "/img/images/users/" + req.file.filename,
+                profile_image: req.file == undefined ? "default_user.jpg" : req.file.filename,
                 user_state: 1,
                 id_rol: 2
             }
             db.User.create(user)
-           
         }
-        res.redirect("/user/login")
+        res.render('users/login.ejs')
 
         
 
@@ -178,7 +177,7 @@ const controladorUser = {
         db.User.update({
          first_name: req.body.first_name,
          last_name: req.body.last_name,
-         profile_image: req.file == undefined ? user.profile_image : "/img/images/users/" + req.file.filename,
+         profile_image: req.file == undefined ? user.profile_image : req.file.filename,
          user_state: 1,
          id_rol: 2
         },{
