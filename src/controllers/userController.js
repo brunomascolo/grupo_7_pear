@@ -7,6 +7,7 @@ const session = require('express-session');
 const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 let db = require("../database/models");
 const { default: Swal } = require('sweetalert2');
+const { validationResult } = require ("express-validator");
 
 
 const controladorUser = {
@@ -64,6 +65,11 @@ const controladorUser = {
         res.render('users/register.ejs')
     },
     store:(req,res) =>{
+
+        /* let errors = validationResult(req);
+        res.send (errors); */
+
+
         const newEmail = db.User.findOne({where: {email: req.body.email}})
         const newUser = db.User.findOne({where: {username : req.body.username}})
 
@@ -119,7 +125,7 @@ const controladorUser = {
         res.redirect("/user/login")
 
         
-
+///-------------------------------------------//
 
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let findUser = function(field, text){
