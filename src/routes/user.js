@@ -26,13 +26,11 @@ router.get('/login', guestMiddleware, userController.login);
 router.get('/register', guestMiddleware,userController.register);
 router.post('/', upload.single("img"), userController.store);
 router.post('/login', userController.loginProcess);
-router.post("/register", validateForm, userController.register);
+router.post("/register", validateFormRegister, userController.register);
 router.get("/profile", authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
 router.get('/edit/:id', authMiddleware, userController.edit);
 router.patch('/edit/:id', upload.single("img"), userController.update);
 router.get('/', authMiddleware, authAdminMiddleware, userController.list);
-
-
 
 module.exports = router;
