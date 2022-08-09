@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 
-const validateForm = [
+const validateFormRegister = [
     body("first_name").notEmpty().withMessage("Debes completar el campo Nombre"),
     body("last_name").notEmpty().withMessage("Debes completar el campo Apellido"),
     body("email").isEmail().withMessage("Debes completar un Email válido"),
@@ -8,4 +8,4 @@ const validateForm = [
     body("password").notEmpty().withMessage("Debes completar el campo Contraseña"),
 ];
 
-module.exports = validateForm;
+module.exports = validateFormRegister;
