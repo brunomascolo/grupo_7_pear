@@ -6,6 +6,7 @@ const session = require("express-session");
 const cookies = require("cookie-parser");
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const userRegisterMiddleware = require("../middlewares/userRegisterMiddleware");
 
 app.use(session({secret: "grupoPear", resave: false, saveUninitialized: false}));
 
@@ -31,11 +32,10 @@ app.use('/', mainRouter); //Rutas del menu principal
 app.use('/products', productsRouter); // Rutas de los productos
 app.use('/categories', categoriesRouter); // Rutas de las categorias
 app.use('/user', userRouter);
+app.use('/register', userRouter);
 //app.use('/admin', adminRouter); Rutas del panel de administrador
 
 app.listen(3000, () => {
   console.log("Servidor funcionando en http://localhost:3000")
 })
-
-
 
