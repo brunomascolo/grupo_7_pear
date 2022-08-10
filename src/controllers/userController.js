@@ -62,12 +62,14 @@ const controladorUser = {
  },
 
     register:(req,res) => {
+
+        let errors = validationResult(req);
+        res.send (errors);
         res.render('users/register.ejs')
     },
     store:(req,res) =>{
 
-        /* let errors = validationResult(req);
-        res.send (errors); */
+        
 
 
         const newEmail = db.User.findOne({where: {email: req.body.email}})

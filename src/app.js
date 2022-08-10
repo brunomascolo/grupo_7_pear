@@ -6,7 +6,6 @@ const session = require("express-session");
 const cookies = require("cookie-parser");
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
-const userRegisterMiddleware = require("../middlewares/userRegisterMiddleware");
 
 app.use(session({secret: "grupoPear", resave: false, saveUninitialized: false}));
 

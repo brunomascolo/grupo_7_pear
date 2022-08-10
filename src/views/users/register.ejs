@@ -14,25 +14,25 @@
             <div class="formulario">
                 <input type="file" name="img"> 
                 <label for="register">
-                    <input class="inputs" type="text" name="first_name" id="first_name" placeholder="   Nombre" minlength="5" required>
+                    <input class="inputs" type="text" name="first_name" id="first_name" placeholder="   Nombre" minlength="5" >
                 </label>
                 <label for="register">
-                    <input class="inputs" type="text" name="last_name" id="last_name" placeholder="   Apellido" minlength="5" required>
+                    <input class="inputs" type="text" name="last_name" id="last_name" placeholder="   Apellido" minlength="5" >
                 </label>
                 <label for="register">
-                    <input class="inputs" type="email" name="email" id="email" placeholder="   Email" minlength="5" required>
+                    <input class="inputs" type="email" name="email" id="email" placeholder="   Email" minlength="5" >
                 </label>
                 <label for="register">
-                    <input class="inputs" type="text" name="username" id="username" placeholder="   Nombre de Usuario" minlength="5" required>
+                    <input class="inputs" type="text" name="username" id="username" placeholder="   Nombre de Usuario" minlength="5" >
                 </label>
                 <% if (locals.errors && errors.email) { %>
                     <div class="errorLogin" style="color: #FF0000"><%= errors.email.msg%></div>
                    <% } %> 
                 <label for="register">
-                    <input class="inputs" type="password" name="password" id="password" placeholder="   Contraseña" minlength="5" required>
+                    <input class="inputs" type="password" name="password" id="password" placeholder="   Contraseña" minlength="5" >
                 </label>   
                 <label for="register">
-                    <input class="inputs" type="password" name="repeatPassword" id="repeatPassword" placeholder="   Repeti tu Contraseña" minlength="5" required>
+                    <input class="inputs" type="password" name="repeatPassword" id="repeatPassword" placeholder="   Repeti tu Contraseña" minlength="5" >
                 </label> 
                 <% if (locals.errors && errors.password) { %>
                     <div class="errorLogin" style="color: #FF0000"><%= errors.password.msg%></div>
