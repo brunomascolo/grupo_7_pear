@@ -91,6 +91,8 @@ return res.render('users/login.ejs', {
 
                     }
                 }
+
+
             })
         if (req.body.password != req.body.repeatPassword) {
             return res.render('users/register.ejs', {
@@ -108,16 +110,15 @@ return res.render('users/login.ejs', {
                 username: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                profile_image: req.file == undefined ? "default_user.jpg" : req.file.filename,
+                profile_image: req.file == undefined ? "/img/images/users/default_user.jpg" : "/img/images/users/" + req.file.filename,
                 user_state: 1,
                 id_rol: 2
             }
             db.User.create(user)
 
         }
-        res.redirect("/user/login")
-        ///-------------------------------------------//
-
+        res.redirect("/user/login");
+        
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let findUser = function(field, text){
             let usuarioBuscado = user.find(oneUser => oneUser[field] === text)
