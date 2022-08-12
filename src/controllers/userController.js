@@ -7,33 +7,33 @@ const session = require('express-session');
 const user = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 let db = require("../database/models");
 const { default: Swal } = require('sweetalert2');
-const { validationResult } = require ("express-validator");
+const { validationResult } = require("express-validator");
 
 
 const controladorUser = {
-    login: (req,res) => {
+    login: (req, res) => {
         res.render('users/login.ejs')
     },
-    loginProcess: (req, res)=>{
+    loginProcess: (req, res) => {
 
-        let userToLogin = db.User.findOne({where: {email: req.body.email}})
-        .then((user)=>{
-            if(user){
-                let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
-                if(contraseñaCorrecta){
-                    /* delete userToLogin.password */
-                    req.session.userLogged = user;
-                    return res.redirect("/user/profile")
-                }
-            }
-            return res.render('users/login.ejs', {
-                errors: {
-                    email: {
-                        msg: "Datos de usuario incorrectos"
+        let userToLogin = db.User.findOne({ where: { email: req.body.email } })
+            .then((user) => {
+                if (user) {
+                    let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
+                    if (contraseñaCorrecta) {
+                        /* delete userToLogin.password */
+                        req.session.userLogged = user;
+                        return res.redirect("/user/profile")
                     }
                 }
-            }) 
-        })
+                return res.render('users/login.ejs', {
+                    errors: {
+                        email: {
+                            msg: "Datos de usuario incorrectos"
+                        }
+                    }
+                })
+            })
         /* let findUser = function(field, text){
             let usuarioBuscado = user.find(oneUser => oneUser[field] === text)
             return usuarioBuscado};
@@ -42,66 +42,57 @@ const controladorUser = {
             let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password);
             if(contraseñaCorrecta){
                 /* delete userToLogin.password; */
-                /*
-                req.session.userLogged = userToLogin;
-                return res.redirect("/user/profile")
-            }
-        }               
-        return res.render('users/login.ejs', {
-            errors: {
-                email: {
-                    msg: "Datos de usuario incorrectos"
-                }
-            }
-        }) 
-        */
+        /*
+        req.session.userLogged = userToLogin;
+        return res.redirect("/user/profile")
+    }
+}               
+return res.render('users/login.ejs', {
+    errors: {
+        email: {
+            msg: "Datos de usuario incorrectos"
+        }
+    }
+}) 
+*/
     },
 
-    profile: (req, res)=>{
-        res.render('users/profile.ejs', {user: req.session.userLogged})
- },
+    profile: (req, res) => {
+        res.render('users/profile.ejs', { user: req.session.userLogged })
+    },
 
-    register:(req,res) => {
-
-        let errors = validationResult(req);
-        res.send (errors);
+    register: (req, res) => {
         res.render('users/register.ejs')
     },
-    store:(req,res) =>{
-
-        
-
-
-        const newEmail = db.User.findOne({where: {email: req.body.email}})
-        const newUser = db.User.findOne({where: {username : req.body.username}})
+    store: (req, res) => {
+        const newEmail = db.User.findOne({ where: { email: req.body.email } })
+        const newUser = db.User.findOne({ where: { username: req.body.username } })
 
         Promise.all([newEmail, newUser])
-        .then(function(user, email){
-            if(email != null || email != undefined || email != ""){            
-                return res.render('users/register.ejs', {
-                    errors: {
-                        email: {
-                            msg: "El correo registrado ya esta en uso."
-                        }
-                    }
-                })
-            } else{
-                if(user != null || user != undefined || user != ""){            
+            .then(function (user, email) {
+                if (email != null || email != undefined || email != "") {
                     return res.render('users/register.ejs', {
                         errors: {
-                            username: {
-                                msg: "El usuario ingresado ya esta en uso."
+                            email: {
+                                msg: "El correo registrado ya esta en uso."
                             }
                         }
                     })
-                } else{
-                    
-                }
-            }
-            
+                } else {
+                    if (user != null || user != undefined || user != "") {
+                        return res.render('users/register.ejs', {
+                            errors: {
+                                username: {
+                                    msg: "El usuario ingresado ya esta en uso."
+                                }
+                            }
+                        })
+                    } else {
 
-        })
-        if(req.body.password != req.body.repeatPassword){
+                    }
+                }
+            })
+        if (req.body.password != req.body.repeatPassword) {
             return res.render('users/register.ejs', {
                 errors: {
                     password: {
@@ -110,24 +101,22 @@ const controladorUser = {
                 }
             })
         }
-        else{
+        else {
             let user = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 username: req.body.username,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password,10),
+                password: bcrypt.hashSync(req.body.password, 10),
                 profile_image: req.file == undefined ? "default_user.jpg" : req.file.filename,
                 user_state: 1,
                 id_rol: 2
             }
             db.User.create(user)
-           
+
         }
         res.redirect("/user/login")
-
-        
-///-------------------------------------------//
+        ///-------------------------------------------//
 
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let findUser = function(field, text){
@@ -170,35 +159,35 @@ const controladorUser = {
         } */
     },
 
-    logout: (req, res)=>{
+    logout: (req, res) => {
         req.session.destroy();
         return res.redirect("/");
-    }, 
+    },
 
-    edit: (req,res)=>{
-        res.render('users/edit.ejs', {user: req.session.userLogged})
-    }, 
+    edit: (req, res) => {
+        res.render('users/edit.ejs', { user: req.session.userLogged })
+    },
 
-    update: (req,res)=>{
+    update: (req, res) => {
         let user = req.session.userLogged
         console.log(user.id)
-        
+
         db.User.update({
-         first_name: req.body.first_name,
-         last_name: req.body.last_name,
-         profile_image: req.file == undefined ? user.profile_image : req.file.filename,
-         user_state: 1,
-         id_rol: 2
-        },{
-            where: {id: user.id}
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            profile_image: req.file == undefined ? user.profile_image : req.file.filename,
+            user_state: 1,
+            id_rol: 2
+        }, {
+            where: { id: user.id }
         })
-        .then(() => {
+            .then(() => {
 
-            req.session.destroy();
-            res.redirect("/user/login")
+                req.session.destroy();
+                res.redirect("/user/login")
 
-        })
-        .catch(error => res.send(error))
+            })
+            .catch(error => res.send(error))
     },
     list: (req, res) => {
         db.User.findAll()
