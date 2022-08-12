@@ -61,40 +61,54 @@ return res.render('users/login.ejs', {
         res.render('users/profile.ejs', { user: req.session.userLogged })
     },
 
-    register: (req, res) => {
+    register:(req,res) => {
+
         res.render('users/register.ejs')
     },
-    store: (req, res) => {
-        const newEmail = db.User.findOne({ where: { email: req.body.email } })
-        const newUser = db.User.findOne({ where: { username: req.body.username } })
+    store:(req,res) =>{
+
+        
+
+
+        const newEmail = db.User.findOne({where: {email: req.body.email}})
+        const newUser = db.User.findOne({where: {username : req.body.username}})
+
+       
 
         Promise.all([newEmail, newUser])
-            .then(function (user, email) {
-                if (email != null || email != undefined || email != "") {
+        .then(function(user, email){
+            if(email != null || email != undefined || email != ""){            
+                return res.render('users/register.ejs', {
+                    errors: {
+                        email: {
+                            msg: "El correo registrado ya esta en uso."
+                        }
+                    }
+                })
+            } else{
+                if(user != null || user != undefined || user != ""){            
                     return res.render('users/register.ejs', {
                         errors: {
-                            email: {
-                                msg: "El correo registrado ya esta en uso."
+                            username: {
+                                msg: "El usuario ingresado ya esta en uso."
                             }
                         }
                     })
-                } else {
-                    if (user != null || user != undefined || user != "") {
-                        return res.render('users/register.ejs', {
-                            errors: {
-                                username: {
-                                    msg: "El usuario ingresado ya esta en uso."
-                                }
-                            }
-                        })
-                    } else {
-
-                    }
+                } else{
+                    
                 }
+<<<<<<< HEAD
 
 
             })
         if (req.body.password != req.body.repeatPassword) {
+=======
+            }
+            
+
+        })
+        if(req.body.password != req.body.repeatPassword){
+>>>>>>> 32f060072c918610b68195d3de051bbd73d66762
             return res.render('users/register.ejs', {
                 errors: {
                     password: {
@@ -117,8 +131,16 @@ return res.render('users/login.ejs', {
             db.User.create(user)
 
         }
+<<<<<<< HEAD
         res.redirect("/user/login");
         
+=======
+        res.redirect("/user/login")
+
+        
+///-------------------------------------------//
+
+>>>>>>> 32f060072c918610b68195d3de051bbd73d66762
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let findUser = function(field, text){
             let usuarioBuscado = user.find(oneUser => oneUser[field] === text)

@@ -24,7 +24,11 @@ const userController = require ('../controllers/userController')
 
 router.get('/login', guestMiddleware, userController.login);
 router.get('/register', guestMiddleware, userController.register);
+<<<<<<< HEAD
 router.post('/', upload.single("img"), userController.store);
+=======
+router.post('/', upload.single("img"), validateFormRegister, userController.store);
+>>>>>>> 32f060072c918610b68195d3de051bbd73d66762
 router.post('/login', userController.loginProcess);
 router.post("/register", userController.register);
 router.get("/profile", authMiddleware, userController.profile);
