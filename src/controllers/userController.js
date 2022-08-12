@@ -65,7 +65,6 @@ const controladorUser = {
     store:(req,res) =>{
         const newEmail = db.User.findOne({where: {email: req.body.email}})
         const newUser = db.User.findOne({where: {username : req.body.username}})
-
         Promise.all([newEmail, newUser])
         .then(function(user, email){
             if(email != null || email != undefined || email != ""){            
@@ -76,7 +75,7 @@ const controladorUser = {
                         }
                     }
                 })
-            } else{
+            } else {
                 if(user != null || user != undefined || user != ""){            
                     return res.render('users/register.ejs', {
                         errors: {
@@ -85,40 +84,36 @@ const controladorUser = {
                             }
                         }
                     })
-                } else{
-                    
                 }
             }
-            
-
-        })
-        if(req.body.password != req.body.repeatPassword){
-            return res.render('users/register.ejs', {
-                errors: {
-                    password: {
-                        msg: "Las contraseñas no coinciden."
+            if(req.body.password != req.body.repeatPassword){
+                return res.render('users/register.ejs', {
+                    errors: {
+                        password: {
+                            msg: "Las contraseñas no coinciden."
+                        }
                     }
-                }
-            })
-        }
-        else{
-            let user = {
-                first_name: req.body.first_name,
-                last_name: req.body.last_name,
-                username: req.body.username,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password,10),
-                profile_image: req.file == undefined ? "default_user.jpg" : req.file.filename,
-                user_state: 1,
-                id_rol: 2
+                })
             }
-            db.User.create(user)
-           
-        }
-        res.redirect("/user/login")
-
+            else{
+                let user = {
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    username: req.body.username,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password,10),
+                    profile_image: req.file == undefined ? "default_user.jpg" : req.file.filename,
+                    user_state: 1,
+                    id_rol: 2
+                }
+                db.User.create(user)
+               
+            }
+            res.redirect("/user/login")      
+    
+        })
+        .catch(error => res.send(error))
         
-
 
         /* const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         let findUser = function(field, text){
