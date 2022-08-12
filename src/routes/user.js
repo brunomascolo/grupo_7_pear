@@ -23,8 +23,8 @@ const upload = multer({storage: storage});
 const userController = require ('../controllers/userController')
 
 router.get('/login', guestMiddleware, userController.login);
-router.get('/register', guestMiddleware, validateFormRegister, userController.register);
-router.post('/', upload.single("img"), userController.store);
+router.get('/register', guestMiddleware, userController.register);
+router.post('/', upload.single("img"), validateFormRegister, userController.store);
 router.post('/login', userController.loginProcess);
 /* router.post("/register", validateFormRegister, userController.register); */
 router.get("/profile", authMiddleware, userController.profile);

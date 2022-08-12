@@ -63,21 +63,23 @@ const controladorUser = {
 
     register:(req,res) => {
 
-        let errors = validationResult(req);
-        res.send (errors);
+        /* let errors = validationResult(req);
+        res.send (errors); */
         res.render('users/register.ejs')
     },
     store:(req,res) =>{
 
-        
-
+        /* let errors = validationResult(req);
+        res.send (errors); */
 
         const newEmail = db.User.findOne({where: {email: req.body.email}})
         const newUser = db.User.findOne({where: {username : req.body.username}})
+        
+       
 
         Promise.all([newEmail, newUser])
         .then(function(user, email){
-            if(email != null || email != undefined || email != ""){            
+            if(email != null || email != undefined || email != "" ){            
                 return res.render('users/register.ejs', {
                     errors: {
                         email: {
@@ -86,7 +88,7 @@ const controladorUser = {
                     }
                 })
             } else{
-                if(user != null || user != undefined || user != ""){            
+                if(user != null || user != undefined || user != "" ){            
                     return res.render('users/register.ejs', {
                         errors: {
                             username: {
@@ -124,6 +126,10 @@ const controladorUser = {
             db.User.create(user)
            
         }
+
+        let errors = validationResult(req);
+        res.send (errors);
+
         res.redirect("/user/login")
 
         
