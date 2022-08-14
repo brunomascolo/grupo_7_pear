@@ -142,7 +142,8 @@ const controladorProducts = {
                 res.redirect("/products")
 
             })
-            .catch(error => res.send(error))
+            .catch(error => 
+                res.send(error))
 
 
         //El if lo utilizaremos para rescatar errores. Por el momento no se exigen validaciones, simplemente lo cargo vacio y con una imagen por defecto
