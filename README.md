@@ -14,6 +14,8 @@ A continuacion presentaremos a los miembros que colaboran en este proyecto:
 <li><h4>Cayetano Fabrissin:</h4> Soy un contador de 32 años que trabaja de forma independiente y decidió dedicar su tiempo libre al estudio de la programación.</li>
 
 <li><h4>Ludmila Johana Gomez:</h4> Tengo 26 años, vivo en Jose Marmol, Buenos Aires. Estudie armado y reparacion de Pc, Servicio tecnico de celulares. Y ahora estoy estudiando Programacion Web Full Stack en Digital House para poder ejercer de lo que me gusta en el mundo de la programacion.</li>
+
+<li><h4>Patricia Beatriz Dilernia:</h4> Tengo 34 años, soy profesora de artes plásticas. Y estudio programación para superar mis límites dentro del mundo de la tecnología.</li>
 </ul>
 <h4>Páginas web de referencia:</h4>
 <ul>

@@ -12,14 +12,20 @@
         </div>
         <form action="/user/login" method="POST" class="login">
             <div class="formulario">
+                <% if (locals.errors && errors.emailpass) { %>
+                    <p class="errorLogin" id="errorLogin"><%= errors.emailpass.msg%></p>
+                   <% } %>  
                 <label for="email">
-                    <input type="text" id="username" name="email" placeholder="  Correo electrónico" class="textos email">
-                </label>
-                <label for="password">
-                    <input type="password" name="password" id="password" placeholder="  Contraseña" class="textos password">
+                    <input type="text" id="username" name="email" placeholder="Ingresa tu correo electronico" class="textos email form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"> 
                 </label>
                 <% if (locals.errors && errors.email) { %>
                     <p class="errorLogin" id="errorLogin"><%= errors.email.msg%></p>
+                   <% } %>      
+                <label for="password">
+                    <input type="password" name="password" id="password" placeholder="  Ingresa tu contraseña" class="textos password form-control <% locals.errors && errors.password ? 'is-invalid' : null %> ">
+                </label>
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errorLogin" id="errorLogin"><%= errors.password.msg%></p>
                    <% } %>                
             </div>
             <div class="botonIniciarSesion">
@@ -38,7 +44,7 @@
     <%- include("../partials/footer.ejs") %>
 
 </div>
-<script src="/js/login.js"></script>
+<!-- <script src="/js/login.js"></script> -->
 
 </body>
 </html>

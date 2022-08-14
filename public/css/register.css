@@ -87,6 +87,10 @@ main form input{
     height: auto;
 }
 
+.errorRegister{
+    color: red;
+}
+
 .checksWrap{
     display:flex;
     flex-direction: column;
