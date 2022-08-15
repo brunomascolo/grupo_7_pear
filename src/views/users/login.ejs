@@ -20,13 +20,15 @@
                 </label>
                 <% if (locals.errors && errors.email) { %>
                     <p class="errorLogin" id="errorLogin"><%= errors.email.msg%></p>
-                   <% } %>      
+                   <% } %>
+                   <p class="errorLogin" id="errorCorreo"></p>      
                 <label for="password">
                     <input type="password" name="password" id="password" placeholder="  Ingresa tu contraseña" class="textos password form-control <% locals.errors && errors.password ? 'is-invalid' : null %> ">
                 </label>
                 <% if (locals.errors && errors.password) { %>
                     <p class="errorLogin" id="errorLogin"><%= errors.password.msg%></p>
-                   <% } %>                
+                   <% } %>
+                   <p class="errorLogin" id="errorPassword"></p>                
             </div>
             <div class="botonIniciarSesion">
                 <button type="submit" class="botones">Iniciar Sesión</button>  

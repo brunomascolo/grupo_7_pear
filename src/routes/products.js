@@ -2,8 +2,9 @@ const express = require ('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require("path");
-const guestMiddleware = require("../middlewares/guestMiddleware")
-const authMiddleware = require("../middlewares/authMiddleware")
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
+const authMiddlewareEdit = require("../middlewares/authMiddlewareEdit");
 
 
 //Configurar multer
@@ -64,12 +65,12 @@ router.get('/search', productsController.search);
 router.get('/create', authMiddleware, productsController.create);
 router.post('/', upload.single("img"), validations , productsController.store);
 //Obtener un producto
-router.get('/:id', productsController.detail);
+router.get('/:id', authMiddleware, productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id', upload.single("img"), validations,  productsController.update); 
+router.get('/edit/:id', authMiddleware, productsController.edit);
+router.patch('/edit/:id', upload.single("img"), validations,  authMiddleware, productsController.update); 
 //Ruta para deshabilitar productos
-router.delete('/delete/:id', productsController.disable);
+router.delete('/delete/:id', authMiddleware, productsController.disable);
 
 
 module.exports = router;

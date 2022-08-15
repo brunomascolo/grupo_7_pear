@@ -35,7 +35,7 @@
                                     <p>Valor: <i class="fab fa-ethereum"></i> <%= products[i].price %>
                                     </p> <!--  Agregar valor en ETH -->
                                 </li>
-                                <% if(locals.isLogged) { %>
+                                <% if(locals.isLogged && locals.userLogged.id == products[i].id_creator){ %>
                                 <li class="li-boton">
                                     <a href="/products/edit/<%= products[i].id%>" class="boton-modificar">Modificar</a>
                                 </li>
