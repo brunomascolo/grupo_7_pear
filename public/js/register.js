@@ -86,7 +86,7 @@ window.addEventListener("load", function () {
             repeatPassword.classList.add("is-invalid");
         }
         else {
-            /* formularioRegister.submit(); */
+            formularioRegister.submit();
         }
     })
 })
