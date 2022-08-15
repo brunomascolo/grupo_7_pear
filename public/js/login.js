@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-    console.log("Trabajando")
+    console.log("JS funcionando en login")
     let formularioLogin = document.querySelector("form.login")
     let validarCorreo =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
     let correo = document.querySelector("input.email");
