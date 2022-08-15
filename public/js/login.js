@@ -24,14 +24,14 @@ window.addEventListener("load", function(){
         if(correo.value == "" && password.value == ""){
             correo.classList.add("is-invalid")
             password.classList.add("is-invalid")
-            erroresCorreo.innerHTML = "Debes ingresar un correo valido"
-            erroresPassword.innerHTML = "Debes ingresar una contraseña"
+            erroresCorreo.innerHTML = "Debes ingresar un correo."
+            erroresPassword.innerHTML = "Debes ingresar una contraseña."
         } else if(!validarCorreo.test(correo.value)){
             correo.classList.add("is-invalid")
-            erroresCorreo.innerHTML = "Debes ingresar un correo valido"
+            erroresCorreo.innerHTML = "Debes ingresar un correo valido."
         } else if (password.value == ""){
             password.classList.add("is-invalid")
-            erroresPassword.innerHTML = "Debes ingresar una contraseña"
+            erroresPassword.innerHTML = "Debes ingresar una contraseña."
         } else {
             formularioLogin.submit();
         }

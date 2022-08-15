@@ -58,7 +58,7 @@
                     <input type="checkbox" name="terminos" id="terminos" class="checks <%= locals.errors && errors.terminos ? 'is-invalid' : null %>">
                     <a href="">He leido y acepto los terminos y condiciones</a>
                 </label>
-                <% if (locals.errors && errors.password) { %>
+                <% if (locals.errors && errors.terminos) { %>
                     <p class="errorRegister" id="errorRegister"><%= errors.terminos.msg%></p>
                    <% } %>
             </div>
@@ -67,7 +67,7 @@
                     <input type="checkbox" name="mayor" id="mayor" class="checks <%= locals.errors && errors.mayor ? 'is-invalid' : null %>">
                     Soy mayor de 18 años
                 </label>
-                <% if (locals.errors && errors.password) { %>
+                <% if (locals.errors && errors.mayor) { %>
                     <p class="errorRegister" id="errorRegister"><%= errors.mayor.msg%></p>
                    <% } %>           
             </div>
