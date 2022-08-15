@@ -23,10 +23,14 @@ const upload = multer({storage: storage});
 const { body } = require('express-validator');
 
 const validations = [
-    body('name').notEmpty().withMessage('Debes colocar un nombre al NFT'),
+    body('name')
+        .notEmpty().withMessage('Debes colocar un nombre al NFT').bail()
+        .isLength({ min: 5 }).withMessage('El nombre del NFT debe tener al menos 5 caracteres'),
     body('url').notEmpty().withMessage('Debes subir tu nft a IPFS y copies tu enlace acá'),
     body('priceeth').notEmpty().withMessage('Debes colocar tu valor en ETH, lo puedes cambiar cuando quieras'),
-    body('description').notEmpty().withMessage('Ingresa una breve descripción del NFT que venderas'),
+    body('description')
+        .notEmpty().withMessage('Ingresa una breve descripción del NFT que venderas').bail()
+        .isLength({ min : 20 }).withMessage('La descripcion del NFT debe contener al menos 20 caracteres'),
     body('category').notEmpty().withMessage('Debes seleccionar una categoria para tu NFT'),
     body('img').custom((value, {req}) => {
         let file = req.file;
