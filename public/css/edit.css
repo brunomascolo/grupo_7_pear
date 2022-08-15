@@ -63,6 +63,18 @@ body {
   padding: 10px;
 }
 
+.msgerror {
+  color:rgb(210, 97, 97)
+}
+
+.is-invalid{
+  font-size: 1.2em;
+  width: 100%;
+  padding: 3px 3px;
+  border-radius: 5px;
+  border: 1px solid red
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
   .formulario {
     display: flex;
@@ -75,6 +87,11 @@ body {
   }
 
   .textField {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .is-invalid{
     width: 90%;
     border-radius: 10px;
   }
@@ -108,6 +125,15 @@ body {
     font-size: 1em;
     border-radius: 10px;
     border-color: gray;
+  }
+
+  
+  .is-invalid {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border-color: red;
   }
 
   .container-principal {

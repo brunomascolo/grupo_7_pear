@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { equal } = require('assert');
+const { validationResult } = require('express-validator');
 
 
 /* const nftFilePath = path.join(__dirname, '../data/nft.json');
@@ -75,6 +76,23 @@ const controladorProducts = {
         res.render('products/edit', { productToEdit }) */
     },
     update: (req, res) => {
+
+        const resultValidations = validationResult(req);
+        
+        if( resultValidations.errors.length > 0 ){
+
+        let pedidoProducto = db.Product.findByPk(req.params.id);
+
+        let pedidoCreador = db.User.findAll();
+        let pedidoCategoria = db.Category.findAll();
+
+        Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
+            .then(function ([product, creator, category]) {
+                res.render("products/edit", { product: product, creator: creator, category: category, errors: resultValidations.mapped(),
+                    oldData: req.body });
+            })                     
+             
+        } else {
         let id_usuario = req.session.userLogged.id
         db.Product.update({
             name: req.body.name,
@@ -99,7 +117,7 @@ const controladorProducts = {
             })
             .catch(error => res.send(error))
 
-
+        }
 
         //Hay campos como el autor, el price en usd y el rating que no deben modificarse.
         /*  const products = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
@@ -123,7 +141,29 @@ const controladorProducts = {
          res.redirect("/products"); */
     },
     store: (req, res) => {
-        //creacion del NFT en la base de datos
+
+       
+
+        //validation de datos por express -validator
+        
+        const resultValidations = validationResult(req);
+        
+        
+
+        if( resultValidations.errors.length > 0 ){
+            
+
+            db.Category.findAll()
+            .then(function (categories) {
+                return res.render("products/create.ejs", { categories: categories ,
+                    errors: resultValidations.mapped(),
+                    oldData: req.body
+             });
+            })
+             
+        } else {
+
+             //creacion del NFT en la base de datos
         let id_usuario = req.session.userLogged.id
         db.Product.create({
             name: req.body.name,
@@ -144,6 +184,8 @@ const controladorProducts = {
             })
             .catch(error => 
                 res.send(error))
+
+        }
 
 
         //El if lo utilizaremos para rescatar errores. Por el momento no se exigen validaciones, simplemente lo cargo vacio y con una imagen por defecto

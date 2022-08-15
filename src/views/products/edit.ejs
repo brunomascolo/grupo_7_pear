@@ -12,11 +12,24 @@
             <form action="/products/edit/<%= product.id %>?_method=PATCH" enctype="multipart/form-data" method="POST" class="formulario">
                 <div class="fieldForm">
                     <label class="etiquetas">Nombre de tu producto(*)</label>
-                    <input type="text" name="name" class="textField" value="<%= product.name %>" required>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        class="<%= locals.errors && errors.name ? "is-invalid" : "textField" %>"
+                        value="<%= product.name %>" required>
+                        <!-- label error campo name -->
+                   
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="msgerror">
+                                <%= errors.name.msg %>                                 
+                            </div>                         
+                        <% } %>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Categoria(*)</label>
-                    <select class="textField" name="category">
+                    <select 
+                        class="<%= locals.errors && errors.category ? "is-invalid" : "textField" %>"
+                        name="category">
 
                         <% for (let i = 0; i < category.length; i++){ %>
                             <% if (category[i].id == product.id_category){ %>
@@ -46,26 +59,70 @@
                         <option value="Music">Musica</option>
                         <option value="Videogames">Videojuegos</option> -->
                     </select>
+                    <!-- label error campo category -->
+                   
+                    <% if (locals.errors && errors.category) { %>
+                        <div class="msgerror">
+                            <%= errors.category.msg %>                                 
+                        </div>                         
+                    <% } %>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Descripcion(*)</label>
-                    <input type="text" class="textField" 
-                    name="description" placeholder="Ingresa una breve descripción del NFT que venderas"  
+                    <input 
+                        type="text" 
+                        class="<%= locals.errors && errors.description ? "is-invalid" : "textField" %>" 
+                        name="description" 
+                        
                     value="<%= product.description %>">
+                     <!-- label error campo description -->
+                   
+                     <% if (locals.errors && errors.description) { %>
+                        <div class="msgerror">
+                            <%= errors.description.msg %>                                 
+                        </div>                         
+                    <% } %>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">URL <a href="https://ipfs.io/" target="_blank">IPFS</a></label>
-                    <input type="text" name="url" class="textField"
-                        placeholder="Sugerimos subir tu nft a IPFS y copies tu enlace acá" value="<%= product.url %>"> 
+                    <input 
+                        type="text" 
+                        name="url" 
+                        class="<%= locals.errors && errors.url ? "is-invalid" : "textField" %>"
+                        
+                        value="<%= product.url %>"> 
+                        <!-- label error campo URL -->
+                   
+                        <% if (locals.errors && errors.url) { %>
+                            <div class="msgerror">
+                                <%= errors.url.msg %>                                 
+                            </div>                         
+                        <% } %>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" name="img"class="textField">
+                    <input type="file" name="img"class="<%= locals.errors && errors.img ? "is-invalid" : "textField" %>">
+                    <% if (locals.errors && errors.img) { %>
+                        <div class="msgerror">
+                           <%= errors.img.msg %>  
+                        </div>
+                     
+                    <% } %>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>
-                    <input type="text" name="priceeth" class="textField"
-                        placeholder="Tu valor en ETH, lo puedes cambiar cuando quieras" value="<%= product.price %>">
+                    <input 
+                        type="text" 
+                        name="priceeth" 
+                        class="<%= locals.errors && errors.priceeth ? "is-invalid" : "textField" %>"
+                        value="<%= product.price %>">
+                        <!-- label error campo ETH -->
+                   
+                        <% if (locals.errors && errors.priceeth) { %>
+                            <div class="msgerror">
+                                <%= errors.priceeth.msg %>                                 
+                            </div>                         
+                        <% } %>
                 </div>
                 <div class="botonCrear">
                     <button type="submit" class="botones">Guardar</button>
