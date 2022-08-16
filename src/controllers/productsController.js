@@ -42,12 +42,13 @@ const controladorProducts = {
         console.log(req.params.id);
         db.Product.findByPk(req.params.id, { include: ["creator", "category"] })
             .then(function (product) {
-
-                res.render('products/details', { product: product });
-
+                if (product) {
+                    res.render('products/details', { product: product });
+                } else {
+                    res.render('products/404')
+                }
             })
-
-
+            .catch(error => res.send(error))
 
         /*  // entrega de datos de detalle co el json
          let nftDetail = nft.find(nft => req.params.id == nft.id)
@@ -66,9 +67,12 @@ const controladorProducts = {
 
         Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
             .then(function ([product, creator, category]) {
-                res.render("products/edit", { product: product, creator: creator, category: category });
+                if (product) {
+                    res.render("products/edit", { product: product, creator: creator, category: category });
+                } else {
+                    res.render('products/404')
+                }
             })
-
 
         /* const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
         let id = req.params.id
@@ -78,44 +82,47 @@ const controladorProducts = {
     update: (req, res) => {
 
         const resultValidations = validationResult(req);
-        
-        if( resultValidations.errors.length > 0 ){
 
-        let pedidoProducto = db.Product.findByPk(req.params.id);
+        if (resultValidations.errors.length > 0) {
 
-        let pedidoCreador = db.User.findAll();
-        let pedidoCategoria = db.Category.findAll();
+            let pedidoProducto = db.Product.findByPk(req.params.id);
 
-        Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
-            .then(function ([product, creator, category]) {
-                res.render("products/edit", { product: product, creator: creator, category: category, errors: resultValidations.mapped(),
-                    oldData: req.body });
-            })                     
-             
+            let pedidoCreador = db.User.findAll();
+            let pedidoCategoria = db.Category.findAll();
+
+            Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
+                .then(function ([product, creator, category]) {
+                    res.render("products/edit", {
+                        product: product, creator: creator, category: category, errors: resultValidations.mapped(),
+                        oldData: req.body
+                    });
+                })
+                .catch(error => res.send(error))
+
         } else {
-        let id_usuario = req.session.userLogged.id
-        db.Product.update({
-            name: req.body.name,
-            id_category: req.body.category,
-            image: req.file == undefined ? "default.jpg" : req.file.filename,
-            url: req.body.url,
-            cid: req.file == undefined ? req.body.name : req.file.filename,
-            price: req.body.priceeth,
-            description: req.body.description == "" ? "Producto sin descripción" : req.body.description,
-            id_creator: id_usuario,
-            state: 1 //estado siempre sera 1. En 0 el producto se deshabilita
+            let id_usuario = req.session.userLogged.id
+            db.Product.update({
+                name: req.body.name,
+                id_category: req.body.category,
+                image: req.file == undefined ? "default.jpg" : req.file.filename,
+                url: req.body.url,
+                cid: req.file == undefined ? req.body.name : req.file.filename,
+                price: req.body.priceeth,
+                description: req.body.description == "" ? "Producto sin descripción" : req.body.description,
+                id_creator: id_usuario,
+                state: 1 //estado siempre sera 1. En 0 el producto se deshabilita
 
-        }, {
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(() => {
-
-                res.redirect("/products")
-
+            }, {
+                where: {
+                    id: req.params.id
+                }
             })
-            .catch(error => res.send(error))
+                .then(() => {
+
+                    res.redirect("/products")
+
+                })
+                .catch(error => res.send(error))
 
         }
 
@@ -142,48 +149,46 @@ const controladorProducts = {
     },
     store: (req, res) => {
 
-       
+
 
         //validation de datos por express -validator
-        
-        const resultValidations = validationResult(req);
-        
-        
 
-        if( resultValidations.errors.length > 0 ){
-            
+        const resultValidations = validationResult(req);
+
+        if (resultValidations.errors.length > 0) {
 
             db.Category.findAll()
-            .then(function (categories) {
-                return res.render("products/create.ejs", { categories: categories ,
-                    errors: resultValidations.mapped(),
-                    oldData: req.body
-             });
-            })
-             
+                .then(function (categories) {
+                    return res.render("products/create.ejs", {
+                        categories: categories,
+                        errors: resultValidations.mapped(),
+                        oldData: req.body
+                    });
+                })
+
         } else {
 
-             //creacion del NFT en la base de datos
-        let id_usuario = req.session.userLogged.id
-        db.Product.create({
-            name: req.body.name,
-            id_category: req.body.category,
-            image: req.file == undefined ? "default.jpg" : req.file.filename,
-            url: req.body.url,
-            cid: req.file == undefined ? req.body.name : req.file.filename,
-            price: req.body.priceeth,
-            description: req.body.description == "" ? "Producto sin descripción" : req.body.description,
-            id_creator: id_usuario,
-            state: 1
-
-        })
-            .then(() => {
-
-                res.redirect("/products")
+            //creacion del NFT en la base de datos
+            let id_usuario = req.session.userLogged.id
+            db.Product.create({
+                name: req.body.name,
+                id_category: req.body.category,
+                image: req.file == undefined ? "default.jpg" : req.file.filename,
+                url: req.body.url,
+                cid: req.file == undefined ? req.body.name : req.file.filename,
+                price: req.body.priceeth,
+                description: req.body.description == "" ? "Producto sin descripción" : req.body.description,
+                id_creator: id_usuario,
+                state: 1
 
             })
-            .catch(error => 
-                res.send(error))
+                .then(() => {
+
+                    res.redirect("/products")
+
+                })
+                .catch(error =>
+                    res.send(error))
 
         }
 
@@ -245,14 +250,14 @@ const controladorProducts = {
         fs.writeFileSync(nftFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products"); */
     },
-    search: (req,res)  => {
+    search: (req, res) => {
         let nftBuscado = '%' + req.query.search + '%';
 
         let pedidoCreador = db.User.findAll();
 
         let pedidoProducto = db.Product.findAll({
             where: {
-                name: {[Op.like]: nftBuscado} 
+                name: { [Op.like]: nftBuscado }
             }
         });
 
@@ -262,7 +267,6 @@ const controladorProducts = {
 
                 res.render('products/productsSearch.ejs', { results: results, creators: creators })
             })
-       
             .catch(error => res.send(error))
     }
 }
