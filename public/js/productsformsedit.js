@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
         
         
         let campoDescription = document.querySelector("#descripcionedit");
-
+        var fileInput = document.getElementById('fileedit');
         let erroresDescription = [];
 
         if (campoDescription.value == "" || campoDescription.value.length < 20) {
@@ -45,11 +45,8 @@ window.addEventListener("load", function(){
             ulErrores3.classList.remove("errores");
             ulErrores3.innerHTML = "Descripcion(*)";
 
-        }      
+        } else if(fileInput != ""){    
                 
-
-
-
             console.log("validando imagen");
             var fileInput = document.getElementById('fileedit');
             var filePath = fileInput.value;
@@ -69,13 +66,9 @@ window.addEventListener("load", function(){
                     reader.readAsDataURL(fileInput.files[0]);
                 }
             }
-       
+        }    
 
-       
-       
-
-       
-        if (erroresName.length < 1 && erroresDescription < 1 && allowedExtensions.exec(filePath)){
+        if (erroresName.length < 1 && erroresDescription < 1){
             formulario.submit();
 
         }

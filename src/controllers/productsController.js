@@ -87,7 +87,6 @@ const controladorProducts = {
             let pedidoProducto = db.Product.findByPk(req.params.id);
             let pedidoCreador = db.User.findAll();
             let pedidoCategoria = db.Category.findAll();
-
             Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
                 .then(function ([product, creator, category]) {
                     if(req.session.userLogged.id == product.id_creator){
@@ -105,7 +104,7 @@ const controladorProducts = {
             db.Product.update({
                 name: req.body.name,
                 id_category: req.body.category,
-                image: req.file == undefined ? "default.jpg" : req.file.filename,
+                image: req.file == undefined ? db.Product.image : req.file.filename,
                 url: req.body.url,
                 cid: req.file == undefined ? req.body.name : req.file.filename,
                 price: req.body.priceeth,

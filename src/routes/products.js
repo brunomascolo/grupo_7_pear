@@ -53,6 +53,34 @@ const validations = [
     })
 ]
 
+const validationsEdit = [
+    body('name')
+        .notEmpty().withMessage('Debes colocar un nombre al NFT').bail()
+        .isLength({ min: 5 }).withMessage('El nombre del NFT debe tener al menos 5 caracteres'),
+    body('url').notEmpty().withMessage('Debes subir tu nft a IPFS y copies tu enlace acá'),
+    body('priceeth').notEmpty().withMessage('Debes colocar tu valor en ETH, lo puedes cambiar cuando quieras'),
+    body('description')
+        .notEmpty().withMessage('Ingresa una breve descripción del NFT que venderas').bail()
+        .isLength({ min : 20 }).withMessage('La descripcion del NFT debe contener al menos 20 caracteres'),
+    body('category').notEmpty().withMessage('Debes seleccionar una categoria para tu NFT'),
+    body('img').custom((value, {req}) => {
+        let file = req.file;
+        let acceptedextensions = ['.jpg', '.jpeg', '.png', '.gif'];
+        if(!file) {
+            return true;
+        } else {
+            let fileextensions = path.extname(file.originalname);
+
+            if(!acceptedextensions.includes(fileextensions)){
+                throw new Error(`las extensiones permitidas son ${acceptedextensions.join(', ')}`);
+            }
+        }
+        
+        return true;
+    })
+]
+
+
 const productsController = require ('../controllers/productsController')
 
 //Obtener todos los productos para la vista products
@@ -68,7 +96,7 @@ router.post('/', upload.single("img"), validations , productsController.store);
 router.get('/:id', authMiddleware, productsController.detail);
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', authMiddleware, productsController.edit);
-router.patch('/edit/:id', upload.single("img"), validations,  authMiddleware, productsController.update); 
+router.patch('/edit/:id', upload.single("img"), validationsEdit,  authMiddleware, productsController.update); 
 //Ruta para deshabilitar productos
 router.delete('/delete/:id', authMiddleware, productsController.disable);
 
