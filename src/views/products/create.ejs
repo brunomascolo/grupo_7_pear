@@ -90,13 +90,14 @@
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">o subé tu imagen</label>
-                    <input type="file" name="img" class="<%= locals.errors && errors.img ? "is-invalid" : "textField" %>">
+                    <input type="file" name="img" id="file" class="<%= locals.errors && errors.img ? "is-invalid" : "textField" %>">
                     <% if (locals.errors && errors.img) { %>
                         <div class="msgerror">
                            <%= errors.img.msg %>  
                         </div>
                      
                     <% } %>
+                    <div id="imagePreview"></div>
                 </div>
                 <div class="fieldForm">
                     <label class="etiquetas">Precio(*) ETH</label>

@@ -75,6 +75,10 @@ body {
   border: 1px solid red
 }
 
+.errores {
+  color: red;
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
   .formulario {
     display: flex;
