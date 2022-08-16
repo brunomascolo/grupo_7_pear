@@ -82,20 +82,21 @@ const controladorProducts = {
     update: (req, res) => {
 
         const resultValidations = validationResult(req);
-
         if (resultValidations.errors.length > 0) {
 
             let pedidoProducto = db.Product.findByPk(req.params.id);
-
             let pedidoCreador = db.User.findAll();
             let pedidoCategoria = db.Category.findAll();
 
             Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
                 .then(function ([product, creator, category]) {
+                    if(req.session.userLogged.id == product.id_creator){
                     res.render("products/edit", {
                         product: product, creator: creator, category: category, errors: resultValidations.mapped(),
                         oldData: req.body
-                    });
+                    });} else {
+                        res.render('products/404')
+                    }
                 })
                 .catch(error => res.send(error))
 
