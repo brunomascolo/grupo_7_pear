@@ -15,7 +15,10 @@
                 <% if (locals.errors && errors.duplicado) { %>
                     <p class="errorRegister" id="errorRegister"><%= errors.duplicado.msg%></p>
                    <% } %>
-                <input type="file" name="img"> 
+                <input type="file" name="img">
+                <% if (locals.errors && errors.img) { %>
+                    <p class="errorRegister" id="errorRegister"><%= errors.img.msg%></p>
+                   <% } %>
                 <label for="register">
                     <input type="text" name="first_name" id="first_name" placeholder="   Nombre" class="inputs form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.first_name : null %>">
                 </label>

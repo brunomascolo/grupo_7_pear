@@ -56,6 +56,19 @@ const validationRegister = [
         }),
     body("terminos").notEmpty().withMessage("Debes aceptar los terminos"),
     body("mayor").notEmpty().withMessage("Este campo es requerido"),
+    body('img').custom((value, {req}) => {
+        let file = req.file;
+        let acceptedextensions = ['.jpg', '.jpeg', '.png', '.gif'];
+        if(!file){
+           return true; 
+        } else {
+            let fileextensions = path.extname(file.originalname);
+            if(!acceptedextensions.includes(fileextensions)){
+                throw new Error(`las extensiones permitidas son ${acceptedextensions.join(', ')}`);
+            }
+        }
+        return true;
+    })
 ]
 
 const upload = multer({storage: storage});

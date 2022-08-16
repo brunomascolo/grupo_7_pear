@@ -9,7 +9,7 @@ const { validationResult } = require("express-validator");
 
 const controladorUser = {
     login: (req, res) => {
-        res.render('users/login.ejs')
+        return res.render('users/login.ejs')
     },
     loginProcess: (req, res) => {
         const resultValidation = validationResult(req);
@@ -90,7 +90,7 @@ const controladorUser = {
 
                 })
                     .then(() => {
-                        res.redirect("/login")
+                        res.render('users/login.ejs')
                     })
                     .catch(error => {
                         if (error.errors[0].path == "email") {
