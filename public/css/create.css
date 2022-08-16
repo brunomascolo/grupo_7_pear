@@ -80,6 +80,30 @@ body {
   border: 1px solid red
 }
 
+div.errores {
+  color: red;
+}
+
+.errores {
+  color: red;
+}
+
+#nombrenft::placeholder {
+  color: red;
+  text-align: right;
+  padding-top: 30px;
+  font-family: "font Awesome 5 Free";
+  font-weight: 600;
+}
+
+#descripcion::placeholder {
+  color: red;
+  text-align: right;
+  padding-top: 30px;
+  font-family: "font Awesome 5 Free";
+  font-weight: 600;
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
   .formulario {
     display: flex;

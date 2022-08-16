@@ -3,13 +3,15 @@
     <%- include("../partials/head.ejs", {titulo: "Pear, sitio de compra y venda de NFT", cssSheet: "create"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
+    
     <main>
         <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
         <div class="container-principal">
             <p>Publica tu NFT</p>
+            
             <form action="/products" method="POST" enctype="multipart/form-data" class="formulario">
                 <div class="fieldForm">
-                    <label class="etiquetas">Nombre de tu producto(*)</label>
+                    <label class="etiquetas" id="nombreProducto">Nombre de tu producto(*)</label>
                     <input 
                         type="text" 
                         name="name" 
@@ -17,6 +19,8 @@
                         
                         class="<%= locals.errors && errors.name ? "is-invalid" : "textField" %>"
                         value="<%= locals.oldData ? oldData.name : null %>" >
+                  
+
                     <!-- label error campo name -->
                    
                         <% if (locals.errors && errors.name) { %>
@@ -51,7 +55,7 @@
                     <% } %>
                 </div>
                 <div class="fieldForm">
-                    <label class="etiquetas">Descripcion(*)</label>
+                    <label class="etiquetas" id="descriptionProducto">Descripcion(*)</label>
                     <input 
                         type="text" 
                         name="description" 
@@ -119,6 +123,7 @@
         </div>
     </main>
     <%- include("../partials/footer.ejs") %>
+    <script type="text/javascript" src="/js/productsforms.js"></script>
 </body>
 
 </html>
