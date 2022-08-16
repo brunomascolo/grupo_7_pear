@@ -90,6 +90,11 @@ main form input{
 .errorRegister{
     color: red;
 }
+.errorLogin{
+    color: red;
+    position: relative;
+    margin: -8px;
+}
 
 .checksWrap{
     display:flex;

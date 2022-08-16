@@ -55,35 +55,56 @@ window.addEventListener("load", function () {
         let username = document.getElementById("username")
         let password = document.getElementById("password")
         let repeatPassword = document.getElementById("repeatPassword")
+        let errorNombre = document.getElementById("errorFirst")
+        let errorApellido = document.getElementById("errorLast")
+        let errorEmail = document.getElementById("errorEmail")
+        let errorUsername = document.getElementById("errorUsername")
+        let errorPassword = document.getElementById("errorPassword")
+        let errorRepeatPassword = document.getElementById("errorRepeatPassword")
+        let errorTerminos = document.getElementById("errorTerminos")
+        let errorMayor = document.getElementById("errorMayor")
+
         if (nombre.value == "") {
             nombre.classList.add("is-invalid")
+            errorNombre.innerHTML = "Debes ingresar un nombre."
         } else if (!validarNombre.test(nombre.value)) {
             nombre.classList.add("is-invalid")
-        }
+            errorNombre.innerHTML = "Debes ingresar un nombre valido."
+        } else
         if (apellido.value == "") {
             apellido.classList.add("is-invalid")
+            errorApellido.innerHTML = "Debes ingresar un apellido."
         } else if (!validarNombre.test(apellido.value)) {
             apellido.classList.add("is-invalid")
-        }
+            errorApellido.innerHTML = "Debes ingresar un apellido valido."
+        } else
         if (email.value == "") {
             email.classList.add("is-invalid")
+            errorEmail.innerHTML = "Debes ingresar un correo."
         } else if (!validarCorreo.test(email.value)) {
             email.classList.add("is-invalid")
-        }
+            errorEmail.innerHTML = "Debes ingresar un correo con formato valido."
+        } else
         if (username.value == "") {
             username.classList.add("is-invalid")
+            errorUsername.innerHTML = "Debes ingresar un nombre de usuario."
         } else if (!validarNombreUsuario.test(username.value)) {
             username.classList.add("is-invalid")
-        }
+            errorUsername.innerHTML = "Debes ingresar un correo con nombre de usuario valido."
+        } else
         if (password.value == "") {
             password.classList.add("is-invalid")
+            errorPassword.innerHTML = "Debes ingresar una contraseña."
         } else if (!validarPassword.test(password.value)) {
             password.classList.add("is-invalid");
-        }
+            errorPassword.innerHTML = "Debes ingresar una contraseña segura con mayuscula, minuscula, numeros y caracteres especiales."
+        } else
         if (repeatPassword.value == "") {
             repeatPassword.classList.add("is-invalid")
+            errorRepeatPassword.innerHTML = "Debes ingresar una contraseña."
         } else if (repeatPassword.value != password.value) {
             repeatPassword.classList.add("is-invalid");
+            errorRepeatPassword.innerHTML = "Debes ingresar la misma contraseña."
         }
         else {
             formularioRegister.submit();
