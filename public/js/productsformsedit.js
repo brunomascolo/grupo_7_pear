@@ -4,28 +4,25 @@ window.addEventListener("load", function(){
 
     
     let formulario = document.querySelector("form.formulario");
+       
 
     formulario.addEventListener("submit", function(e){
         e.preventDefault();
 
         
         
-        let campoNombre = document.querySelector("#nombrenft");
+        let campoNombre = document.querySelector("#nombrenftedit");
         let erroresName = [];
 
-        if (campoNombre.value == "") {
-            erroresName = "mínimo 5 caracteres ";
-            let ulErrores2 = document.getElementById("nombrenft");
-            ulErrores2.placeholder = erroresName;
+        if (campoNombre.value == "" || campoNombre.value.length < 5) {
             
-        } else if (campoNombre.value.length < 5) {
-            erroresName = (" mínimo 5");
-            let ulErrores = document.getElementById("nombreProducto");
+            erroresName = ("mínimo 5 caracteres ");
+            let ulErrores = document.getElementById("nombreProductoedit");
             ulErrores.classList.add("errores");
             ulErrores.innerHTML = "Nombre de tu producto(*)" + erroresName;
            
         } else if(campoNombre.value.length >= 5){
-            let ulErrores = document.getElementById("nombreProducto");
+            let ulErrores = document.getElementById("nombreProductoedit");
             ulErrores.classList.remove("errores");
             ulErrores.innerHTML = "Nombre de tu producto(*)";
 
@@ -33,32 +30,28 @@ window.addEventListener("load", function(){
 
         
         
-        let campoDescription = document.querySelector("#descripcion");
+        let campoDescription = document.querySelector("#descripcionedit");
 
         let erroresDescription = [];
 
-        if (campoDescription.value == "") {
-            erroresDescription = "mínimo 20 caracteres ";
-            let ulErrores4 = document.getElementById("descripcion");
-            ulErrores4.placeholder = erroresDescription;
-            
-        } else if (campoDescription.value.length < 20) {
+        if (campoDescription.value == "" || campoDescription.value.length < 20) {
             erroresDescription = (" mínimo 20");
-            let ulErrores3 = document.getElementById("descriptionProducto");
+            let ulErrores3 = document.getElementById("descriptionProductoedit");
             ulErrores3.classList.add("errores");
             ulErrores3.innerHTML = "Descripcion(*)" + erroresDescription;
            
         } else if(campoDescription.value.length >= 20){
-            let ulErrores3 = document.getElementById("descriptionProducto");
+            let ulErrores3 = document.getElementById("descriptionProductoedit");
             ulErrores3.classList.remove("errores");
             ulErrores3.innerHTML = "Descripcion(*)";
 
-        }
+        }      
+                
 
 
 
             console.log("validando imagen");
-            var fileInput = document.getElementById('file');
+            var fileInput = document.getElementById('fileedit');
             var filePath = fileInput.value;
             var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
             if(!allowedExtensions.exec(filePath)){
@@ -71,7 +64,7 @@ window.addEventListener("load", function(){
                 if (fileInput.files && fileInput.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function(e) {
-                        document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+                        document.getElementById('imagePreviewedit').innerHTML = '<img src="'+e.target.result+'"/>';
                     };
                     reader.readAsDataURL(fileInput.files[0]);
                 }
