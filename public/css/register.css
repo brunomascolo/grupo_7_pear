@@ -20,6 +20,10 @@ main{
 .errorRegister{
     color: red;
 }
+.error-div{
+    margin: -20px;
+    margin-left: 10px;
+}
 
 .botones{
   
@@ -36,7 +40,10 @@ main{
 }
 
 @media (min-width: 430px) and (max-width: 800px){
-
+    .container-principal{
+        width: 100%;
+        margin: auto;
+    } 
 
 }
 

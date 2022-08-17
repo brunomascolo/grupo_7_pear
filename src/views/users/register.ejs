@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include("../partials/head.ejs", {titulo: "Pear, sitio de compra y venda de NFT" , cssSheet: "register" }) %>
+
     <body>
         <%- include("../partials/header.ejs") %>
             <main>
                 <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
                 <div class="container-principal">
-                    <form action="/user" method="POST" enctype="multipart/form-data" class="border border-light p-5 register" >
-
-                        <p class="h4 mb-4 text-center">Registro de usuario</p>
-                    
-                        <label for="textInput">Nombre</label><i class="errorRegister" id="errorFirst"></i>  
+                    <form action="/user" method="POST" enctype="multipart/form-data"
+                        class="border border-light p-5 register">
+                        <p class="h4 mb-6 text-center">Registro de usuario</p>
+                        <label for="textInput">Nombre</label><i class="errorRegister" id="errorFirst"></i>
                         <input type="text" id="first_name" class="form-control mb-4" placeholder="Ingresa tu nombre">
-                    
+        
                         <label for="last_name">Apellido</label><i class="errorRegister" id="errorLast"></i>
                         <input type="text" id="last_name" class="form-control mb-4" placeholder="Ingresa tu apellido">
-                    
+                        
                         <label for="email">Correo</label><i class="errorRegister" id="errorEmail"></i>
                         <input type="text" id="email" class="form-control mb-4" placeholder="Ingresa tu correo">
-                    
+
+
                         <label for="username">Nombre de usuario</label><i class="errorRegister" id="errorUsername"></i>
-                        <input type="text" id="username" class="form-control mb-4" placeholder="Ingresa tu nombre de usuario">
-                    
+                        <input type="text" id="username" class="form-control mb-4"
+                            placeholder="Ingresa tu nombre de usuario">
+
+
                         <label for="passwdInput">Contraseña</label><i class="errorRegister" id="errorPassword"></i>
-                        <input type="password" id="password" class="form-control mb-4" placeholder="Ingresa una contraseña segura">
-                        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">La contraseña debe contener al menos un numero, una mayuscula y un caracter especial</small>
+                        <input type="password" id="password" class="form-control mb-4"
+                            placeholder="Ingresa una contraseña segura">
 
-                    
-                        <label for="passwdInput">Repite tu contraseña</label><i class="errorRegister" id="errorRepeatPassword"></i>
-                        <input type="password" id="repeatPassword" class="form-control mb-4" placeholder="Repite tu contraseña">
 
-                        <label for="passwdInput">Imagen de perfil (No es obligatorio)</label><i class="errorRegister" id="errorRepeatPassword"></i>
-                        <input type="file" name="img">
-                    
-                    
+
+                        <label for="passwdInput">Repite tu contraseña</label><i class="errorRegister"
+                            id="errorRepeatPassword"></i>
+                        <input type="password" id="repeatPassword" class="form-control mb-4"
+                            placeholder="Repite tu contraseña">
+
+                        <label for="passwdInput">Imagen de perfil (No es obligatorio)</label><i class="errorRegister"
+                            id="errorRepeatPassword"></i>
+                        <input type="file" name="img" class="form-control mb-4">
+
                         <div class="custom-control custom-checkbox mb-4">
                             <input type="checkbox" class="custom-control-input" id="terminos">
-                            <label class="custom-control-label" for="terminos">He leido y acepto los terminos y condiciones</label>
+                            <label class="custom-control-label" for="terminos">Acepto los terminos y
+                                condiciones</label><p class="errorLogin" id="errorTerminos"></p> 
                         </div>
-                    
                         <div class="custom-control custom-checkbox mb-4">
                             <input type="checkbox" class="custom-control-input" id="mayor">
-                            <label class="custom-control-label" for="mayor">Soy mayor de edad</label>
+                            <label class="custom-control-label" for="mayor">Soy mayor de edad</label><p class="errorLogin" id="errorMayor"></p> 
                         </div>
-                    
-                        <button type="submit" class="botones btn btn-success">Registrarme</button>
-                
+                        <div class="custom-control custom-checkbox mb-4">
+                            <button type="submit" class="botones btn btn-success">Registrarme</button>
+                        </div>
                     </form>
                 </div>
             </main>
             <%- include("../partials/footer.ejs") %>
-            <script src="/js/register.js"></script>
+                <script src="/js/register.js"></script>
     </body>
 
 </html>
