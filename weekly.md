@@ -60,7 +60,7 @@
 <li>Revisar el avance de cada compañero</li>
 <li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
 
-<h2>Weekly Sprint 5 02/07/2022</h2>
+<h2>Weekly Sprint 6 02/07/2022</h2>
 
 <h4>Que se hizo ayer?</h4>
 <li>Todos los integrantes trabajamos en las tareas asignadas</li>
@@ -69,6 +69,22 @@
 <h4>Existieron impedimentos</h4>
 <li>Se genero un breve retraso por el trabajo en equipo que dependia de que otro compañero finalice su tarea</li>
 <li>Detectamos una falla que no permitia volver a logear en el sistema, pero lo pudimos solucionar</li>
+
+<h4>Que se va hacer hoy</h4>
+<li>Revisamos funcionamiento de cada entregable</li>
+<li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
+
+<h2>Weekly Sprint 7 11/08/2022</h2>
+
+<h4>Que se hizo ayer?</h4>
+<li>Todos los integrantes trabajamos en las tareas asignadas</li>
+<li>Coordinamos reunión para el día 16/08</li>
+
+<h4>Existieron impedimentos</h4>
+<li>Se genero un breve retraso por el trabajo en equipo que dependia de que otro compañero finalice su tarea</li>
+<li>Detectamos una falla que no permitia volver a logear en el sistema, pero lo pudimos solucionar</li>
+<li>Se presento problema con git y con su contenido. Impedia registrar correctamente los usuarios</li>
+<li>Debido a lo anterior, se genero una rama de respaldo, llamada test</li>
 
 <h4>Que se va hacer hoy</h4>
 <li>Revisamos funcionamiento de cada entregable</li>
