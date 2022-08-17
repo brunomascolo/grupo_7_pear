@@ -66,45 +66,45 @@ window.addEventListener("load", function () {
 
         if (nombre.value == "") {
             nombre.classList.add("is-invalid")
-            errorNombre.innerHTML = "Debes ingresar un nombre."
+            errorNombre.innerHTML = " Debes ingresar un nombre."
         } else if (!validarNombre.test(nombre.value)) {
             nombre.classList.add("is-invalid")
-            errorNombre.innerHTML = "Debes ingresar un nombre valido."
-        } else
+            errorNombre.innerHTML =  "Debes ingresar un nombre valido."
+        }
         if (apellido.value == "") {
             apellido.classList.add("is-invalid")
-            errorApellido.innerHTML = "Debes ingresar un apellido."
+            errorApellido.innerHTML = " Debes ingresar un apellido."
         } else if (!validarNombre.test(apellido.value)) {
             apellido.classList.add("is-invalid")
-            errorApellido.innerHTML = "Debes ingresar un apellido valido."
-        } else
+            errorApellido.innerHTML = " Debes ingresar un apellido valido."
+        }
         if (email.value == "") {
             email.classList.add("is-invalid")
-            errorEmail.innerHTML = "Debes ingresar un correo."
+            errorEmail.innerHTML = " Debes ingresar un correo."
         } else if (!validarCorreo.test(email.value)) {
             email.classList.add("is-invalid")
-            errorEmail.innerHTML = "Debes ingresar un correo con formato valido."
-        } else
+            errorEmail.innerHTML = " Debes ingresar un correo con formato valido."
+        }
         if (username.value == "") {
             username.classList.add("is-invalid")
-            errorUsername.innerHTML = "Debes ingresar un nombre de usuario."
+            errorUsername.innerHTML = " Debes ingresar un nombre de usuario."
         } else if (!validarNombreUsuario.test(username.value)) {
             username.classList.add("is-invalid")
-            errorUsername.innerHTML = "Debes ingresar un correo con nombre de usuario valido."
-        } else
+            errorUsername.innerHTML = " Debes ingresar un correo con nombre de usuario valido."
+        }
         if (password.value == "") {
             password.classList.add("is-invalid")
-            errorPassword.innerHTML = "Debes ingresar una contraseña."
+            errorPassword.innerHTML = " Debes ingresar una contraseña."
         } else if (!validarPassword.test(password.value)) {
             password.classList.add("is-invalid");
-            errorPassword.innerHTML = "Debes ingresar una contraseña segura con mayuscula, minuscula, numeros y caracteres especiales."
-        } else
+            errorPassword.innerHTML = " Debes ingresar una contraseña segura."
+        }
         if (repeatPassword.value == "") {
             repeatPassword.classList.add("is-invalid")
-            errorRepeatPassword.innerHTML = "Debes ingresar una contraseña."
+            errorRepeatPassword.innerHTML = " Debes ingresar una contraseña."
         } else if (repeatPassword.value != password.value) {
             repeatPassword.classList.add("is-invalid");
-            errorRepeatPassword.innerHTML = "Debes ingresar la misma contraseña."
+            errorRepeatPassword.innerHTML = " Debes ingresar la misma contraseña."
         }
         else {
             formularioRegister.submit();
