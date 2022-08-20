@@ -1,12 +1,26 @@
 const path = require('path');
 const fs = require('fs');
 
-const nftFilePath = path.resolve(__dirname, '../data/nft.json');
-const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
+/* const nftFilePath = path.resolve(__dirname, '../data/nft.json');
+const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8')); */
+
+let db = require("../database/models");
+const Op = db.Sequelize.Op;
+
 
 const controladorMain ={
-    index: (req,res)=>{
-        res.render('index', {nft:nft})
+    index: (req, res) => {
+        db.Product.findAll({
+            limit: 3,
+            include: ['category'],
+            attributes: ['id','name','image','price','description'], //Oculto datos como creador, estado, y quien creo el producto
+            order: [['id','DESC']]
+        })
+        .then(function (products){
+         return res.render("index.ejs", {products: products}) 
+           
+        })
+        .catch(error => res.send(error))
     },
     cart:(req,res)=>{
         res.render('users/shoppingcart', {nft:nft})

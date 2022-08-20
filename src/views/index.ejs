@@ -8,10 +8,10 @@
         <section class="main">
             <p class="titulos-principal">Más Visitados</p>
             <div class="home-general">
-                <% for( let i = 0; i < 3; i++ ) {  %>
+                <% for (let i=0; i < products.length; i++) { %>
                 <div class="slider-principal">
-                    <a href="/products/<%= nft[i].id %>"><img src="<%= nft[i].img %>" alt="slider"></a>
-                    <p class="name-section"><%= nft[i].name %></p>
+                    <a href="/products/<%= products[i].id %>"><img src="/img/images/<%= products[i].image %>" alt="slider"></a>
+                    <p class="name-section"><%= products[i].name %></p>
                 </div>                
                 <% } %>
             </div>
