@@ -14,6 +14,9 @@ const controladorMain ={
             limit: 3,
             include: ['category'],
             attributes: ['id','name','image','price','description'], //Oculto datos como creador, estado, y quien creo el producto
+            /* order: [
+                [db.sequelize.literal('RAND()')]
+              ] */
             order: [['id','DESC']]
         })
         .then(function (products){
