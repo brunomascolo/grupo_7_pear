@@ -3,7 +3,7 @@ const db = require("../../database/models");
 const nftAPIController = {
     'list': (req, res) => {
         db.Product.findAll({
-            limit: 3,
+            limit: 10,
             include: ['category'],
             attributes: ['id','name','image','price','description'], //Oculto datos como creador, estado, y quien creo el producto
             order: [['id','DESC']]
