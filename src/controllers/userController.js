@@ -11,7 +11,7 @@ const controladorUser = {
     login: (req, res) => {
         return res.render('users/login.ejs')
     },
-    loginProcess: (req, res) => {
+    loginProcess: (req, res) => { 
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             return res.render("users/login.ejs", {
@@ -26,6 +26,10 @@ const controladorUser = {
                     let contraseñaCorrecta = bcrypt.compareSync(req.body.password, user.password);
                     if (contraseñaCorrecta) {
                         req.session.userLogged = user;
+
+                        if(req.body.recordar){
+                            res.cookie('email', req.body.email, { maxAge: (1000 * 90) * 10 })
+                        }
                         return res.redirect("/user/profile")
                     }
                 }
@@ -33,12 +37,13 @@ const controladorUser = {
                     errors: {
                         emailpass: {
                             msg: "Datos de usuario incorrectos"
-                        }
+                        } 
                     }
                 })
             })
     },
     profile: (req, res) => {
+        console.log(req.cookies.userEmail)
         res.render('users/profile.ejs', { user: req.session.userLogged })
     },
 
@@ -117,6 +122,7 @@ const controladorUser = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('email');
         req.session.destroy();
         return res.redirect("/");
     },
@@ -127,8 +133,6 @@ const controladorUser = {
 
     update: (req, res) => {
         let user = req.session.userLogged
-        console.log(user.id)
-
         db.User.update({
             first_name: req.body.first_name,
             last_name: req.body.last_name,

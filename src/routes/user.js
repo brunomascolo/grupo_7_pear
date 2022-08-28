@@ -45,7 +45,7 @@ const validationRegister = [
             minLowercase: 1,
             minUppercase: 1,
             minNumbers: 1,
-            minSymbols: 1}).withMessage("La contraseña debe tener mayusculas, minusculas, numeros y caracteres especiales"),
+            minSymbols: 1}).withMessage("La contraseña debe tener mayusculas, minusculas, numeros y caracteres especiales"),  
     body("repeatPassword")
         .notEmpty().withMessage("Debes escribir una contraseña").bail()
         .custom((value, { req })=>{
@@ -78,7 +78,7 @@ router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validationLogin ,userController.loginProcess);
 router.get('/register', guestMiddleware, userController.register);
 router.post("/register", userController.register);
-router.post('/', upload.single("img"), validationRegister, userController.store);
+router.post('/', upload.single("img"), validationRegister, userController.store);       
 router.get('/', authMiddleware, authAdminMiddleware, userController.list);
 router.get("/profile", authMiddleware, userController.profile);
 router.get('/logout', userController.logout);

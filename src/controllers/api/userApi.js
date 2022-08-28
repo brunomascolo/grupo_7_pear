@@ -24,7 +24,6 @@ const usertAPIController = {
             {
                 include : ['role'],
                 attributes: ['id','first_name','last_name','username','email','profile_image']
-
             })
             .then(user => {
                 let respuesta = {

@@ -13,7 +13,7 @@ const Op = db.Sequelize.Op;
 const controladorProducts = {
     index: (req, res) => {
         //Listado de NFT desde la base de datos con sequelize
-        let pedidoProducto = db.Product.findAll();
+        let pedidoProducto = db.Product.findAll({where: {state: 1}});
 
         let pedidoCreador = db.User.findAll();
 
@@ -149,8 +149,6 @@ const controladorProducts = {
     },
     store: (req, res) => {
 
-
-
         //validation de datos por express -validator
 
         const resultValidations = validationResult(req);
@@ -213,9 +211,11 @@ const controladorProducts = {
         nft.push(newNFT);
         fs.writeFileSync(nftFilePath, JSON.stringify(nft, null, " "));
         res.redirect("/products") */
-    },
+    },    
     disable: (req, res) => {
-        db.Product.destroy({
+        db.Product.update({
+            state: 0
+        },{
             where: {
                 id: req.params.id
             }
