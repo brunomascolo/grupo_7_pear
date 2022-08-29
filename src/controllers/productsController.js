@@ -39,7 +39,7 @@ const controladorProducts = {
     },
     detail: (req, res) => {
         //obteniendo detalle desde la base de datos
-        console.log(req.params.id);
+        /* console.log(req.params.id); */
         db.Product.findByPk(req.params.id, { include: ["creator", "category"] })
             .then(function (product) {
                 if (product) {
