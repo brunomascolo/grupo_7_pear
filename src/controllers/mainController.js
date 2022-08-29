@@ -1,9 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-
-/* const nftFilePath = path.resolve(__dirname, '../data/nft.json');
-const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8')); */
-
 let db = require("../database/models");
 const Op = db.Sequelize.Op;
 
