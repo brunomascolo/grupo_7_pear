@@ -22,7 +22,7 @@ const controladorMain ={
         .catch(error => res.send(error))
     },
     cart:(req,res)=>{
-        res.render('users/shoppingcart', {nft:nft})
+        res.render('users/shoppingcart')
     }
 }
 
