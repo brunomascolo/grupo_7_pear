@@ -15,6 +15,9 @@
 .fotoYNombreUsuario{
     display: flex;
 }
+.textos-menu{
+    color: #3AAFB9 !important;
+}
 
 .fotoIcono{
     width:30px;
@@ -44,11 +47,14 @@
     width: 100%;
 }
 
+nav.navbar {
+    background-color: white !important;
+}
+
 .menu-principal ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
     z-index: 1;
 }
 
@@ -110,7 +116,7 @@
     }
     .logo {
         position: relative;
-        left: -50px;        
+        left: 150px;        
         width: 49%;
     }
 
