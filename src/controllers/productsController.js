@@ -269,8 +269,17 @@ const controladorProducts = {
             })
             .catch(error => res.send(error))
     }, 
-    addToCart: (req, res) => {
-        
+    viewCart: (req, res) => {
+        let productsInCart = JSON.parse(localStorage.getItem("id"))
+        let products = []
+        for(i of productsInCart){
+            db.Product.findByPk(i.id).then((item) =>{
+                products.push(item)
+            })
+        }
+        console.log(products)
+        res.render('users/shoppingcart', {products : products})
+
     }
 }
 
