@@ -268,6 +268,9 @@ const controladorProducts = {
                 res.render('products/productsSearch.ejs', { results: results, creators: creators })
             })
             .catch(error => res.send(error))
+    }, 
+    addToCart: (req, res) => {
+        
     }
 }
 
