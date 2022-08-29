@@ -14,10 +14,10 @@
        <div class="valorcompra">
            <p>Precio:</p>
            <p>~<%= product.price %>  ETH</p>
-           <p>($ <%= product.price / 0.00058 %>  USD)</p>
-           <a href="/cart"><i class="fas fa-shopping-cart fa-bars botoncompra2"></i></a>
+           <p>($ <%= (product.price / 0.00058).toFixed(2) %>  USD)</p>           
        </div>
        <button class="botoncomprar">Comprar Ahora</button>
+       <a href="/cart"><button class="botoncomprar" >Agregar al Carrito</button></a>
        <div class="datosvendedor">
            <h2>Vendedor</h2>
            <div class="ranknft">
