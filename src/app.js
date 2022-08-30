@@ -33,6 +33,7 @@ const categoriesRouter = require("./routes/category");
 //Rutas de las api de productos
 const apiNftRouter = require('./routes/api/nft')
 const apiUserRouter = require('./routes/api/user')
+const apiCategoryRouter = require('./routes/api/category')
 
 app.use('/', mainRouter); //Rutas del menu principal
 app.use('/products', productsRouter); // Rutas de los productos
@@ -44,6 +45,7 @@ app.use('/register', userRouter);
 //Aquí creo la colección de mis recursos de productos (APIs)
 app.use('/api/nft',apiNftRouter);
 app.use('/api/user',apiUserRouter);
+app.use('/api/category',apiCategoryRouter);
 
 app.listen(3000, () => {
   console.log("Servidor funcionando en http://localhost:3000")

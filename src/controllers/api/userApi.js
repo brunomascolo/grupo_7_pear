@@ -1,6 +1,6 @@
 const db = require("../../database/models");
 
-const usertAPIController = {
+const userAPIController = {
     'list': (req, res) => {
         db.User.findAll({ 
                 include: { association: 'role' },
@@ -39,4 +39,4 @@ const usertAPIController = {
     }
 }
 
-module.exports = usertAPIController;
+module.exports = userAPIController;

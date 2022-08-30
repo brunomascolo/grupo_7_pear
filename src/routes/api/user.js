@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const usertAPIController = require('../../controllers/api/userApi');
+const userAPIController = require('../../controllers/api/userApi');
 
 //Listado de nft
-router.get('/', usertAPIController.list);
+router.get('/', userAPIController.list);
 //Detalle de nft
-router.get('/:id', usertAPIController.detail);
+router.get('/:id', userAPIController.detail);
 
 module.exports = router;
