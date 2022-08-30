@@ -13,7 +13,7 @@
        </div>
        <div class="valorcompra">
            <p>Precio:</p>
-           <p id="product-price">~<%= product.price %>  ETH</p>
+           <p id="product-price"><%= product.price %></p><span>ETH</span>
            <p>($ <%= (product.price / 0.00058).toFixed(2) %>  USD)</p>           
        </div>
        <button class="botoncomprar">Comprar Ahora</button>
@@ -37,7 +37,7 @@
 
     </main>
     <%- include("../partials/footer.ejs") %>
-    <script src="/js/cart.js"></script>
+    <script src="/js/addToCart.js"></script>
 </body>
 
 </html>

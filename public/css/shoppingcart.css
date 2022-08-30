@@ -26,6 +26,13 @@
     color: #3AAFB9;
 }
 
+.carritoVacio{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    color: #B9F18C;
+}
+
 .tituloSeguridadDatos{
     padding: 3px;
     margin: 2px;
@@ -34,6 +41,7 @@
 .tituloProducto{
     color: #3AAFB9;
     font-size: 1.5em;
+    margin-top: 10%;
 }
 
 .seccionProductos{
@@ -82,11 +90,17 @@
 
 .precios{
     margin-left: 2%;
+    color: #3AAFB9;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .descripcionProductoCarrito{
    margin: auto;
 }
+
 
 .procederPago{
     display: flex;
@@ -103,9 +117,10 @@
 } */
 
 .linkSeguirComprando{
-    font-size: 0.85em;
+    font-size: 1.2em;
     margin: auto;
     margin-top: 1%;
+    margin-bottom: 15px;
 }
 
 .botonPago{
@@ -121,7 +136,7 @@
 .precioProdTotal{
  display: flex;
  justify-content: flex-end;
- margin-right: 5%;
+ margin-right: 20%;
  font-weight: 600;
  color: #3AAFB9;
  font-size: 1.15m;
@@ -132,11 +147,9 @@
     border: 0px;
     outline:none;
     color: #3AAFB9;
-    background-color: white;
-    height: 50%;
-    margin: auto;
-    margin-right: 0px;
+    background-color: rgba(0,0,0,0);
     transition:  .30s ;
+    font-size: 1.5em;
 }
 
 .botonPago:hover {
@@ -169,13 +182,17 @@
     .descripcionProductoCarrito{
         max-width: 500px ;
     }
+    .tituloProducto{
+        font-size: 1em;
+    }
+    .precios{
+        font-size: 1em;
+    }
 
 }
 
 @media (min-width: 801px){
-    .precios{
-        font-size: 18px;
-    }
+    
     .precioProdTotal{
         font-size: 20px;
     }
@@ -184,5 +201,19 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+    .precios{
+        margin-left: 2%;
+        color: #3AAFB9;
+        font-weight: 600;
+        font-size: 1.3em;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+.tituloProducto{
+    color: #3AAFB9;
+    font-size: 1.5em;
+    margin-top: 10%;
+}
 
 }

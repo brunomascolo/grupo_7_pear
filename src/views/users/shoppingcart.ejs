@@ -12,52 +12,19 @@
             <h5 class="tituloSeguridadDatos"><i class="fas fa-lock"></i>  Tus datos personales están seguros</h5>
         </div>     
         <!-- sección productos a comprar -->
-        <section class="seccionProductos">
-            <article class="articulosCarrito">
-                <div class="productoImagenDescripcion">    
-                    <img src="/img/images/slider1.jpg" alt="producto1" class="imgProductos">
-                    <div>
-                        <h3 class="tituloProducto">ONE APE#1901</h3>                        
-                    </div>                    
-                </div>
-                <div class="precioProd">
-                    <button class="botonQuitar"><i class="fas fa-times"></i></button>
-                    <p class="precios">Precio:</p>
-                    <p class="precios">~0.098 ETH
+        <section class="seccionProductos" id="productos-carrito">                  
 
-                        (299.55 USD)</p>
-                </div>
-            </article>
-            <article class="articulosCarrito">
-                <div class="productoImagenDescripcion">    
-                    <img src="/img/images/slider3.jpg" alt="producto1" class="imgProductos">
-                    <div>
-                        <h3 class="tituloProducto">LOVE APE#18351</h3>                        
-                    </div>                    
-                </div>
-                <div class="precioProd">
-                    <button class="botonQuitar"><i class="fas fa-times"></i></button>
-                    <p class="precios">Precio:</p>
-                    <p class="precios">~0.125 ETH
-
-                        (382.07 USD)</p>
-                </div>
-            </article>
-            <div>
-                <p class="precioProdTotal">Total: ~0.223 ETH
-
-                    (681.62 USD)</p>
-            </div>
-            <div class="botonesPago">
-                <button class="botonPago">Proceder al Pago</button>
-                <a href="/">Seguir Comprando</a>
-            </div>
-            
-
+        </section>
+        <section id="precioFinal">
+                     
         </section>  
+        <section id="botones">
+            
+        </section>
       
     </main>
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/cartView.js"></script>
     
 </body>
 
