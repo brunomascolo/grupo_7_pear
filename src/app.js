@@ -47,7 +47,7 @@ app.use('/api/nft',apiNftRouter);
 app.use('/api/user',apiUserRouter);
 app.use('/api/category',apiCategoryRouter);
 
-app.listen(3000, () => {
-  console.log("Servidor funcionando en http://localhost:3000")
+app.listen(3001, () => {
+  console.log("Servidor funcionando en http://localhost:3001")
 })
 
