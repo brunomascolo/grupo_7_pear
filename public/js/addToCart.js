@@ -27,7 +27,5 @@ window.addEventListener("load", function(){
         localStorage.setItem("cart", JSON.stringify(cart))
         console.log(localStorage.getItem("cart"))
         alertify.success('Agregado al carrito');
-        
-
     })
 })
