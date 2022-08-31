@@ -22,10 +22,11 @@ window.addEventListener("load", function(){
                 continue
             }
         }        
-        let item = {id: idProducto.textContent, nombre: nombreProducto.textContent, img: imgProducto.src, precio: parseFloat(precioProducto.textContent)}
+        let item = {id: parseInt(idProducto.textContent), nombre: nombreProducto.textContent, img: imgProducto.src, precio: parseFloat(precioProducto.textContent)}
         cart.push(item)
         localStorage.setItem("cart", JSON.stringify(cart))
         console.log(localStorage.getItem("cart"))
+        alertify.success('Agregado al carrito');
         
 
     })
