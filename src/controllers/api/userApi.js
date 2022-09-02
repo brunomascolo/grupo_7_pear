@@ -1,5 +1,7 @@
 const db = require("../../database/models");
 
+const ruta = 'http://localhost:3001';
+
 const userAPIController = {
     'list': (req, res) => {
         db.User.findAll({ 
@@ -11,7 +13,7 @@ const userAPIController = {
                     meta: {
                         status: 200,
                         total: user.length,
-                        url: 'api/user'
+                        url: ruta+'api/user'
                     },
                     data: user
                 }
@@ -30,7 +32,7 @@ const userAPIController = {
                     meta: {
                         status: 200,
                         total: user.length,
-                        url: '/api/user/:id'
+                        url: ruta+'/api/user/'+req.params.id
                     },
                     data: user
                 }

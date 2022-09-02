@@ -2,6 +2,8 @@ const db = require("../../database/models");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
+const ruta = 'http://localhost:3001';
+
 const nftAPIController = {
     /* 'list': (req, res) => {
         db.Product.findAll({
@@ -62,7 +64,7 @@ const nftAPIController = {
                 delete nft.created_at,
                 delete nft.updated_at
 
-                nft.urlNft = 'http://localhost:3001/api/nft/'+ nft.id
+                nft.urlNft = ruta + '/api/nft/'+ nft.id
             })
 
             return res.status(200).json({
@@ -87,7 +89,7 @@ const nftAPIController = {
                     meta: {
                         status: 200,/* 
                         total: product.length, */
-                        url: '/api/nft/:id'
+                        url: ruta + '/api/nft/' + req.params.id
                     },
                     data: product
                 }
@@ -106,7 +108,7 @@ const nftAPIController = {
                     meta: {
                         status: 200,
                         total: product.length,
-                        url: 'http://localhost:3001/api/nft/last'
+                        url: ruta + '/api/nft/last'
                     },
                     data: product
                 }
