@@ -24,6 +24,7 @@
             </div>
           </li>
           <% if(locals.isLogged) { %>
+          <% if(locals.userLogged.id_rol == 1) { %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle textos-menu" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -37,6 +38,7 @@
               </div>
             </li>
             <% } %>
+          <% } %>
         </ul>
       </ul>
       <ul class="login-bar">
