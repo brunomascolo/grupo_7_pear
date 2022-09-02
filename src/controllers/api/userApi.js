@@ -3,7 +3,7 @@ const db = require("../../database/models");
 const userAPIController = {
     'list': (req, res) => {
         db.User.findAll({ 
-                include: { association: 'role' },
+                /* include: { association: 'role' }, */
                 attributes: ['id','first_name','last_name','username','email','profile_image']
             })
             .then(user => {
@@ -22,7 +22,7 @@ const userAPIController = {
     'detail': (req, res) => {
         db.User.findByPk(req.params.id,
             {
-                include : ['role'],
+                /* include : ['role'], */
                 attributes: ['id','first_name','last_name','username','email','profile_image']
             })
             .then(user => {

@@ -62,7 +62,7 @@ const nftAPIController = {
                 delete nft.created_at,
                 delete nft.updated_at
 
-                nft.urlNft = 'http://localhost:3000/api/nft/'+ nft.id
+                nft.urlNft = 'http://localhost:3001/api/nft/'+ nft.id
             })
 
             return res.status(200).json({
@@ -93,7 +93,26 @@ const nftAPIController = {
                 }
                 res.json(respuesta);
             });
-    }
+    },
+    'listNFT': (req, res) => {
+        db.Product.findAll({
+            limit: 1,
+            include: ['category'],
+            attributes: ['id','name','image','price','description'], //Oculto datos como creador, estado, y quien creo el producto
+            order: [['id','DESC']]
+        })
+            .then(product => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: product.length,
+                        url: 'http://localhost:3001/api/nft/last'
+                    },
+                    data: product
+                }
+                res.json(respuesta);
+            })
+    },
 }
 
 module.exports = nftAPIController;
