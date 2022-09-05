@@ -1,25 +1,48 @@
 const express = require('express');
 const path = require('path');
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsDoc = require('swagger-jsdoc');
 const methodOverride = require('method-override');
-const app = express();
 const session = require("express-session");
 const cookies = require("cookie-parser");
-
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const swaggerDocument = require('./data/pear-api-doc.json');
+
+/* const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Pear API",
+      version: "1.0.0",
+      description: "Proyecto final del grupo 7 de la comision 14 del curso de Programacion Web Full Stack de DH."
+    },
+    servers: [
+      {
+        url: "http://localhost:3001/api" //una vez publicado, cambiar a pearnft.shop
+      }
+    ]
+  },
+  apis: ["./routes/api/*.js"]
+} */
+
+//const specs = swaggerJsDoc(options)
+
+const app = express();
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.use(session({
-    secret: "grupoPear", 
-    resave: false, 
-    saveUninitialized: false,  
-  }));
+  secret: "grupoPear",
+  resave: false,
+  saveUninitialized: false,
+}));
 
 app.use(cookies());
 app.use(userLoggedMiddleware);
-
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(methodOverride('_method')); 
+app.use(methodOverride('_method'));
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views'));
@@ -43,9 +66,9 @@ app.use('/register', userRouter);
 //app.use('/admin', adminRouter); Rutas del panel de administrador
 
 //Aquí creo la colección de mis recursos de productos (APIs)
-app.use('/api/nft',apiNftRouter);
-app.use('/api/user',apiUserRouter);
-app.use('/api/category',apiCategoryRouter);
+app.use('/api/nft', apiNftRouter);
+app.use('/api/user', apiUserRouter);
+app.use('/api/category', apiCategoryRouter);
 
 app.listen(3001, () => {
   console.log("Servidor funcionando en http://localhost:3001")
