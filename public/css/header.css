@@ -18,6 +18,7 @@
 }
 .textos-menu{
     color: #3AAFB9 !important;
+    transition: all 100ms;
 }
 
 .fotoIcono{
@@ -37,6 +38,7 @@
 
 .botonCabecera {
     padding: 10px;
+    transition: all 100ms;
 }
 
 .header {
@@ -166,5 +168,16 @@ nav.navbar {
         font-size: 19px;
     }
 
+    .textos-menu:hover{
+        color:#B9F18C;
+    }
+
+    .textos-menu:hover i{
+        color:#B9F18C;
+    }
+
+    .botonCabecera:hover{
+        color:#3AAFB9
+    }
 
 }
