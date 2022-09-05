@@ -64,7 +64,13 @@ footer{
     font-size: 12px;
     color: gainsboro;
     margin: 10px;
+    text-align: center;
+    font-weight: 700;
+}
 
+.corazon{
+    text-align: center;
+    color: white;
 }
 
 @media (min-width: 430px) and (max-width: 800px) {
