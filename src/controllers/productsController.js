@@ -13,7 +13,7 @@ const Op = db.Sequelize.Op;
 const controladorProducts = {
     index: (req, res) => {
         //Listado de NFT desde la base de datos con sequelize
-        let pedidoProducto = db.Product.findAll({where: {state: 1}});
+        let pedidoProducto = db.Product.findAll({ where: { state: 1 } });
 
         let pedidoCreador = db.User.findAll();
 
@@ -21,6 +21,27 @@ const controladorProducts = {
             .then(function ([products, creators]) {
 
                 res.render('products/products.ejs', { products: products, creators: creators })
+            })
+
+        //Listado de NFT desde un archibo JSON
+
+        /*  const nft = JSON.parse(fs.readFileSync(nftFilePath, 'utf-8'));
+         let nftFiltrados = nft.filter(article => article.condition == 1)
+         
+         res.render('products/products.ejs', { nftFiltrados }) */
+    },
+    myproducts: (req, res) => {
+        //Listado de NFT desde la base de datos con sequelize
+        let id_usuario = req.session.userLogged.id
+        let pedidoProducto = db.Product.findAll({
+            where: { id_creator: id_usuario }
+        });
+        let pedidoCreador = db.User.findAll();
+
+        Promise.all([pedidoProducto, pedidoCreador])
+            .then(function ([products, creators]) {
+
+                res.render('products/myproducts.ejs', { products: products, creators: creators })
             })
 
         //Listado de NFT desde un archibo JSON
@@ -60,15 +81,19 @@ const controladorProducts = {
     },
 
     edit: (req, res) => {
+        let id_usuario = req.session.userLogged.id
         let pedidoProducto = db.Product.findByPk(req.params.id);
-
         let pedidoCreador = db.User.findAll();
         let pedidoCategoria = db.Category.findAll();
 
         Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
             .then(function ([product, creator, category]) {
                 if (product) {
-                    res.render("products/edit", { product: product, creator: creator, category: category });
+                    if (product.id_creator == id_usuario) {
+                        res.render("products/edit", { product: product, creator: creator, category: category });
+                    } else {
+                        res.render('products/404')
+                    }
                 } else {
                     res.render('products/404')
                 }
@@ -89,11 +114,12 @@ const controladorProducts = {
             let pedidoCategoria = db.Category.findAll();
             Promise.all([pedidoProducto, pedidoCreador, pedidoCategoria])
                 .then(function ([product, creator, category]) {
-                    if(req.session.userLogged.id == product.id_creator){
-                    res.render("products/edit", {
-                        product: product, creator: creator, category: category, errors: resultValidations.mapped(),
-                        oldData: req.body
-                    });} else {
+                    if (req.session.userLogged.id == product.id_creator) {
+                        res.render("products/edit", {
+                            product: product, creator: creator, category: category, errors: resultValidations.mapped(),
+                            oldData: req.body
+                        });
+                    } else {
                         res.render('products/404')
                     }
                 })
@@ -211,18 +237,18 @@ const controladorProducts = {
         nft.push(newNFT);
         fs.writeFileSync(nftFilePath, JSON.stringify(nft, null, " "));
         res.redirect("/products") */
-    },    
+    },
     disable: (req, res) => {
         db.Product.update({
             state: 0
-        },{
+        }, {
             where: {
                 id: req.params.id
             }
         })
             .then(() => {
 
-                res.redirect("/products");
+                res.redirect("/products/myproducts");
 
             })
             .catch(error => res.send(error))
@@ -250,6 +276,21 @@ const controladorProducts = {
         fs.writeFileSync(nftFilePath, JSON.stringify(products, null, " "));
         res.redirect("/products"); */
     },
+    enable: (req, res) => {
+        db.Product.update({
+            state: 1
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+
+                res.redirect("/products/myproducts");
+
+            })
+            .catch(error => res.send(error))
+    },
     search: (req, res) => {
         let nftBuscado = '%' + req.query.search + '%';
 
@@ -268,17 +309,17 @@ const controladorProducts = {
                 res.render('products/productsSearch.ejs', { results: results, creators: creators })
             })
             .catch(error => res.send(error))
-    }, 
+    },
     viewCart: (req, res) => {
         let productsInCart = JSON.parse(localStorage.getItem("id"))
         let products = []
-        for(i of productsInCart){
-            db.Product.findByPk(i.id).then((item) =>{
+        for (i of productsInCart) {
+            db.Product.findByPk(i.id).then((item) => {
                 products.push(item)
             })
         }
         console.log(products)
-        res.render('users/shoppingcart', {products : products})
+        res.render('users/shoppingcart', { products: products })
 
     }
 }

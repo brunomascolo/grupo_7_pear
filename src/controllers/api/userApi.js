@@ -1,6 +1,6 @@
 const db = require("../../database/models");
 
-const ruta = 'http://localhost:3001';
+const ruta = 'http://pearnft.shop';
 
 const userAPIController = {
     'list': (req, res) => {
@@ -13,7 +13,7 @@ const userAPIController = {
                     meta: {
                         status: 200,
                         total: user.length,
-                        url: ruta+'api/user'
+                        url: ruta+'/api/user'
                     },
                     data: user
                 }

@@ -85,6 +85,8 @@ const productsController = require ('../controllers/productsController')
 
 //Obtener todos los productos para la vista products
 router.get('/',productsController.index);
+//Obtener todos los productos para la vista products
+router.get('/myproducts', authMiddleware, productsController.myproducts);
 /* //Crear todos los productos producto
 router.get('/', productsController.index); */
 // Ruta para buscar
@@ -99,6 +101,8 @@ router.get('/edit/:id', authMiddleware, productsController.edit);
 router.patch('/edit/:id', upload.single("img"), validationsEdit,  authMiddleware, productsController.update); 
 //Ruta para deshabilitar productos
 router.delete('/delete/:id', authMiddleware, productsController.disable);
+//Ruta para habilitar productos
+router.patch('/active/:id', authMiddleware, productsController.enable);
 
 
 module.exports = router;

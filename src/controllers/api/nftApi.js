@@ -2,7 +2,7 @@ const db = require("../../database/models");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
-const ruta = 'http://localhost:3001';
+const ruta = 'http://pearnft.shop';
 
 const nftAPIController = {
     /* 'list': (req, res) => {

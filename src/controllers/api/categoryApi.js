@@ -1,5 +1,7 @@
 const db = require("../../database/models");
 
+const ruta = 'http://pearnft.shop';
+
 const categoryAPIController = {
     'list': (req, res) => {
         db.Category.findAll()
@@ -8,7 +10,7 @@ const categoryAPIController = {
                     meta: {
                         status: 200,
                         total: category.length,
-                        url: 'api/category'
+                        url: ruta+'/api/category'
                     },
                     data: category
                 }

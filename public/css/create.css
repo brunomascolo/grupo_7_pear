@@ -67,6 +67,16 @@ body {
   padding: 10px;
   text-align: center;
 }
+.botones_habilitar {
+  background-color: rgb(38, 134, 45);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
 
 .msgerror {
   color:rgb(210, 97, 97)
