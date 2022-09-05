@@ -90,6 +90,7 @@ router.get('/myproducts', authMiddleware, productsController.myproducts);
 /* //Crear todos los productos producto
 router.get('/', productsController.index); */
 // Ruta para buscar
+router.get('/purchase', productsController.purchase);
 router.get('/search', productsController.search);
 //Crear un producto
 router.get('/create', authMiddleware, productsController.create);

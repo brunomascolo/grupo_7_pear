@@ -10,6 +10,7 @@
 
 .logo {
     width: 50%;
+    margin-left: 10px;
 }
 
 .fotoYNombreUsuario{
@@ -116,7 +117,7 @@ nav.navbar {
     }
     .logo {
         position: relative;
-        left: 150px;        
+        left: 180px;        
         width: 49%;
     }
 

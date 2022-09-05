@@ -321,6 +321,9 @@ const controladorProducts = {
         console.log(products)
         res.render('users/shoppingcart', { products: products })
 
+    },
+    purchase: (req, res) => {
+        res.render('products/purchase')
     }
 }
 
