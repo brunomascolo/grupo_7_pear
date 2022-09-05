@@ -7,6 +7,10 @@ const session = require("express-session");
 const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const swaggerDocument = require('./data/pear-api-doc.json');
+const cors = require('cors');
+
+const ruta =  "http://localhost";
+const puerto = 3001;
 
 /* const options = {
   definition: {
@@ -43,6 +47,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(cors());
 
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, '/views'));
@@ -70,7 +75,7 @@ app.use('/api/nft', apiNftRouter);
 app.use('/api/user', apiUserRouter);
 app.use('/api/category', apiCategoryRouter);
 
-app.listen(3001, () => {
-  console.log("Servidor funcionando en http://localhost:3001")
+app.listen(puerto, () => {
+  console.log("Servidor funcionando "+ruta+":"+puerto)
 })
 
