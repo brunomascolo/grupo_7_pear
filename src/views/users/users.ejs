@@ -7,13 +7,12 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
-                <p class="titulo">Listado de usuarios (Falta finalizar el css)</p>
+                <p class="titulo">Listado de usuarios</p>
                 <div class="container-principal">
                     <% for (let i=0; i < users.length; i++) { %>
                         <ul class="info-product">
                             <li>
-                                Nombre: <a href="#"><%= users[i].first_name %></a>  <a href="#"><%= users[i].last_name %></a> Correo: <a href="#"><%= users[i].email %></a>
-                                </a>
+                                Nombre: <span><%= users[i].first_name %></span>  <span><%= users[i].last_name %></span><br> Correo: <a href="#"><%= users[i].email %></a>
                             </li>
                         </ul>
                     <% } %> 

@@ -7,21 +7,21 @@
         <%- include("../partials/header.ejs") %>
             <main>
                 <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
-                <p class="titulo">Listado de categorias (Falta finalizar el css)</p>
+                <p class="titulo">Listado de categorias</p>
                 <div class="container-principal">
-                    <li class="li-boton">
-                        <a href="/categories/create" class="boton-modificar">Crear categoria</a>
-                    </li>
                     <% for (let i=0; i < categories.length; i++) { %>
                         <ul class="info-product">
                             <li>
-                                <a href="#"><%= categories[i].name %></a>
+                                <p class="categoria"><%= categories[i].name %></p>
                                 <!-- <a href="/categories/<%= categories[i].id %>"><%= categories[i].name %></a> -->
-                                </a>
+                            </p>
                             </li>
                         </ul>
                     <% } %> 
                 </div>
+                <li class="li-boton">
+                    <a href="/categories/create" class="boton-modificar">Crear categoria</a>
+                </li>
             </main>
             <%- include("../partials/footer.ejs") %>
     </body>
