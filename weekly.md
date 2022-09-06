@@ -89,3 +89,18 @@
 <h4>Que se va hacer hoy</h4>
 <li>Revisamos funcionamiento de cada entregable</li>
 <li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
+
+<h2>Weekly Sprint 8 05/09/2022</h2>
+
+<h4>Que se hizo ayer?</h4>
+<li>Todos los integrantes mostramos las tareas finalizadas</li>
+<li>Coordinamos la presentación para el día 06 de septiembre</li>
+
+<h4>Existieron impedimentos</h4>
+<li>Se genero un breve retraso por el trabajo en equipo que dependia de que otro compañero finalice su tarea</li>
+<li>No logramos contactar con un integrante del equipo desde el ultimo sprint, por lo que debimos omitir su particiación en la distribución del trabajo</li>
+
+<h4>Que se va hacer hoy</h4>
+<li>Revisamos funcionamiento de cada entregable para desplegar proyecto en AWS</li>
+<li>Se actualiza el trello y se hara un push con los ultimos cambios</li>
+
