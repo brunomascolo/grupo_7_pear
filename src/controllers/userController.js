@@ -82,7 +82,7 @@ const controladorUser = {
                         }
                     })
                 } */
-
+                alertify.success('Tu registro fue exitoso!');
                 db.User.create({
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,

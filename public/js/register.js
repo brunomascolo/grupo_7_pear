@@ -119,7 +119,6 @@ window.addEventListener("load", function () {
             errorRepeatPassword.innerHTML = "Debes ingresar la misma contraseña."
         }
         else {
-            alertify.success('Tu registro fue exitoso!');
             formularioRegister.submit();
         }
     })
