@@ -55,6 +55,8 @@ window.addEventListener("load", function () {
         let username = document.getElementById("username")
         let password = document.getElementById("password")
         let repeatPassword = document.getElementById("repeatPassword")
+        let terminos = document.getElementById("terminos")
+        let mayor = document.getElementById("mayor")
         let errorNombre = document.getElementById("errorFirst")
         let errorApellido = document.getElementById("errorLast")
         let errorEmail = document.getElementById("errorEmail")
@@ -64,9 +66,19 @@ window.addEventListener("load", function () {
         let errorTerminos = document.getElementById("errorTerminos")
         let errorMayor = document.getElementById("errorMayor")
 
-        if (nombre.value == "") {
+        if (nombre.value == "" && apellido.value == "" && email.value == "" && username.value == "" &&  password.value == "" && repeatPassword.value == "") {
             nombre.classList.add("is-invalid")
             errorNombre.innerHTML = "Debes ingresar un nombre."
+            apellido.classList.add("is-invalid")
+            errorApellido.innerHTML = "Debes ingresar un apellido."
+            email.classList.add("is-invalid")
+            errorEmail.innerHTML = "Debes ingresar un correo."
+            username.classList.add("is-invalid")
+            errorUsername.innerHTML = "Debes ingresar un nombre de usuario."
+            password.classList.add("is-invalid")
+            errorPassword.innerHTML = "Debes ingresar una contraseña."
+            repeatPassword.classList.add("is-invalid")
+            errorRepeatPassword.innerHTML = "Debes ingresar una contraseña."
         } else if (!validarNombre.test(nombre.value)) {
             nombre.classList.add("is-invalid")
             errorNombre.innerHTML = "Debes ingresar un nombre valido."
