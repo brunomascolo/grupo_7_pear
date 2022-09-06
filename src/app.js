@@ -9,7 +9,7 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const swaggerDocument = require('./data/pear-api-doc.json');
 const cors = require('cors');
 
-const ruta =  "http://localhost";
+const ruta =  "http://pearnft.shop";
 const puerto = 3001;
 
 /* const options = {
