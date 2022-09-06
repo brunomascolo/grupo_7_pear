@@ -44,6 +44,11 @@
     text-align: center;
     color: var(--VerdeOscuro);
 }
+.titulo-error {
+    font-size: 1em;
+    text-align: center;
+    color: var(--VerdeOscuro);
+}
 
 .boton-modificar {
     background-color: var(--VerdeOscuro);
@@ -73,11 +78,23 @@
         color: var(--VerdeOscuro);
         text-align: center;
     }
+    .titulo-error {
+        font-size: 1em;
+        font-weight: bold;
+        color: var(--VerdeOscuro);
+        text-align: center;
+    }
 }
 @media (min-width: 801px) {
     .titulo{
         font-size: 2em;
         font-weight: bold;
+    }
+    .titulo-error{
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 35px;
+        margin-bottom: 35px;
     }
     .container-principal{
         width: 70%;

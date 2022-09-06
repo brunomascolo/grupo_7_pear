@@ -9,6 +9,7 @@
                 <!-- Nombre, Precio, Descripcion, archivo (enlace) -->
                 <p class="titulo">Listado de NFT buscados</p>
                 <div class="container-principal">
+                <% if(results.length != 0) { %>
                     <!-- Mostrar los productos VISITADOS dinámicamente (usando un for o foreach) -->
                     <% for (let i=0; i <results.length; i++) { %>
                         <div class="productosDetail">
@@ -42,6 +43,9 @@
                                 <% } %>
                             </ul>
                         </div>
+                        <% } %>
+                    <% } else { %>
+                        <h3 class="titulo-error">¡Ups! No hay coindicendias con tu busqueda.</h3>
                         <% } %>
                 </div>
             </main>
