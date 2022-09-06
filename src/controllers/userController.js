@@ -82,7 +82,6 @@ const controladorUser = {
                         }
                     })
                 } */
-                alertify.success('Tu registro fue exitoso!');
                 db.User.create({
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
@@ -95,7 +94,7 @@ const controladorUser = {
 
                 })
                     .then(() => {
-                        res.render('users/login.ejs')
+                        res.render('users/loginAfterReg.ejs')
                     })
                     .catch(error => {
                         if (error.errors[0].path == "email") {
