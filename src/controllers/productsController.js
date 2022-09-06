@@ -298,9 +298,9 @@ const controladorProducts = {
 
         let pedidoProducto = db.Product.findAll({
             where: {
-                name: { [Op.like]: nftBuscado }
-            }
-        });
+                name: { [Op.like]: nftBuscado },
+                state: 1
+                }});
 
 
         Promise.all([pedidoProducto, pedidoCreador])
